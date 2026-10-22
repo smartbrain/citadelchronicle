@@ -649,7 +649,7 @@ P4_HTML = """
 
                     <!-- TICKETING BOX -->
                     <div style="border: 1.5px dashed #000; background: #fff; padding: 7px 6px; font-family: 'Courier Prime', monospace; font-size: 7.5pt; margin-bottom: 7px;">
-                        <div style="font-weight: bold; text-transform: uppercase; color: var(--ink-accent); font-size: 8.2pt;">EARLY BIRD PASSES: 21% SATS DISCOUNT</div>
+                        <div style="font-weight: bold; text-transform: uppercase; color: var(--ink-accent); font-size: 8.2pt;">CONFERENCE &amp; VIP PASSES ON SALE NOW</div>
                         <div style="margin-top: 2px;">General Admission • Developer Hackathon • VIP Citadel Dinner</div>
                         <div style="font-weight: bold; margin-top: 3px; font-size: 8.2pt; letter-spacing: 0.05em;">CONFERENCE.BITCOINTHAILAND.OR.TH</div>
                     </div>
