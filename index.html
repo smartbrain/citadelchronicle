@@ -227,6 +227,233 @@
         }
 
         /* =====================================================================
+           MOBILE MODE: SINGLE COLUMN RESPONSIVE BROADSHEET
+           Triggered via '📱 Mobile (1-Col)' button or screens <= 768px
+           ===================================================================== */
+        body.mobile-mode {
+            padding: 10px 6px !important;
+        }
+
+        body.mobile-mode .a4-page {
+            width: 100% !important;
+            max-width: 680px !important;
+            min-height: auto !important;
+            height: auto !important;
+            margin: 0 auto 28px auto !important;
+            padding: 18px 14px !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+            border: 1px solid var(--rule-color) !important;
+            display: flex !important;
+        }
+
+        body.mobile-mode .newspaper-columns-3,
+        body.mobile-mode .newspaper-columns-2 {
+            column-count: 1 !important;
+            column-gap: 0 !important;
+            column-rule: none !important;
+            text-align: left !important;
+        }
+
+        body.mobile-mode .newspaper-columns-5 {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 14px !important;
+        }
+        body.mobile-mode .newspaper-columns-5 > div {
+            border-bottom: 1px dashed var(--rule-color) !important;
+            padding-bottom: 12px !important;
+        }
+        body.mobile-mode .newspaper-columns-5 > div:last-child {
+            border-bottom: none !important;
+            padding-bottom: 0 !important;
+        }
+
+        body.mobile-mode .grid,
+        body.mobile-mode .md\:grid-cols-2,
+        body.mobile-mode .md\:grid-cols-3,
+        body.mobile-mode .split-1-1 {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 16px !important;
+        }
+
+        body.mobile-mode [class*="col-span-"] {
+            grid-column: auto !important;
+            width: 100% !important;
+        }
+
+        body.mobile-mode .border-r {
+            border-right: none !important;
+            border-bottom: 1px solid var(--rule-color) !important;
+            padding-right: 0 !important;
+            padding-bottom: 16px !important;
+        }
+
+        body.mobile-mode .masthead-row {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
+            text-align: center !important;
+        }
+        body.mobile-mode .masthead-row > div:nth-child(2) {
+            order: 1;
+            padding: 4px 0 !important;
+        }
+        body.mobile-mode .masthead-row > div:nth-child(1) {
+            order: 2;
+            width: 100% !important;
+        }
+        body.mobile-mode .masthead-row > div:nth-child(3) {
+            order: 3;
+            width: 100% !important;
+        }
+        body.mobile-mode .masthead-title {
+            font-size: clamp(2.1rem, 7.5vw, 2.7rem) !important;
+            line-height: 1.05 !important;
+        }
+
+        body.mobile-mode .newspaper-copy p {
+            font-size: 1.05rem !important;
+            line-height: 1.62 !important;
+            margin-bottom: 1.1rem !important;
+            text-align: left !important;
+            text-indent: 0 !important;
+        }
+        body.mobile-mode .drop-cap::first-letter {
+            font-size: 2.7rem !important;
+            line-height: 0.85 !important;
+            padding-right: 8px !important;
+            padding-top: 2px !important;
+        }
+
+        body.mobile-mode h2 {
+            font-size: 1.55rem !important;
+            line-height: 1.15 !important;
+        }
+        body.mobile-mode h3 {
+            font-size: 1.25rem !important;
+            line-height: 1.2 !important;
+        }
+
+        body.mobile-mode .engraved-box {
+            width: 100% !important;
+            padding: 10px 12px !important;
+        }
+        body.mobile-mode img {
+            width: 100% !important;
+            height: auto !important;
+            max-height: none !important;
+        }
+
+        /* Responsive fallback for actual mobile screens */
+        @media (max-width: 768px) {
+            body:not(.desktop-force) {
+                padding: 10px 6px !important;
+            }
+            body:not(.desktop-force) .a4-page {
+                width: 100% !important;
+                max-width: 680px !important;
+                min-height: auto !important;
+                height: auto !important;
+                margin: 0 auto 28px auto !important;
+                padding: 18px 14px !important;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
+                border: 1px solid var(--rule-color) !important;
+                display: flex !important;
+            }
+            body:not(.desktop-force) .newspaper-columns-3,
+            body:not(.desktop-force) .newspaper-columns-2 {
+                column-count: 1 !important;
+                column-gap: 0 !important;
+                column-rule: none !important;
+                text-align: left !important;
+            }
+            body:not(.desktop-force) .newspaper-columns-5 {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 14px !important;
+            }
+            body:not(.desktop-force) .newspaper-columns-5 > div {
+                border-bottom: 1px dashed var(--rule-color) !important;
+                padding-bottom: 12px !important;
+            }
+            body:not(.desktop-force) .newspaper-columns-5 > div:last-child {
+                border-bottom: none !important;
+                padding-bottom: 0 !important;
+            }
+            body:not(.desktop-force) .grid,
+            body:not(.desktop-force) .md\:grid-cols-2,
+            body:not(.desktop-force) .md\:grid-cols-3,
+            body:not(.desktop-force) .split-1-1 {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 16px !important;
+            }
+            body:not(.desktop-force) [class*="col-span-"] {
+                grid-column: auto !important;
+                width: 100% !important;
+            }
+            body:not(.desktop-force) .border-r {
+                border-right: none !important;
+                border-bottom: 1px solid var(--rule-color) !important;
+                padding-right: 0 !important;
+                padding-bottom: 16px !important;
+            }
+            body:not(.desktop-force) .masthead-row {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 10px !important;
+                text-align: center !important;
+            }
+            body:not(.desktop-force) .masthead-row > div:nth-child(2) {
+                order: 1;
+                padding: 4px 0 !important;
+            }
+            body:not(.desktop-force) .masthead-row > div:nth-child(1) {
+                order: 2;
+                width: 100% !important;
+            }
+            body:not(.desktop-force) .masthead-row > div:nth-child(3) {
+                order: 3;
+                width: 100% !important;
+            }
+            body:not(.desktop-force) .masthead-title {
+                font-size: clamp(2.1rem, 7.5vw, 2.7rem) !important;
+                line-height: 1.05 !important;
+            }
+            body:not(.desktop-force) .newspaper-copy p {
+                font-size: 1.05rem !important;
+                line-height: 1.62 !important;
+                margin-bottom: 1.1rem !important;
+                text-align: left !important;
+                text-indent: 0 !important;
+            }
+            body:not(.desktop-force) .drop-cap::first-letter {
+                font-size: 2.7rem !important;
+                line-height: 0.85 !important;
+                padding-right: 8px !important;
+                padding-top: 2px !important;
+            }
+            body:not(.desktop-force) h2 {
+                font-size: 1.55rem !important;
+                line-height: 1.15 !important;
+            }
+            body:not(.desktop-force) h3 {
+                font-size: 1.25rem !important;
+                line-height: 1.2 !important;
+            }
+            body:not(.desktop-force) .engraved-box {
+                width: 100% !important;
+                padding: 10px 12px !important;
+            }
+            body:not(.desktop-force) img {
+                width: 100% !important;
+                height: auto !important;
+                max-height: none !important;
+            }
+        }
+
+        /* =====================================================================
            PRINT MEDIA STYLESHEET (STRICT A4 PORTRAIT PAGINATION)
            ===================================================================== */
         @media print {
@@ -285,6 +512,7 @@
             <button id="btnCenterSpread" onclick="setViewMode('center-spread')" class="press-btn text-amber-400 font-bold" title="Pages 2 & 3 side by side (unfolded inside of A3)">📖 Center Spread (A3 Fold: P2+P3)</button>
             <button id="btnOuterSpread" onclick="setViewMode('outer-spread')" class="press-btn text-amber-400" title="Pages 4 & 1 side by side (unfolded outside of A3)">📰 Outer Spread (A3 Fold: P4+P1)</button>
             <button id="btnAllPages" onclick="setViewMode('all-pages')" class="press-btn">View All 4 Pages</button>
+            <button id="btnMobile" onclick="setViewMode('mobile')" class="press-btn text-emerald-400 font-bold" title="Single-column responsive reading mode for phones and small screens">📱 Mobile (1-Col)</button>
         </div>
         <div class="flex flex-wrap items-center gap-1.5 font-mono-tech text-xs">
             <button id="btnEditCopy" onclick="toggleEditNewspaper()" class="press-btn" title="Click directly on any headline or story to edit live">
@@ -300,7 +528,7 @@
     </header>
 
     <!-- Visual Hint Banner -->
-    <div class="no-print text-center font-mono-tech text-[11px] text-[#a8a090] mb-3">
+    <div id="formatHintBanner" class="no-print text-center font-mono-tech text-[11px] text-[#a8a090] mb-3">
         FORMAT: Double-sided A3 sheet folded into four A4 portrait pages (210mm × 297mm) • Canonical: <a href="https://citadelchronicle.com" class="underline text-amber-400 font-bold">citadelchronicle.com</a>
     </div>
 
@@ -860,7 +1088,7 @@
             }, 2500);
         }
 
-        // View Mode Switcher: Supports single A4 pages, Center Spread (P2+P3), Outer Spread (P4+P1), and All Pages
+        // View Mode Switcher: Supports single A4 pages, Center Spread (P2+P3), Outer Spread (P4+P1), All Pages, and Mobile 1-Column Reader
         function setViewMode(mode) {
             playTypewriterClack(false);
             const p1 = document.getElementById('page-1');
@@ -868,6 +1096,7 @@
             const p3 = document.getElementById('page-3');
             const p4 = document.getElementById('page-4');
             const root = document.getElementById('newspaperRoot');
+            const banner = document.getElementById('formatHintBanner');
 
             // Reset any wrapper classes
             p1.classList.remove('page-left', 'page-right', 'hidden');
@@ -885,68 +1114,14 @@
                 document.getElementById('btnP4'),
                 document.getElementById('btnCenterSpread'),
                 document.getElementById('btnOuterSpread'),
-                document.getElementById('btnAllPages')
+                document.getElementById('btnAllPages'),
+                document.getElementById('btnMobile')
             ];
             btns.forEach(b => b && b.classList.remove('active-mode'));
 
-            if (mode === 'p1') {
-                p1.classList.remove('hidden');
-                p2.classList.add('hidden');
-                p3.classList.add('hidden');
-                p4.classList.add('hidden');
-                document.getElementById('btnP1').classList.add('active-mode');
-                showToast("SHOWING PAGE 1: FRONT COVER (A4 PORTRAIT)");
-            } else if (mode === 'p2') {
-                p1.classList.add('hidden');
-                p2.classList.remove('hidden');
-                p3.classList.add('hidden');
-                p4.classList.add('hidden');
-                document.getElementById('btnP2').classList.add('active-mode');
-                showToast("SHOWING PAGE 2: EDITORIAL & MORGUE (A4 PORTRAIT)");
-            } else if (mode === 'p3') {
-                p1.classList.add('hidden');
-                p2.classList.add('hidden');
-                p3.classList.remove('hidden');
-                p4.classList.add('hidden');
-                document.getElementById('btnP3').classList.add('active-mode');
-                showToast("SHOWING PAGE 3: THE DEEP DIVE (A4 PORTRAIT)");
-            } else if (mode === 'p4') {
-                p1.classList.add('hidden');
-                p2.classList.add('hidden');
-                p3.classList.add('hidden');
-                p4.classList.remove('hidden');
-                document.getElementById('btnP4').classList.add('active-mode');
-                showToast("SHOWING PAGE 4: THE BACK PAGE (A4 PORTRAIT)");
-            } else if (mode === 'center-spread') {
-                // Inside Spread: Page 2 (Left) + Page 3 (Right) inside A3 Fold
-                p1.classList.add('hidden');
-                p4.classList.add('hidden');
-                p2.classList.remove('hidden');
-                p3.classList.remove('hidden');
-                p2.classList.add('page-left');
-                p3.classList.add('page-right');
-                root.className = 'spread-wrapper';
-                // Ensure DOM ordering: P2 then P3
-                root.appendChild(p2);
-                root.appendChild(p3);
-                document.getElementById('btnCenterSpread').classList.add('active-mode');
-                showToast("SHOWING CENTER SPREAD: A3 FOLD (PAGES 2 & 3 SIDE-BY-SIDE)");
-            } else if (mode === 'outer-spread') {
-                // Outside Spread: Page 4 (Left) + Page 1 (Right) inside A3 Fold
-                p2.classList.add('hidden');
-                p3.classList.add('hidden');
-                p4.classList.remove('hidden');
-                p1.classList.remove('hidden');
-                p4.classList.add('page-left');
-                p1.classList.add('page-right');
-                root.className = 'spread-wrapper';
-                // Ensure DOM ordering: P4 then P1
-                root.appendChild(p4);
-                root.appendChild(p1);
-                document.getElementById('btnOuterSpread').classList.add('active-mode');
-                showToast("SHOWING OUTER SPREAD: A3 FOLD (PAGE 4 LEFT • PAGE 1 RIGHT)");
-            } else if (mode === 'all-pages') {
-                // All 4 Pages in booklet sequence
+            if (mode === 'mobile') {
+                document.body.classList.add('mobile-mode');
+                document.body.classList.remove('desktop-force');
                 p1.classList.remove('hidden');
                 p2.classList.remove('hidden');
                 p3.classList.remove('hidden');
@@ -955,10 +1130,96 @@
                 root.appendChild(p2);
                 root.appendChild(p3);
                 root.appendChild(p4);
-                document.getElementById('btnAllPages').classList.add('active-mode');
-                showToast("SHOWING ALL 4 PAGES (BOOKLET SEQUENCE)");
+                const btnM = document.getElementById('btnMobile');
+                if (btnM) btnM.classList.add('active-mode');
+                if (banner) {
+                    banner.innerHTML = 'FORMAT: Single-Column Mobile Reader (Pages 1–4 Sequential Flow) • Canonical: <a href="https://citadelchronicle.com" class="underline text-amber-400 font-bold">citadelchronicle.com</a>';
+                }
+                showToast("📱 MOBILE READER: SINGLE-COLUMN FLOW");
+            } else {
+                document.body.classList.remove('mobile-mode');
+                document.body.classList.add('desktop-force');
+                if (banner) {
+                    banner.innerHTML = 'FORMAT: Double-sided A3 sheet folded into four A4 portrait pages (210mm × 297mm) • Canonical: <a href="https://citadelchronicle.com" class="underline text-amber-400 font-bold">citadelchronicle.com</a>';
+                }
+                if (mode === 'p1') {
+                    p1.classList.remove('hidden');
+                    p2.classList.add('hidden');
+                    p3.classList.add('hidden');
+                    p4.classList.add('hidden');
+                    document.getElementById('btnP1').classList.add('active-mode');
+                    showToast("SHOWING PAGE 1: FRONT COVER (A4 PORTRAIT)");
+                } else if (mode === 'p2') {
+                    p1.classList.add('hidden');
+                    p2.classList.remove('hidden');
+                    p3.classList.add('hidden');
+                    p4.classList.add('hidden');
+                    document.getElementById('btnP2').classList.add('active-mode');
+                    showToast("SHOWING PAGE 2: EDITORIAL & MORGUE (A4 PORTRAIT)");
+                } else if (mode === 'p3') {
+                    p1.classList.add('hidden');
+                    p2.classList.add('hidden');
+                    p3.classList.remove('hidden');
+                    p4.classList.add('hidden');
+                    document.getElementById('btnP3').classList.add('active-mode');
+                    showToast("SHOWING PAGE 3: THE DEEP DIVE (A4 PORTRAIT)");
+                } else if (mode === 'p4') {
+                    p1.classList.add('hidden');
+                    p2.classList.add('hidden');
+                    p3.classList.add('hidden');
+                    p4.classList.remove('hidden');
+                    document.getElementById('btnP4').classList.add('active-mode');
+                    showToast("SHOWING PAGE 4: THE BACK PAGE (A4 PORTRAIT)");
+                } else if (mode === 'center-spread') {
+                    // Inside Spread: Page 2 (Left) + Page 3 (Right) inside A3 Fold
+                    p1.classList.add('hidden');
+                    p4.classList.add('hidden');
+                    p2.classList.remove('hidden');
+                    p3.classList.remove('hidden');
+                    p2.classList.add('page-left');
+                    p3.classList.add('page-right');
+                    root.className = 'spread-wrapper';
+                    // Ensure DOM ordering: P2 then P3
+                    root.appendChild(p2);
+                    root.appendChild(p3);
+                    document.getElementById('btnCenterSpread').classList.add('active-mode');
+                    showToast("SHOWING CENTER SPREAD: A3 FOLD (PAGES 2 & 3 SIDE-BY-SIDE)");
+                } else if (mode === 'outer-spread') {
+                    // Outside Spread: Page 4 (Left) + Page 1 (Right) inside A3 Fold
+                    p2.classList.add('hidden');
+                    p3.classList.add('hidden');
+                    p4.classList.remove('hidden');
+                    p1.classList.remove('hidden');
+                    p4.classList.add('page-left');
+                    p1.classList.add('page-right');
+                    root.className = 'spread-wrapper';
+                    // Ensure DOM ordering: P4 then P1
+                    root.appendChild(p4);
+                    root.appendChild(p1);
+                    document.getElementById('btnOuterSpread').classList.add('active-mode');
+                    showToast("SHOWING OUTER SPREAD: A3 FOLD (PAGE 4 LEFT • PAGE 1 RIGHT)");
+                } else if (mode === 'all-pages') {
+                    // All 4 Pages in booklet sequence
+                    p1.classList.remove('hidden');
+                    p2.classList.remove('hidden');
+                    p3.classList.remove('hidden');
+                    p4.classList.remove('hidden');
+                    root.appendChild(p1);
+                    root.appendChild(p2);
+                    root.appendChild(p3);
+                    root.appendChild(p4);
+                    document.getElementById('btnAllPages').classList.add('active-mode');
+                    showToast("SHOWING ALL 4 PAGES (BOOKLET SEQUENCE)");
+                }
             }
         }
+
+        // Auto-detect mobile screen on initial load
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.innerWidth <= 768) {
+                setViewMode('mobile');
+            }
+        });
 
         function toggleDarkInk() {
             playTypewriterClack(false);
