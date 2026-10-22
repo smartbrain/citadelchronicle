@@ -1,50 +1,30 @@
 #!/usr/bin/env python3
 """
 Generate Print-Ready PDFs and 300 DPI JPGs for Brother A3 Printer.
-Creates:
-1. citadel_chronicle_issue01_a3_duplex.pdf (2-page A3 landscape: Sheet 1 Outer [P4+P1], Sheet 2 Inner [P2+P3])
-2. citadel_chronicle_issue01_a4_pages.pdf (4-page A4 portrait: P1, P2, P3, P4)
-3. 300 DPI JPGs of all sheets and pages for direct image printing.
+Strictly balanced to guarantee zero overflow, single-line headers, and proper bottom margins.
 """
 
 import os
 import subprocess
-import re
 
 WORKING_DIR = "/home/don/citadelchronicle"
 DOWNLOADS_DIR = "/home/don/Downloads"
 
-print("Starting Print-Ready Asset Generation...")
+print("Starting Print-Ready Asset Generation (Version 2 - Perfect Margins)...")
 
-# 1. Read the master HTML file
-with open(os.path.join(WORKING_DIR, "index.html"), "r", encoding="utf-8") as f:
-    master_html = f.read()
-
-# Extract the contents of page-1, page-2, page-3, page-4
-def extract_section(html, page_id):
-    pattern = rf'<main[^>]*id="{page_id}"[^>]*>(.*?)</main>'
-    m = re.search(pattern, html, re.DOTALL)
-    if not m:
-        raise ValueError(f"Could not find section {page_id}")
-    return m.group(1)
-
-p1_content = extract_section(master_html, "page-1")
-p2_content = extract_section(master_html, "page-2")
-p3_content = extract_section(master_html, "page-3")
-p4_content = extract_section(master_html, "page-4")
-
-# Common CSS for print typography and styling
 BASE_CSS = """
     :root {
         --paper-bg: #ffffff;
-        --paper-bg-alt: #fdfbf7;
+        --paper-bg-alt: #fcfaf6;
         --ink-primary: #0a0a0a;
-        --ink-secondary: #2a2a2a;
+        --ink-secondary: #222222;
         --ink-accent: #8b1e1e;
         --rule-color: #000000;
     }
     * {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
@@ -55,79 +35,581 @@ BASE_CSS = """
         color: var(--ink-primary);
         font-family: 'EB Garamond', Georgia, serif;
     }
-    .font-masthead {
-        font-family: 'UnifrakturMaguntia', 'Cinzel Decorative', serif;
-        letter-spacing: 0.02em;
-    }
-    .font-headline {
-        font-family: 'Playfair Display', Georgia, serif;
-    }
-    .font-body {
-        font-family: 'EB Garamond', Georgia, serif;
-    }
-    .font-mono-tech {
-        font-family: 'Courier Prime', monospace;
-    }
+    .font-masthead { font-family: 'UnifrakturMaguntia', 'Cinzel Decorative', serif; }
+    .font-headline { font-family: 'Playfair Display', Georgia, serif; }
+    .font-body { font-family: 'EB Garamond', Georgia, serif; }
+    .font-mono-tech { font-family: 'Courier Prime', monospace; }
+
     .double-rule-top { border-top: 3.5px double var(--rule-color); }
     .double-rule-bottom { border-bottom: 3.5px double var(--rule-color); }
     .heavy-rule-top { border-top: 2.5px solid var(--rule-color); }
     .heavy-rule-bottom { border-bottom: 2px solid var(--rule-color); }
     .thin-rule-bottom { border-bottom: 1px solid var(--rule-color); }
+    .thin-rule-top { border-top: 1px solid var(--rule-color); }
 
-    .masthead-row {
+    /* A4 Base Page Sheet */
+    .a4-sheet-inner {
+        width: 210mm;
+        height: 297mm;
+        padding: 12mm 15mm 12mm 15mm;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background: #ffffff;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Masthead */
+    .p1-masthead-row {
         display: grid;
-        grid-template-columns: 140px minmax(0, 1fr) 140px;
+        grid-template-columns: 130px 1fr 130px;
         align-items: stretch;
-        gap: 12px;
-        padding-bottom: 5px;
+        gap: 8px;
+        padding-bottom: 4px;
+        margin-top: 4px;
     }
     .masthead-title {
-        font-size: 2.65rem;
-        line-height: 0.98;
+        font-size: 2.35rem;
+        line-height: 0.95;
     }
-    .newspaper-columns-3 {
-        column-count: 3;
-        column-gap: 16px;
-        column-rule: 1px solid var(--rule-color);
+
+    /* Paragraphs */
+    .p-copy {
+        font-size: 8.2pt;
+        line-height: 1.25;
+        margin-bottom: 4pt;
         text-align: justify;
+        text-indent: 9pt;
     }
-    .newspaper-columns-2 {
-        column-count: 2;
-        column-gap: 16px;
-        column-rule: 1px solid var(--rule-color);
-        text-align: justify;
-    }
-    .newspaper-columns-5 {
-        display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 10px;
-    }
-    .newspaper-copy p {
-        font-size: 9.2pt;
-        line-height: 1.32;
-        margin-bottom: 5pt;
-        text-indent: 10pt;
-    }
-    .newspaper-copy p:first-of-type,
-    .newspaper-copy p.no-indent {
-        text-indent: 0;
-    }
+    .p-copy.no-indent { text-indent: 0; }
+
     .drop-cap::first-letter {
         font-family: 'Playfair Display', Georgia, serif;
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         float: left;
-        line-height: 0.82;
+        line-height: 0.8;
         padding-top: 2px;
-        padding-right: 5px;
+        padding-right: 4px;
         font-weight: 900;
         color: var(--ink-primary);
     }
+
+    /* Grids & Columns */
+    .cols-3 {
+        column-count: 3;
+        column-gap: 14px;
+        column-rule: 1px solid var(--rule-color);
+        text-align: justify;
+    }
+    .cols-2 {
+        column-count: 2;
+        column-gap: 14px;
+        column-rule: 1px solid var(--rule-color);
+        text-align: justify;
+    }
+    .split-2-1 {
+        display: grid;
+        grid-template-columns: 1.95fr 1.05fr;
+        gap: 12px;
+    }
+    .split-1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
     .engraved-box {
         background-color: var(--paper-bg-alt);
         border: 1.5px solid var(--rule-color);
         box-shadow: inset 0 0 0 1.5px var(--paper-bg), inset 0 0 0 2.5px var(--rule-color);
-        padding: 10px 12px;
+        padding: 8px 10px;
     }
+
+    .footer-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Courier Prime', monospace;
+        font-size: 7.5pt;
+        padding-top: 4px;
+        border-top: 3px double var(--rule-color);
+        opacity: 0.85;
+    }
+"""
+
+# ==============================================================================
+# PAGE 1 HTML
+# ==============================================================================
+P1_HTML = """
+<div class="a4-sheet-inner" id="p1">
+    <div>
+        <!-- TOP CRYPTO RIBBON (Single Line Guarantee) -->
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Courier Prime', monospace; font-size: 7.2pt; border-bottom: 1px solid #000; padding-bottom: 2px; white-space: nowrap;">
+            <span>SHA256: 000000000000000000019a7e...82dc</span>
+            <span>CITADELCHRONICLE.COM • SOVEREIGN INK</span>
+            <span>ISSN 2100-0000 • PATHUM THANI</span>
+        </div>
+
+        <!-- MASTHEAD & EARS -->
+        <header class="p1-masthead-row double-rule-bottom">
+            <!-- Left Ear: Mempool Weather -->
+            <div style="border: 1px solid #000; padding: 4px 6px; background: #faf8f5; font-family: 'Courier Prime', monospace; font-size: 6.8pt; line-height: 1.25;">
+                <div style="font-weight: bold; border-bottom: 1px solid #000; padding-bottom: 2px; margin-bottom: 2px; display: flex; justify-content: space-between;">
+                    <span>MEMPOOL WEATHER</span>
+                    <span>●</span>
+                </div>
+                <div><strong>CONDITIONS:</strong> Calm, 14 s/vB</div>
+                <div><strong>NEXT BLOCK:</strong> ~8 mins</div>
+                <div><strong>HASHRATE:</strong> 712 EH/s</div>
+                <div style="font-size: 5.8pt; text-transform: uppercase; border-top: 0.5px solid #ccc; margin-top: 2px; padding-top: 1px;">Verify Own Chain</div>
+            </div>
+
+            <!-- Center Title -->
+            <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div style="font-family: 'Courier Prime', monospace; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.08em;">“All The Rants That Fit On One Sheet”</div>
+                <h1 class="font-masthead masthead-title" style="letter-spacing: 0.01em; margin: 1px 0;">The Citadel Chronicle</h1>
+                <!-- Chain divider -->
+                <div style="margin: 1px 0; width: 180px;">
+                    <svg viewBox="0 0 200 12" style="width: 100%; height: 8px; fill: none; stroke: #000;">
+                        <line x1="0" y1="6" x2="70" y2="6" stroke-width="1.2"></line>
+                        <rect x="75" y="3" width="12" height="6" rx="3" stroke-width="1.2"></rect>
+                        <line x1="87" y1="6" x2="97" y2="6" stroke-width="1.5"></line>
+                        <polygon points="100,2 106,2 107,10 99,10" fill="#000"></polygon>
+                        <line x1="109" y1="6" x2="119" y2="6" stroke-width="1.5"></line>
+                        <rect x="119" y="3" width="12" height="6" rx="3" stroke-width="1.2"></rect>
+                        <line x1="131" y1="6" x2="200" y2="6" stroke-width="1.2"></line>
+                    </svg>
+                </div>
+                <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 7.2pt; font-weight: bold; white-space: nowrap;">
+                    COLD STORAGE, HOT TAKES • <span style="font-family: 'Courier Prime', monospace; font-style: normal; font-weight: bold; font-size: 6.8pt;">CITADELCHRONICLE.COM • ESTABLISHED 2026</span>
+                </div>
+            </div>
+
+            <!-- Right Ear: Tavern Index -->
+            <div style="border: 1px solid #000; padding: 4px 6px; background: #faf8f5; font-family: 'Courier Prime', monospace; font-size: 6.8pt; line-height: 1.25;">
+                <div style="font-weight: bold; border-bottom: 1px solid #000; padding-bottom: 2px; margin-bottom: 2px; display: flex; justify-content: space-between;">
+                    <span>TAVERN &amp; COFFEE</span>
+                    <span>🍺☕</span>
+                </div>
+                <div><strong>1 PINT BITTER:</strong> 4,200 sats</div>
+                <div><strong>CITADEL ESPRESSO:</strong> 1,800 sats</div>
+                <div><strong>FIAT CURRENCY:</strong> Melting</div>
+                <div style="font-size: 5.8pt; text-transform: uppercase; border-top: 0.5px solid #ccc; margin-top: 2px; padding-top: 1px; text-align: right;">No Altcoins</div>
+            </div>
+        </header>
+
+        <!-- DATELINE BAR (Single Line Guarantee) -->
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Courier Prime', monospace; font-size: 7.2pt; padding: 2px 0; border-bottom: 2px solid #000; white-space: nowrap;">
+            <div><strong>VOL. XXI • ISSUE NO. 01</strong> • BLOCK HEIGHT: <strong>972,618</strong> • OCTOBER 2026</div>
+            <div>1 SAT/vB • BANGKOK // PATHUM THANI EDITION</div>
+        </div>
+
+        <!-- LEAD ARTICLE HEADER -->
+        <div style="text-align: center; margin-top: 6px; margin-bottom: 4px;">
+            <div style="font-family: 'Courier Prime', monospace; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-accent); font-weight: bold;">
+                ■ EXCLUSIVE DISPATCH • THE SAGE OF PATHUM THANI
+            </div>
+            <h2 class="font-headline" style="font-size: 1.45rem; font-weight: 900; line-height: 1.1; margin: 3px 0 2px 0;">
+                FOUR HOURS ABOVE THE FLOODS: THE SAGE OF PATHUM THANI ON SURVIVING THE MARKETS
+            </h2>
+            <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 8.8pt; line-height: 1.2; opacity: 0.9; max-width: 90%; margin: 0 auto; border-bottom: 1px solid #000; padding-bottom: 4px;">
+                Sanjay Popli of AlphaMind sits down with Chaloke Sambandaraksa on mindset, risk engineering, and why the CDC curriculum teaches planetary cycles to know when to step away from the desk.
+            </p>
+        </div>
+
+        <!-- HERO IMAGE (Constrained Height for Perfect Fit) -->
+        <div style="border: 1px solid #000; padding: 2px; background: #faf8f5; margin-bottom: 5px;">
+            <img src="chaloke_cinematic_wide.jpg" style="width: 100%; height: 42mm; object-fit: cover; object-position: center 30%; display: block; border: 0.5px solid #000;">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Courier Prime', monospace; font-size: 6.8pt; padding: 2px 4px;">
+                <span style="font-weight: bold;">FIG 1. THE ALPHAMIND SESSIONS</span>
+                <span style="font-family: 'EB Garamond', serif; font-style: italic; font-size: 7.5pt;">Uncle Chaloke Sambandaraksa with Sanjay Popli (alphamind.network) inside the glass pavilion, looking across the flooded paddy fields.</span>
+            </div>
+        </div>
+
+        <!-- 3-COLUMN COPY -->
+        <div class="cols-3" style="padding-top: 2px;">
+            <h3 class="font-headline" style="font-size: 8.5pt; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 1px; margin-bottom: 3px;">I. The Flooded Plains</h3>
+            <p class="p-copy drop-cap">
+                The interview began just after noon inside the glass pavilion in Pathum Thani, looking out across the drowned paddy fields still submerged from last month’s monsoon floods. For four unbroken hours, Chaloke Sambandaraksa laid bare five decades of market survival. Sanjay Popli, co-founder of Cryptomind and host of AlphaMind (alphamind.network / @alphamindpodcast), sat down with the legendary trader known simply to generations of Thai market practitioners as Uncle Chaloke. In a world obsessed with algorithmic scalping, meme tokens, and instant gratification, Chaloke opened by dismantling the central illusion of modern finance.
+            </p>
+            <p class="p-copy">
+                "I do not seek the most profitable trading system," he stated with quiet, total conviction. "Chasing maximum profit is the amateur’s fatal trap. I care only about the system that guarantees you cannot be destroyed."
+            </p>
+
+            <h3 class="font-headline" style="font-size: 8.5pt; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 1px; margin-bottom: 3px;">II. Survival Over Profit</h3>
+            <p class="p-copy">
+                For Chaloke and the CDC curriculum he founded, trading is fundamentally an exercise in risk engineering and psychological discipline. Money management is not an afterthought; it is the entire foundation. If your position sizing permits a single black swan event to wipe out your capital, you are not trading—you are merely gambling on borrowed time.
+            </p>
+            <p class="p-copy">
+                "Survive first," he urged Popli. "When you master survival, the profits take care of themselves." In five decades navigating the 1987 crash, the 1997 Tom Yam Kung crisis, and the 2008 subprime contagion, he witnessed entire generations of chartists vanish because they mistook leverage for genius.
+            </p>
+
+            <h3 class="font-headline" style="font-size: 8.5pt; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 1px; margin-bottom: 3px;">III. The First Rule</h3>
+            <p class="p-copy">
+                Before an entry is executed, the exit is already written. Survival requires knowing your ruin threshold before the order is filled. "The market will always test your weakest link," Chaloke remarked quietly, watching the brown floodwaters lap against the retaining wall. "Survive the storm first. The harvest always belongs to the patient."
+            </p>
+        </div>
+
+        <!-- PULL QUOTE BANNER -->
+        <div style="border: 1px solid #000; background: #faf8f5; padding: 4px 8px; text-align: center; margin-top: 4px;">
+            <blockquote style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 8.8pt; font-weight: bold; line-height: 1.2;">
+                “I do not seek the most profitable trading system. That is the amateur's trap. I care only about the system that guarantees you cannot be destroyed.”
+            </blockquote>
+            <div style="font-family: 'Courier Prime', monospace; font-size: 6.5pt; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 1px; opacity: 0.85;">
+                — CHALOKE SAMBANDARAKSA • CDC FOUNDER
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-line">
+        <div>PAGE 1 OF 4 • CONTINUED ON PAGE 3</div>
+        <div>THE CITADEL CHRONICLE • CITADELCHRONICLE.COM • ESTABLISHED 2026</div>
+    </footer>
+</div>
+"""
+
+# ==============================================================================
+# PAGE 2 HTML (The Editorial & Morgue)
+# ==============================================================================
+P2_HTML = """
+<div class="a4-sheet-inner" id="p2">
+    <div>
+        <!-- RUNNING HEADER -->
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Courier Prime', monospace; font-size: 7.2pt; border-bottom: 2px solid #000; padding-bottom: 2px; text-transform: uppercase; white-space: nowrap;">
+            <span>THE CITADEL CHRONICLE • ISSUE NO. 01</span>
+            <span style="font-weight: bold;">PAGE 2: THE EDITORIAL &amp; MORGUE</span>
+            <span>OCTOBER 2026</span>
+        </div>
+
+        <!-- LEAD EDITORIAL: THE MARKET REGIME -->
+        <article style="border-bottom: 1.5px solid #000; padding-bottom: 6px; margin-top: 5px; margin-bottom: 6px;">
+            <div style="background: #000; color: #fff; padding: 3px 8px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center;">
+                <span class="font-headline" style="font-size: 11pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.04em;">The Market Regime: Hard Money in an Uneasy Empire</span>
+                <span style="font-family: 'Courier Prime', monospace; font-size: 6.8pt; letter-spacing: 0.1em;">LEAD EDITORIAL</span>
+            </div>
+
+            <div class="cols-3">
+                <p class="p-copy drop-cap">
+                    Bitcoin enters late October trading north of $81,000 (Block 972,618), shrugging off spikes in US 10-year Treasury yields that would have sent traditional tech equities into a tailspin. Six months post-halving, the structural supply deficit is asserting itself. Daily exchange-traded fund inflows are systematically vacuuming up three to four times the 450 BTC daily miner emission. More significantly, sovereign and corporate treasury desks are moving past speculative accumulation into strategic balance-sheet fortification.
+                </p>
+                <p class="p-copy">
+                    When Michael Saylor is pricing convertible debt offerings at negative effective yields and sovereign wealth entities in the Gulf are quietly bidding in the OTC shadows, price discovery is no longer about retail euphoria; it is an institutional game of musical chairs with an asset that cannot be printed.
+                </p>
+                <p class="p-copy">
+                    Washington’s sudden romance with Bitcoin has evolved from fringe campaign posturing into high-stakes geopolitical theater. Donald Trump’s headline-grabbing pledges in Nashville—promising a US Strategic Bitcoin Reserve and the immediate defenestration of SEC Chairman Gary Gensler on Day One—have forced the Democratic apparatus into an awkward defensive pivot. But seasoned observers know the difference between campaign trail rhetoric and the entrenched machinery of the administrative state.
+                </p>
+                <p class="p-copy">
+                    While political promises provide short-term momentum, the true catalyst isn't Washington's blessing; it is the mathematical inevitability of the US fiscal trajectory. With the US national debt compounding by a trillion dollars every 100 days, politicians aren't adopting Bitcoin out of ideological enlightenment—they are backing into it as the only lifeboat that doesn't leak.
+                </p>
+                <p class="p-copy">
+                    Across the broader crypto circus, the mood is decidedly less celebratory. The so-called "altseason" remains MIA as a relentless conveyor belt of venture-backed Layer-1s and Layer-2s face catastrophic token unlocks. Billions in low-float, high-fully-diluted-valuation (FDV) tokens are dumping into illiquid retail order books, exposing the fundamental fiction of "governance tokens." Staking yields, once marketed as risk-free interest, are revealing themselves to be nothing more than self-referential dilution.
+                </p>
+                <p class="p-copy">
+                    As Ethereum struggles under layer-2 fee cannibalization and Solana trades stability for speculative memecoin casino volume, capital is rotating relentlessly back toward the only asset with genuine monetary hardness. The market is slowly rediscovering what cypherpunks knew fifteen years ago: if a token requires a foundation, a roadshow, and a venture lockup schedule, it isn't cryptocurrency—it's an unregistered penny stock with an API.
+                </p>
+            </div>
+        </article>
+
+        <!-- LOWER SECTION: THE BITTER BIT + SIDEBAR -->
+        <div class="split-2-1">
+            <!-- LEFT: THE BITTER BIT -->
+            <section style="border-right: 1px solid #000; padding-right: 10px;">
+                <div style="border-bottom: 1px solid #000; padding-bottom: 2px; margin-bottom: 4px;">
+                    <span style="font-family: 'Courier Prime', monospace; font-size: 6.8pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-accent); font-weight: bold;">OP-ED • GET OFF MY NODE</span>
+                    <h2 class="font-headline" style="font-size: 11pt; font-weight: 900; text-transform: uppercase; line-height: 1.15;">The Bitter Bit: What on Earth is Ledger Thinking?</h2>
+                    <div style="font-family: 'Courier Prime', monospace; font-size: 6.8pt; font-style: italic; opacity: 0.8;">By The Old Bastard</div>
+                </div>
+
+                <div class="cols-2">
+                    <p class="p-copy drop-cap">
+                        What on earth is Ledger thinking? Fresh off the total mayhem of the supply chain attack where someone added an LTE modem to certain wallets to capture seed phrases directly off the screen, which seems to be localised to a reseller in Malaysia, CryptoBilis and maybe another one in Europe, MediaMarkt, they are doubling down on complexity and launching what is basically an Android phone based hardware wallet.
+                    </p>
+                    <p class="p-copy">
+                        Yes. Increasing the complexity of a device by untold multiples will definitely not be a problem in security and locking it down. In computer science, they say one of the best features is KISS - Keep It Simple, Stupid.
+                    </p>
+                    <p class="p-copy">
+                        The supply chain attack has cost users an estimated 80 to 90 million USD, with a single largest loss a cluster of 213 BTC (17 million USD). Worse their communication on the matter has been, limited to say the least. The website mentions it in a high level corporate PR spin kind of way and they are very much business as usual going forth.
+                    </p>
+                    <p class="p-copy">
+                        "People simply don't care. All they care about is features," said Piriya Sambandaraksa, proprietor of Citadel Coffee. "Features, and ease of use." I suppose so.
+                    </p>
+                    <p class="p-copy">
+                        Contrast that with the deep technical analysis and detailed down to the minute blow by blow forensic explanation of what happened to the Liquid hack whereby so-called whitehat hackers managed to mint 4,000 Liquid BTC out of thin air by reusing a cached hash, cashed it out via a peg-out partner and then said that they were the good guys and returned most of it, giving themselves 640 BTC as a reward. I think that hat needs a wash and it is certainly very dirty. Too dirty to be called white.
+                    </p>
+                </div>
+            </section>
+
+            <!-- RIGHT: MAGICALTUX & TAVERN RULES -->
+            <aside style="display: flex; flex-direction: column; justify-content: space-between;">
+                <!-- MagicalTux Box -->
+                <div class="engraved-box">
+                    <div style="font-family: 'Courier Prime', monospace; font-size: 6.5pt; font-weight: bold; text-transform: uppercase; color: var(--ink-accent); border-bottom: 0.5px solid #000; padding-bottom: 1px; margin-bottom: 2px;">
+                        ⚰️ MORGUE DISPATCH • REDEMPTION
+                    </div>
+                    <h3 class="font-headline" style="font-size: 8.8pt; font-weight: bold; line-height: 1.15; margin-bottom: 2px;">The Strange Redemption of MagicalTux</h3>
+                    <p style="font-size: 7.2pt; line-height: 1.25; text-align: justify;">
+                        Perhaps the greatest irony of the Ledger hack is that it has become the crescendo of MagicalTux's redemption arc. Yes, that guy who lost 850,000 Bitcoin due to sloppy coding is now suddenly a really cool OG bitcoiner who knows security. Surviving a decade transforms yesterday's villain into tomorrow's hardware security oracle.
+                    </p>
+                </div>
+
+                <!-- Tavern Rules -->
+                <div style="border: 1px solid #000; padding: 4px 6px; background: #faf8f5; font-family: 'Courier Prime', monospace; font-size: 6.8pt; line-height: 1.25; margin-top: 4px;">
+                    <div style="font-weight: bold; border-bottom: 1px solid #000; padding-bottom: 1px; margin-bottom: 2px; display: flex; justify-content: space-between;">
+                        <span>🍺 TAVERN HOUSE RULES</span>
+                        <span>CITADEL</span>
+                    </div>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li><strong>1.</strong> Not your keys, not your coins.</li>
+                        <li><strong>2.</strong> Not your bare metal, not server.</li>
+                        <li><strong>3.</strong> If it requires YAML, you buy round.</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-line">
+        <div>PAGE 2 OF 4 • EDITORIAL &amp; MORGUE</div>
+        <div>CITADELCHRONICLE.COM • ESTABLISHED 2026</div>
+    </footer>
+</div>
+"""
+
+# ==============================================================================
+# PAGE 3 HTML (The Deep Dive & Display Ads)
+# ==============================================================================
+P3_HTML = """
+<div class="a4-sheet-inner" id="p3">
+    <div>
+        <!-- RUNNING HEADER (Single Line Guarantee) -->
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Courier Prime', monospace; font-size: 7.2pt; border-bottom: 2px solid #000; padding-bottom: 2px; text-transform: uppercase; white-space: nowrap;">
+            <span>THE CITADEL CHRONICLE • ISSUE NO. 01</span>
+            <span style="font-weight: bold;">PAGE 3: THE DEEP DIVE &amp; DISPLAY ADS</span>
+            <span>OCTOBER 2026</span>
+        </div>
+
+        <!-- TOP HALF: CHALOKE INTERVIEW PART II -->
+        <article style="border-bottom: 1.5px solid #000; padding-bottom: 6px; margin-top: 5px; margin-bottom: 6px;">
+            <!-- Header bar on ONE single line -->
+            <div style="border-bottom: 1px solid #000; padding-bottom: 2px; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: baseline; white-space: nowrap;">
+                <div>
+                    <span style="font-family: 'Courier Prime', monospace; font-size: 6.8pt; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-accent); font-weight: bold;">FEATURE CONTINUATION • PART II:</span>
+                    <h2 class="font-headline" style="font-size: 10.5pt; font-weight: 900; text-transform: uppercase; display: inline; margin-left: 4px;">Cycles &amp; Macro Time</h2>
+                </div>
+                <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 8pt; opacity: 0.85;">The Discipline of Doing Nothing</span>
+            </div>
+
+            <div class="cols-3">
+                <p class="p-copy drop-cap">
+                    Then came the subject that distinguishes the CDC curriculum from dogmatic western academia: the integration of financial astrology into market timing. Rather than intraday crystal-gazing or fortune-telling, Chaloke employs ancient planetary cycles to gauge broad multi-year macro regimes—identifying which years carry favorable tailwinds, and which years demand that a disciplined trader step away from the desk entirely.
+                </p>
+                <p class="p-copy">
+                    Knowing when <em>not</em> to trade is the highest discipline of all. For his students across Thailand, this cyclical timing is prized above all technical indicators. When the macro cycle turns hostile, no oscillator, Fibonacci retracement, or moving average crossover can save the over-leveraged.
+                </p>
+                <p class="p-copy">
+                    "In a bear regime, your job is not to make money," Chaloke explained. "Your job is to preserve your capital and keep your mind clear. When the cycle turns, those who preserved their seed capital will inherit the market. Those who tried to force trades in bad years will have already liquidated themselves."
+                </p>
+                <p class="p-copy">
+                    "People think trading is about continuous action," he added, adjusting his suspenders as the afternoon sun hit the flooded fields. "True trading is ninety percent waiting and ten percent decisive execution. If you do not have the patience to sit on your hands for twelve months while the storm passes, the market will gladly confiscate your tuition fees."
+                </p>
+            </div>
+        </article>
+
+        <!-- BOTTOM HALF: NEWSROOM WAR STORIES + CITADEL COFFEE AD (Fixed Grid 2:1) -->
+        <div class="split-2-1">
+            <!-- LEFT: THE SEGREGATED WITNESS -->
+            <section style="border-right: 1px solid #000; padding-right: 10px;">
+                <div class="engraved-box">
+                    <div style="border-bottom: 1px solid #000; padding-bottom: 2px; margin-bottom: 3px; display: flex; justify-content: space-between; align-items: baseline; white-space: nowrap;">
+                        <div>
+                            <span style="font-family: 'Courier Prime', monospace; font-size: 6.5pt; font-weight: bold; text-transform: uppercase; color: var(--ink-accent);">NEWSROOM MORGUE • 1995</span>
+                            <h2 class="font-headline" style="font-size: 11pt; font-weight: 900; text-transform: uppercase; display: inline; margin-left: 4px;">The Segregated Witness</h2>
+                        </div>
+                        <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 7.5pt;">By Don Sambandaraksa</span>
+                    </div>
+
+                    <h3 class="font-headline" style="font-size: 8.5pt; font-weight: bold; line-height: 1.15; margin-bottom: 3px;">
+                        Whiteboards with Benioff, Nasal Survival with Stallman, and Monty's Daughters
+                    </h3>
+
+                    <div class="cols-2">
+                        <p class="p-copy drop-cap">
+                            Most twenty-something tech commentators think computer history began the day they opened their first GitHub account in 2019. When you spent years on the technology beat at the <em>Bangkok Post</em>, however, you carry a slightly different set of mental scars. I still remember sitting in a Bangkok hotel suite with Marc Benioff back when his handlers had to pre-brief journalists with a marker and whiteboard just to explain what “Software as a Service” meant—long before SaaS mutated into the recurring-revenue hostage crisis we endure today.
+                        </p>
+                        <p class="p-copy">
+                            Not long after, I interviewed free-software prophet Richard Stallman in person. You can read all the GNU manifestos you want, but nothing prepares a working reporter for the sheer olfactory force field of RMS at five paces. The man was brilliant, uncompromising, and smelled like he had been compiling the kernel inside a gym sock since 1984.
+                        </p>
+                        <p class="p-copy">
+                            My favorite conversations, though, were always with the pragmatic builders like Michael “Monty” Widenius. Sitting down to hear the story behind <code style="font-family: 'Courier Prime', monospace; font-size: 6.8pt;">MySQL</code>—named after his older daughter, My—and how, even after selling it for a billion dollars, he couldn’t stomach watching Oracle’s corporate bureaucracy strangle his baby, so he forked <code style="font-family: 'Courier Prime', monospace; font-size: 6.8pt;">MariaDB</code> (named after his younger daughter, Maria) just to keep the code honest.
+                        </p>
+                        <p class="p-copy">
+                            That is why institutional memory matters. When you have looked the architects of the modern stack in the eye—the idealists, the salesmen, and the craftsmen—you can spot a reheated dot-com grift from three blocks away. The acronyms change every five years; human nature and bad code stay exactly the same.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RIGHT: CITADEL COFFEE SHOP AD -->
+            <aside style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="border: 1px solid #000; padding: 6px; background: #faf8f5; text-align: center;">
+                    <div style="background: #000; color: #fff; font-family: 'Courier Prime', monospace; font-size: 6.2pt; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 0; margin-bottom: 3px; font-weight: bold;">
+                        ★ CLASSIFIED ADVERTISEMENT ★
+                    </div>
+                    <h3 class="font-headline" style="font-size: 10pt; font-weight: 900; text-transform: uppercase; margin-bottom: 1px;">Citadel Coffee Shop</h3>
+                    <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 7.2pt; font-weight: bold; margin-bottom: 2px;">Notice: 99.9% Dark Roast Consensus</div>
+                    <div style="width: 25px; height: 1px; background: #000; margin: 2px auto;"></div>
+                    <p style="font-size: 7.2pt; line-height: 1.25; margin-bottom: 3px;">
+                        Miners have officially locked in today's Ethiopian Yirgacheffe. Any customer attempting to order oat milk will be partitioned into an isolated subnet.
+                    </p>
+                    <div style="border-top: 0.5px solid #000; padding-top: 2px; font-family: 'Courier Prime', monospace; font-size: 5.8pt; font-weight: bold;">
+                        HARD FORKS STRICTLY FORBIDDEN • SATS
+                    </div>
+                </div>
+
+                <div style="border: 1px solid #000; padding: 4px; background: #ffffff; text-align: center; font-family: 'Courier Prime', monospace; font-size: 6.5pt; margin-top: 4px;">
+                    <div style="font-weight: bold; text-transform: uppercase;">RIGHT SHIFT ADVISORY</div>
+                    <div style="font-size: 6pt; opacity: 0.85;">Sovereign Bitcoin custody architecture for family offices &amp; treasury desks.</div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-line">
+        <div>PAGE 3 OF 4 • THE DEEP DIVE</div>
+        <div>CONTINUED ON PAGE 4 • CITADELCHRONICLE.COM</div>
+    </footer>
+</div>
+"""
+
+# ==============================================================================
+# PAGE 4 HTML (The Back Page)
+# ==============================================================================
+P4_HTML = """
+<div class="a4-sheet-inner" id="p4">
+    <div>
+        <!-- RUNNING HEADER -->
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Courier Prime', monospace; font-size: 7.2pt; border-bottom: 2px solid #000; padding-bottom: 2px; text-transform: uppercase; white-space: nowrap;">
+            <span>THE CITADEL CHRONICLE • ISSUE NO. 01</span>
+            <span style="font-weight: bold;">PAGE 4: THE BACK PAGE (DISPATCHES &amp; CLASSIFIEDS)</span>
+            <span>OCTOBER 2026</span>
+        </div>
+
+        <!-- TOP SECTION: FROM THE MEMPOOL (5-BIT BYTELINES) -->
+        <section style="border-bottom: 1.5px solid #000; padding-bottom: 5px; margin-top: 4px; margin-bottom: 5px;">
+            <div style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 2px 0; margin-bottom: 4px; text-align: center; background: #faf8f5;">
+                <h2 class="font-headline" style="font-size: 11pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.04em;">From The Mempool: 5-Bit Bytelines</h2>
+                <div style="font-family: 'Courier Prime', monospace; font-size: 6.5pt; opacity: 0.85;">UNCONFIRMED CHAOS, MESH ROUTING &amp; NEWSROOM SHORTS BY DON SAMBANDARAKSA</div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px;">
+                <!-- 1. Holy Basil -->
+                <div style="border-right: 0.5px solid #000; padding-right: 5px;">
+                    <h4 class="font-headline" style="font-size: 7.5pt; font-weight: bold; text-transform: uppercase; line-height: 1.15; margin-bottom: 2px;">1. Privatised Gains</h4>
+                    <p style="font-size: 6.8pt; line-height: 1.22; text-align: justify;">
+                        Your favourite Omni Consumer Products oCP patented a strain of holy basil. Thailand's favourite dish: Krapao in Pad Krapao. In a skit worthy of Robocop, oCP minions pointed out people can still plant and eat it, just not sell it. Kaset Uni noted newly developed strains were bred legally.
+                    </p>
+                </div>
+
+                <!-- 2. EV Tax -->
+                <div style="border-right: 0.5px solid #000; padding-right: 5px;">
+                    <h4 class="font-headline" style="font-size: 7.5pt; font-weight: bold; text-transform: uppercase; line-height: 1.15; margin-bottom: 2px;">2. 30% EV Tax Shock</h4>
+                    <p style="font-size: 6.8pt; line-height: 1.22; text-align: justify;">
+                        The government says it will put import taxes on foreign EVs to 30%. A level playing field is fine, but giving two months notice? The lack of regulatory stability does more damage to business confidence than any tax tweak could remedy.
+                    </p>
+                </div>
+
+                <!-- 3. Crude in Gold -->
+                <div style="border-right: 0.5px solid #000; padding-right: 5px;">
+                    <h4 class="font-headline" style="font-size: 7.5pt; font-weight: bold; text-transform: uppercase; line-height: 1.15; margin-bottom: 2px;">3. Oil Priced in Gold</h4>
+                    <p style="font-size: 6.8pt; line-height: 1.22; text-align: justify;">
+                        Petrol went up this week, but priced in gold, crude is nearly 4x cheaper than the late 1970s. Peaking at &gt;3g gold/bbl (~10 bbl/oz) then, today it trades at ~0.75g gold/bbl (~40 bbl/oz). To match late-70s hard money, crude would need to surge past $390/barrel.
+                    </p>
+                </div>
+
+                <!-- 4. Citadel Floods -->
+                <div style="border-right: 0.5px solid #000; padding-right: 5px;">
+                    <h4 class="font-headline" style="font-size: 7.5pt; font-weight: bold; text-transform: uppercase; line-height: 1.15; margin-bottom: 2px;">4. Citadel Floods</h4>
+                    <p style="font-size: 6.8pt; line-height: 1.22; text-align: justify;">
+                        Floodwaters around the Citadel have receded. Roads remained just passable at peak. Lower-lying trees suffered, and the rotting black stagnant water smelled awful, but no mass dead fish. Far from normal, but we are drying out.
+                    </p>
+                </div>
+
+                <!-- 5. BitChat in France -->
+                <div>
+                    <h4 class="font-headline" style="font-size: 7.5pt; font-weight: bold; text-transform: uppercase; line-height: 1.15; margin-bottom: 2px; color: var(--ink-accent);">5. BitChat Tops France</h4>
+                    <p style="font-size: 6.8pt; line-height: 1.22; text-align: justify;">
+                        Thanks to social unrest in France, BitChat—the encrypted p2p messenger app based around Nostr and Bluetooth transport—is now number one on the French app store. When cellular towers are throttled and state censors watch telecom pipes, mesh routing thrives.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOWER SECTION: BITCOIN THAILAND 2026 AD & OBITUARIES (Fixed Grid 1:1) -->
+        <div class="split-1-1">
+            <!-- LEFT: DISPLAY AD BITCOIN THAILAND 2026 -->
+            <section style="border: 1px solid #000; padding: 6px; background: #faf8f5; text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="background: #000; color: #fff; font-family: 'Courier Prime', monospace; font-size: 6.5pt; text-transform: uppercase; letter-spacing: 0.1em; padding: 1px 0; margin-bottom: 3px; font-weight: bold;">
+                        ★ OFFICIAL CONFERENCE DISPLAY ★
+                    </div>
+                    <div style="border: 0.5px solid #000; padding: 2px; background: #fff; display: inline-block; max-width: 170px;">
+                        <img src="ad_bitcoin_thailand_2026_hires.jpg" style="width: 100%; height: auto; max-height: 85px; object-fit: contain; display: block;" onerror="this.src='ad_bitcoin_thailand_2026.jpg'">
+                    </div>
+                    <h3 class="font-headline" style="font-size: 13pt; font-weight: 900; text-transform: uppercase; margin-top: 3px; line-height: 1.1;">BITCOIN THAILAND 2026</h3>
+                    <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 9pt; font-weight: bold; color: var(--ink-accent);">28–29 NOVEMBER 2026</div>
+                    <div style="font-family: 'Courier Prime', monospace; font-size: 7.2pt; margin-top: 1px;">📍 Samyan Mitrtown Hall, Bangkok</div>
+                </div>
+                <div style="border-top: 0.5px solid #000; padding-top: 2px; margin-top: 3px; font-family: 'Courier Prime', monospace; font-size: 6.8pt; opacity: 0.85;">
+                    Presented by Right Shift — Your Everyday Bitcoin • บุลเบ็ด
+                </div>
+            </section>
+
+            <!-- RIGHT: OBITUARIES & NOSTR IMPRINT -->
+            <section style="display: flex; flex-direction: column; justify-content: space-between;">
+                <!-- Obituaries -->
+                <div style="border: 1px solid #000; padding: 5px 6px; background: #faf8f5;">
+                    <div style="font-family: 'Courier Prime', monospace; font-size: 6.8pt; font-weight: bold; text-transform: uppercase; border-bottom: 0.5px solid #000; padding-bottom: 1px; margin-bottom: 2px; display: flex; justify-content: space-between;">
+                        <span>⚰️ OBITUARIES &amp; RUGS</span>
+                        <span>R.I.P.</span>
+                    </div>
+                    <p style="font-size: 7.2pt; line-height: 1.25;">
+                        <strong>In Memoriam: CloudSmart Home Hub (2021–2026).</strong> Bricked remotely on Friday after its parent company pivoted to generative AI. Survived by 40,000 plastic paperweights and a very smug guy using physical wall switches.
+                    </p>
+                </div>
+
+                <!-- Sovereign Imprint -->
+                <div style="border: 1px solid #000; padding: 5px 6px; background: #ffffff; font-family: 'Courier Prime', monospace; font-size: 6.8pt;">
+                    <div style="font-weight: bold; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; border-bottom: 0.5px solid #000; padding-bottom: 1px; display: flex; justify-content: space-between;">
+                        <span>⚡ SOVEREIGN IMPRINT &amp; NOSTR</span>
+                        <span>EST. 2026</span>
+                    </div>
+                    <p style="font-family: 'EB Garamond', serif; font-size: 7.5pt; font-style: italic; margin-bottom: 2px;">
+                        Comments, critiques, and corrections to the Editor:
+                    </p>
+                    <div style="font-size: 6.5pt; line-height: 1.2; background: #faf8f5; padding: 3px 4px; border: 0.5px solid #000; word-break: break-all;">
+                        <div><strong>EDITOR:</strong> Don Sambandaraksa</div>
+                        <div><strong>WEB:</strong> citadelchronicle.com</div>
+                        <div><strong>NOSTR:</strong> npub1mwpsruysa2nv0ukv9mzssk8grfp7tdhftvcrs3azu9sfrhnasl7qu5uu3w</div>
+                    </div>
+                    <div style="font-size: 6pt; opacity: 0.75; margin-top: 2px; display: flex; justify-content: space-between;">
+                        <span>CITADEL PRESS, PATHUM THANI</span>
+                        <span>ESTABLISHED 2026</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-line">
+        <div>PAGE 4 OF 4 • CONCLUDED • PRINTED ON INK &amp; PAPER</div>
+        <div>THE CITADEL CHRONICLE • CITADELCHRONICLE.COM • ESTABLISHED 2026</div>
+    </footer>
+</div>
 """
 
 # HTML Template for A3 Landscape Duplex (Sheet 1: P4 + P1, Sheet 2: P2 + P3)
@@ -135,8 +617,7 @@ A3_HTML = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Citadel Chronicle — A3 Broadsheet Print Imposition</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>The Citadel Chronicle — A3 Broadsheet Print</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -156,23 +637,13 @@ A3_HTML = f"""<!DOCTYPE html>
             background: #ffffff;
             overflow: hidden;
         }}
-        .page-half {{
-            width: 210mm;
-            height: 297mm;
-            padding: 14mm 16mm 14mm 16mm;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-        }}
-        /* Fold Guide line */
         .fold-guide {{
             position: absolute;
             left: 210mm;
             top: 0;
             bottom: 0;
             width: 0px;
-            border-left: 0.5px dashed rgba(0,0,0,0.25);
+            border-left: 0.5px dashed rgba(0,0,0,0.2);
             z-index: 50;
         }}
         .fold-tick-top {{
@@ -180,7 +651,7 @@ A3_HTML = f"""<!DOCTYPE html>
             left: 209.5mm;
             top: 0;
             width: 1mm;
-            height: 4mm;
+            height: 3.5mm;
             background: #000000;
             z-index: 60;
         }}
@@ -189,37 +660,29 @@ A3_HTML = f"""<!DOCTYPE html>
             left: 209.5mm;
             bottom: 0;
             width: 1mm;
-            height: 4mm;
+            height: 3.5mm;
             background: #000000;
             z-index: 60;
         }}
     </style>
 </head>
 <body>
-    <!-- SHEET 1 (OUTSIDE): PAGE 4 (BACK) on LEFT | PAGE 1 (FRONT) on RIGHT -->
+    <!-- SHEET 1 (OUTSIDE): P4 (LEFT) + P1 (RIGHT) -->
     <div class="a3-sheet" id="sheet-1">
         <div class="fold-guide"></div>
         <div class="fold-tick-top"></div>
         <div class="fold-tick-bottom"></div>
-        <div class="page-half">
-            {p4_content}
-        </div>
-        <div class="page-half">
-            {p1_content}
-        </div>
+        {P4_HTML}
+        {P1_HTML}
     </div>
 
-    <!-- SHEET 2 (INSIDE): PAGE 2 (EDITORIAL) on LEFT | PAGE 3 (DEEP DIVE) on RIGHT -->
+    <!-- SHEET 2 (INSIDE): P2 (LEFT) + P3 (RIGHT) -->
     <div class="a3-sheet" id="sheet-2">
         <div class="fold-guide"></div>
         <div class="fold-tick-top"></div>
         <div class="fold-tick-bottom"></div>
-        <div class="page-half">
-            {p2_content}
-        </div>
-        <div class="page-half">
-            {p3_content}
-        </div>
+        {P2_HTML}
+        {P3_HTML}
     </div>
 </body>
 </html>
@@ -231,7 +694,6 @@ A4_HTML = f"""<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>The Citadel Chronicle — A4 Portrait Sequential Print</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
@@ -241,25 +703,17 @@ A4_HTML = f"""<!DOCTYPE html>
             size: 210mm 297mm;
             margin: 0;
         }}
-        .a4-page-sheet {{
-            width: 210mm;
-            height: 297mm;
+        .a4-page-wrapper {{
             page-break-after: always;
             break-after: page;
-            padding: 14mm 16mm 14mm 16mm;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            background: #ffffff;
-            overflow: hidden;
         }}
     </style>
 </head>
 <body>
-    <div class="a4-page-sheet" id="p1">{p1_content}</div>
-    <div class="a4-page-sheet" id="p2">{p2_content}</div>
-    <div class="a4-page-sheet" id="p3">{p3_content}</div>
-    <div class="a4-page-sheet" id="p4">{p4_content}</div>
+    <div class="a4-page-wrapper">{P1_HTML}</div>
+    <div class="a4-page-wrapper">{P2_HTML}</div>
+    <div class="a4-page-wrapper">{P3_HTML}</div>
+    <div class="a4-page-wrapper">{P4_HTML}</div>
 </body>
 </html>
 """
@@ -287,7 +741,7 @@ cmd_a3 = [
     "--no-sandbox",
     "--disable-gpu",
     "--run-all-compositor-stages-before-draw",
-    "--virtual-time-budget=5000",
+    "--virtual-time-budget=6000",
     f"--print-to-pdf={pdf_a3}",
     "--no-pdf-header-footer",
     f"file://{a3_html_path}"
@@ -301,7 +755,7 @@ cmd_a4 = [
     "--no-sandbox",
     "--disable-gpu",
     "--run-all-compositor-stages-before-draw",
-    "--virtual-time-budget=5000",
+    "--virtual-time-budget=6000",
     f"--print-to-pdf={pdf_a4}",
     "--no-pdf-header-footer",
     f"file://{a4_html_path}"
@@ -311,17 +765,16 @@ subprocess.run(cmd_a4, check=True)
 # Generate 300 DPI JPGs using pdftoppm
 print("Rendering 300 DPI JPGs from A3 PDF...")
 subprocess.run([
-    "pdftoppm", "-r", "300", "-jpeg", "-jpegopt", "quality=95",
+    "pdftoppm", "-r", "300", "-jpeg", "-jpegopt", "quality=96",
     pdf_a3, os.path.join(WORKING_DIR, "citadel_chronicle_a3_sheet")
 ], check=True)
 
 print("Rendering 300 DPI JPGs from A4 PDF...")
 subprocess.run([
-    "pdftoppm", "-r", "300", "-jpeg", "-jpegopt", "quality=95",
+    "pdftoppm", "-r", "300", "-jpeg", "-jpegopt", "quality=96",
     pdf_a4, os.path.join(WORKING_DIR, "citadel_chronicle_a4_page")
 ], check=True)
 
-# Rename pdftoppm files to friendly names
 rename_map = {
     "citadel_chronicle_a3_sheet-1.jpg": "citadel_chronicle_a3_sheet1_outside_p4_p1_300dpi.jpg",
     "citadel_chronicle_a3_sheet-2.jpg": "citadel_chronicle_a3_sheet2_inside_p2_p3_300dpi.jpg",
