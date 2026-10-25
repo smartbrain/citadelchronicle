@@ -1,0 +1,5 @@
+.obsidian/
+Untitled.base
+*.pyc
+__pycache__/
+issue-02/backup_v3/

@@ -1,0 +1,17 @@
+{
+  "issue_number": "02",
+  "volume": "XXI",
+  "issue_title": "The Citadel Chronicle",
+  "tagline": "COLD STORAGE, HOT TAKES",
+  "block_height": "973,200",
+  "block_hash": "000000000000000000021b8c4e7f10a8c2d9e03f2a1b7e4f9c8d1e2a3b4c5d6e",
+  "date_display": "NOVEMBER 2026",
+  "location": "PATHUM THANI // BANGKOK",
+  "mempool_fee": "12 sat/vB",
+  "mempool_status": "Clear, 12 sat/vB",
+  "next_block_est": "~9 mins",
+  "hashrate_est": "725 EH/s",
+  "pint_bitter_price": "4,200 sats",
+  "citadel_espresso_price": "1,800 sats",
+  "fiat_status": "Melting Fast"
+}
