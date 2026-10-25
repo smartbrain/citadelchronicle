@@ -219,11 +219,15 @@
 <body class="desktop-force">
 
     <!-- TOP CONTROL TOOLBAR -->
-    <header class="max-w-5xl mx-auto mb-6 bg-stone-900 border border-stone-700 text-stone-200 p-3 rounded-lg shadow-2xl flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
-        <div class="flex items-center gap-2">
-            <a href="index.html" class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 rounded text-amber-300 font-bold">← Issue 01</a>
-            <span class="font-bold tracking-widest text-amber-500 uppercase">THE CITADEL CHRONICLE • ISSUE 02</span>
-            <span class="bg-amber-900/60 text-amber-200 px-2 py-0.5 rounded border border-amber-600/40">DRAFT PROOF</span>
+    <header class="no-print max-w-6xl mx-auto mb-6 bg-stone-900 border border-stone-700 text-stone-200 p-3 rounded-lg shadow-2xl flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+        <div class="flex flex-wrap items-center gap-2">
+            <!-- ISSUE SELECTOR -->
+            <div class="flex items-center gap-1 bg-black/60 p-1 rounded border border-amber-600/50">
+                <span class="font-bold text-amber-500 uppercase tracking-wider text-[11px] px-1">EDITION:</span>
+                <a href="index.html" id="navIssue02" class="px-2.5 py-1 rounded text-xs font-bold transition bg-amber-600 text-stone-950 font-extrabold shadow" title="Currently viewing Issue No. 02 (Latest Release)">🗞️ No. 02 (Nov 2026)</a>
+                <a href="issue-01.html" id="navIssue01" class="px-2.5 py-1 rounded text-xs font-bold transition bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white border border-stone-600" title="Switch to Issue No. 01 (Oct 2026)">🏛️ No. 01 (Oct 2026)</a>
+            </div>
+            <span class="font-bold tracking-widest text-amber-500 uppercase hidden sm:inline">THE CITADEL CHRONICLE</span>
         </div>
 
         <!-- VIEW SELECTOR BUTTONS -->
@@ -820,6 +824,7 @@
 
             // Reset classes
             root.className = '';
+            document.body.classList.remove('mobile-mode');
             [p1, p2, p3, p4].forEach(p => {
                 p.classList.remove('hidden', 'page-left', 'page-right');
             });

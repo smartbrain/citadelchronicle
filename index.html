@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE CITADEL CHRONICLE — Issue No. 01</title>
+    <title>THE CITADEL CHRONICLE — Issue No. 02</title>
     <!-- Tailwind CSS for structural utilities -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Classic Broadsheet, Blackletter & Cypherpunk Monospace -->
@@ -45,10 +45,6 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* =====================================================================
-           TRUE A4 PORTRAIT CONTAINER (210mm × 297mm • Ratio 1:1.4142)
-           At 96 DPI screen scale: 794px width × 1123px minimum height.
-           ===================================================================== */
         .a4-page {
             width: 794px;
             max-width: 100%;
@@ -58,1190 +54,864 @@
             background-color: var(--paper-bg);
             background-image: 
                 radial-gradient(rgba(120, 100, 70, 0.06) 1px, transparent 0),
-                radial-gradient(rgba(40, 30, 20, 0.04) 1px, transparent 0);
-            background-size: 24px 24px;
-            background-position: 0 0, 12px 12px;
-            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.55), inset 0 0 60px rgba(139, 115, 85, 0.1);
-            border: 1px solid var(--rule-color);
-            position: relative;
+                linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px);
+            background-size: 24px 24px, 100% 100%;
+            box-shadow: 
+                0 0 0 1px rgba(0,0,0,0.35),
+                0 18px 45px rgba(0, 0, 0, 0.65),
+                0 4px 12px rgba(0, 0, 0, 0.4);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            position: relative;
+            box-sizing: border-box;
         }
 
-        /* Typography Classes */
-        .font-masthead {
-            font-family: 'UnifrakturMaguntia', 'Cinzel Decorative', serif;
-            letter-spacing: 0.02em;
-        }
-        .font-headline {
-            font-family: 'Playfair Display', Georgia, serif;
-        }
-        .font-body {
-            font-family: 'EB Garamond', Georgia, serif;
-        }
-        .font-mono-tech {
-            font-family: 'Courier Prime', monospace;
+        .a4-page::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.04) 100%);
         }
 
-        /* Newspaper Rules & Dividers */
-        .double-rule-top {
-            border-top: 4px double var(--rule-color);
-        }
-        .double-rule-bottom {
-            border-bottom: 4px double var(--rule-color);
-        }
-        .heavy-rule-top {
-            border-top: 3px solid var(--rule-color);
-        }
-        .heavy-rule-bottom {
-            border-bottom: 2px solid var(--rule-color);
-        }
-        .thin-rule-bottom {
-            border-bottom: 1px solid var(--rule-color);
-        }
-
-        /* Masthead Grid */
-        .masthead-row {
-            display: grid;
-            grid-template-columns: 145px minmax(0, 1fr) 145px;
-            align-items: stretch;
-            gap: 12px;
-            padding-bottom: 6px;
-        }
-
-        .masthead-title {
-            font-size: clamp(2.2rem, 4.4vw, 3.4rem);
-            line-height: 0.98;
-        }
-
-        /* Newspaper Column Layouts (Balanced for A4 Portrait Width) */
-        .newspaper-columns-3 {
-            column-count: 3;
-            column-gap: 18px;
-            column-rule: 1px solid var(--rule-color);
-            text-align: justify;
-        }
-
-        .newspaper-columns-2 {
-            column-count: 2;
-            column-gap: 18px;
-            column-rule: 1px solid var(--rule-color);
-            text-align: justify;
-        }
-
-        .newspaper-columns-5 {
-            display: grid;
-            grid-template-columns: repeat(5, minmax(0, 1fr));
-            gap: 12px;
-        }
-
-        .newspaper-copy p {
-            font-size: 0.94rem;
-            line-height: 1.34;
-            margin-bottom: 0.6rem;
-            text-indent: 1rem;
-        }
-        .newspaper-copy p:first-of-type,
-        .newspaper-copy p.no-indent {
-            text-indent: 0;
-        }
-
-        .drop-cap::first-letter {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 2.9rem;
-            float: left;
-            line-height: 0.82;
-            padding-top: 3px;
-            padding-right: 6px;
-            padding-bottom: 0;
-            font-weight: 900;
-            color: var(--ink-primary);
-        }
-
-        /* Mechanical Clack Buttons */
-        .press-btn {
-            font-family: 'Courier Prime', monospace;
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 5px 9px;
-            border: 1px solid var(--rule-color);
-            background-color: var(--paper-bg-alt);
-            color: var(--ink-primary);
-            cursor: pointer;
-            transition: all 0.12s ease;
-            box-shadow: 2px 2px 0px var(--rule-color);
-            white-space: nowrap;
-        }
-        .press-btn:hover {
-            transform: translate(-1px, -1px);
-            box-shadow: 3px 3px 0px var(--rule-color);
-        }
-        .press-btn:active, .press-btn.active-mode {
-            transform: translate(1px, 1px);
-            box-shadow: 0px 0px 0px var(--rule-color);
-            background-color: var(--ink-primary);
-            color: var(--paper-bg);
-        }
-
-        [contenteditable="true"] {
-            outline: 1px dashed var(--ink-accent);
-            background-color: rgba(139, 30, 30, 0.05);
-        }
-
-        .engraved-box {
-            background-color: var(--paper-bg-alt);
-            border: 2px solid var(--rule-color);
-            box-shadow: inset 0 0 0 2px var(--paper-bg), inset 0 0 0 3px var(--rule-color);
-            padding: 12px 14px;
-        }
-
-        /* =====================================================================
-           A3 SPREAD CONTAINER (Two A4 Pages Side-by-Side = 420mm × 297mm)
-           ===================================================================== */
+        /* Spreads: A3 Landscape (Two A4 Pages Side-by-Side) */
         .spread-wrapper {
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: stretch;
-            max-width: 1620px;
+            gap: 2px;
+            max-width: 1600px;
             margin: 0 auto 36px auto;
-            position: relative;
+            background-color: #1a1917;
+            padding: 6px;
+            border-radius: 4px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.8);
         }
 
         .spread-wrapper .a4-page {
             margin: 0;
+            width: 785px;
             box-shadow: none;
         }
 
-        /* Center Fold Shadow Effect for Authentic A3 Broadsheet Crease */
-        .spread-wrapper .page-left {
-            border-right: 1px dashed rgba(60, 50, 40, 0.4);
-            box-shadow: -10px 16px 40px rgba(0, 0, 0, 0.45), inset -16px 0 24px -10px rgba(0, 0, 0, 0.22);
+        .spread-wrapper .a4-page.page-left {
+            border-right: 1px dashed rgba(0,0,0,0.35);
+        }
+        .spread-wrapper .a4-page.page-right {
+            border-left: 1px solid rgba(255,255,255,0.15);
         }
 
-        .spread-wrapper .page-right {
-            border-left: none;
-            box-shadow: 10px 16px 40px rgba(0, 0, 0, 0.45), inset 16px 0 24px -10px rgba(0, 0, 0, 0.22);
+        .font-masthead { font-family: 'UnifrakturMaguntia', 'Cinzel Decorative', serif; }
+        .font-headline { font-family: 'Playfair Display', Georgia, serif; }
+        .font-body { font-family: 'EB Garamond', Georgia, serif; }
+        .font-mono-tech { font-family: 'Courier Prime', monospace; }
+
+        .double-rule-top { border-top: 3.5px double var(--rule-color); }
+        .double-rule-bottom { border-bottom: 3.5px double var(--rule-color); }
+        .heavy-rule-top { border-top: 2.5px solid var(--rule-color); }
+        .heavy-rule-bottom { border-bottom: 2px solid var(--rule-color); }
+        .thin-rule-bottom { border-bottom: 1px solid var(--rule-color); }
+        .thin-rule-top { border-top: 1px solid var(--rule-color); }
+
+        .p1-masthead-row {
+            display: grid;
+            grid-template-columns: 140px 1fr 140px;
+            align-items: stretch;
+            gap: 12px;
+            padding-bottom: 4px;
+            margin-top: 2px;
+        }
+        .masthead-title {
+            font-size: 2.75rem;
+            line-height: 0.95;
         }
 
-        /* =====================================================================
-           MOBILE MODE: SINGLE COLUMN RESPONSIVE BROADSHEET
-           Triggered via '📱 Mobile (1-Col)' button or screens <= 768px
-           ===================================================================== */
-        body.mobile-mode {
-            padding: 10px 6px !important;
+        .p-copy {
+            font-size: 9.6pt;
+            line-height: 1.34;
+            margin-bottom: 6pt;
+            text-align: justify;
+            text-indent: 12pt;
+            color: var(--ink-secondary);
+        }
+        .p-copy.no-indent { text-indent: 0; }
+
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3.1rem;
+            float: left;
+            line-height: 0.8;
+            padding-top: 2px;
+            padding-right: 6px;
+            font-weight: 900;
+            color: var(--ink-primary);
         }
 
-        body.mobile-mode .a4-page {
-            width: 100% !important;
-            max-width: 680px !important;
-            min-height: auto !important;
-            height: auto !important;
-            margin: 0 auto 28px auto !important;
-            padding: 18px 14px !important;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
-            border: 1px solid var(--rule-color) !important;
-            display: flex !important;
+        .cols-3 {
+            column-count: 3;
+            column-gap: 16px;
+            column-rule: 1px solid var(--rule-color);
+            text-align: justify;
+        }
+        .cols-2 {
+            column-count: 2;
+            column-gap: 16px;
+            column-rule: 1px solid var(--rule-color);
+            text-align: justify;
+        }
+        .split-2-1 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 14px;
+        }
+        .split-1-1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
         }
 
-        body.mobile-mode .newspaper-columns-3,
-        body.mobile-mode .newspaper-columns-2 {
-            column-count: 1 !important;
-            column-gap: 0 !important;
-            column-rule: none !important;
-            text-align: left !important;
+        .footer-line {
+            border-top: 2px solid var(--rule-color);
+            padding-top: 4px;
+            margin-top: 4px;
+            font-family: 'Courier Prime', monospace;
+            font-size: 7.2pt;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
-        body.mobile-mode .newspaper-columns-5 {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 14px !important;
-        }
-        body.mobile-mode .newspaper-columns-5 > div {
-            border-bottom: 1px dashed var(--rule-color) !important;
-            padding-bottom: 12px !important;
-        }
-        body.mobile-mode .newspaper-columns-5 > div:last-child {
-            border-bottom: none !important;
-            padding-bottom: 0 !important;
-        }
-
-        body.mobile-mode .grid,
-        body.mobile-mode .md\:grid-cols-2,
-        body.mobile-mode .md\:grid-cols-3,
-        body.mobile-mode .split-1-1 {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 16px !important;
-        }
-
-        body.mobile-mode [class*="col-span-"] {
-            grid-column: auto !important;
-            width: 100% !important;
-        }
-
-        body.mobile-mode .border-r {
-            border-right: none !important;
-            border-bottom: 1px solid var(--rule-color) !important;
-            padding-right: 0 !important;
-            padding-bottom: 16px !important;
-        }
-
-        body.mobile-mode .masthead-row {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 10px !important;
-            text-align: center !important;
-        }
-        body.mobile-mode .masthead-row > div:nth-child(2) {
-            order: 1;
-            padding: 4px 0 !important;
-        }
-        body.mobile-mode .masthead-row > div:nth-child(1) {
-            order: 2;
-            width: 100% !important;
-        }
-        body.mobile-mode .masthead-row > div:nth-child(3) {
-            order: 3;
-            width: 100% !important;
-        }
-        body.mobile-mode .masthead-title {
-            font-size: clamp(2.1rem, 7.5vw, 2.7rem) !important;
-            line-height: 1.05 !important;
-        }
-
-        body.mobile-mode .newspaper-copy p {
-            font-size: 1.05rem !important;
-            line-height: 1.62 !important;
-            margin-bottom: 1.1rem !important;
-            text-align: left !important;
-            text-indent: 0 !important;
-        }
-        body.mobile-mode .drop-cap::first-letter {
-            font-size: 2.7rem !important;
-            line-height: 0.85 !important;
-            padding-right: 8px !important;
-            padding-top: 2px !important;
-        }
-
-        body.mobile-mode h2 {
-            font-size: 1.55rem !important;
-            line-height: 1.15 !important;
-        }
-        body.mobile-mode h3 {
-            font-size: 1.25rem !important;
-            line-height: 1.2 !important;
-        }
-
-        body.mobile-mode .engraved-box {
-            width: 100% !important;
-            padding: 10px 12px !important;
-        }
-        body.mobile-mode img {
-            width: 100% !important;
-            height: auto !important;
-            max-height: none !important;
-        }
-
-        /* Responsive fallback for actual mobile screens */
+        /* Mobile Reader Mode */
         @media (max-width: 768px) {
-            body:not(.desktop-force) {
-                padding: 10px 6px !important;
-            }
-            body:not(.desktop-force) .a4-page {
-                width: 100% !important;
-                max-width: 680px !important;
-                min-height: auto !important;
-                height: auto !important;
-                margin: 0 auto 28px auto !important;
-                padding: 18px 14px !important;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
-                border: 1px solid var(--rule-color) !important;
-                display: flex !important;
-            }
-            body:not(.desktop-force) .newspaper-columns-3,
-            body:not(.desktop-force) .newspaper-columns-2 {
-                column-count: 1 !important;
-                column-gap: 0 !important;
-                column-rule: none !important;
-                text-align: left !important;
-            }
-            body:not(.desktop-force) .newspaper-columns-5 {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 14px !important;
-            }
-            body:not(.desktop-force) .newspaper-columns-5 > div {
-                border-bottom: 1px dashed var(--rule-color) !important;
-                padding-bottom: 12px !important;
-            }
-            body:not(.desktop-force) .newspaper-columns-5 > div:last-child {
-                border-bottom: none !important;
-                padding-bottom: 0 !important;
-            }
-            body:not(.desktop-force) .grid,
-            body:not(.desktop-force) .md\:grid-cols-2,
-            body:not(.desktop-force) .md\:grid-cols-3,
-            body:not(.desktop-force) .split-1-1 {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 16px !important;
-            }
-            body:not(.desktop-force) [class*="col-span-"] {
-                grid-column: auto !important;
-                width: 100% !important;
-            }
-            body:not(.desktop-force) .border-r {
-                border-right: none !important;
-                border-bottom: 1px solid var(--rule-color) !important;
-                padding-right: 0 !important;
-                padding-bottom: 16px !important;
-            }
-            body:not(.desktop-force) .masthead-row {
-                display: flex !important;
-                flex-direction: column !important;
-                gap: 10px !important;
-                text-align: center !important;
-            }
-            body:not(.desktop-force) .masthead-row > div:nth-child(2) {
-                order: 1;
-                padding: 4px 0 !important;
-            }
-            body:not(.desktop-force) .masthead-row > div:nth-child(1) {
-                order: 2;
-                width: 100% !important;
-            }
-            body:not(.desktop-force) .masthead-row > div:nth-child(3) {
-                order: 3;
-                width: 100% !important;
-            }
-            body:not(.desktop-force) .masthead-title {
-                font-size: clamp(2.1rem, 7.5vw, 2.7rem) !important;
-                line-height: 1.05 !important;
-            }
-            body:not(.desktop-force) .newspaper-copy p {
-                font-size: 1.05rem !important;
-                line-height: 1.62 !important;
-                margin-bottom: 1.1rem !important;
-                text-align: left !important;
-                text-indent: 0 !important;
-            }
-            body:not(.desktop-force) .drop-cap::first-letter {
-                font-size: 2.7rem !important;
-                line-height: 0.85 !important;
-                padding-right: 8px !important;
-                padding-top: 2px !important;
-            }
-            body:not(.desktop-force) h2 {
-                font-size: 1.55rem !important;
-                line-height: 1.15 !important;
-            }
-            body:not(.desktop-force) h3 {
-                font-size: 1.25rem !important;
-                line-height: 1.2 !important;
-            }
-            body:not(.desktop-force) .engraved-box {
-                width: 100% !important;
-                padding: 10px 12px !important;
-            }
-            body:not(.desktop-force) img {
-                width: 100% !important;
-                height: auto !important;
-                max-height: none !important;
-            }
-        }
-
-        /* =====================================================================
-           PRINT MEDIA STYLESHEET (STRICT A4 PORTRAIT PAGINATION)
-           ===================================================================== */
-        @media print {
-            @page {
-                size: A4 portrait;
-                margin: 6mm 8mm;
-            }
             body {
-                background: #ffffff !important;
-                color: #000000 !important;
-                padding: 0 !important;
-                margin: 0 !important;
+                padding: 4px 2px;
             }
             .a4-page {
-                width: 100% !important;
-                max-width: 100% !important;
-                min-height: auto !important;
-                box-shadow: none !important;
-                border: 1px solid #000000 !important;
-                padding: 18px 22px !important;
-                margin: 0 !important;
-                background: #ffffff !important;
-                display: flex !important;
-                page-break-after: always !important;
-                break-after: page !important;
+                padding: 16px 14px;
+                min-height: auto;
+                margin-bottom: 24px;
             }
-            .spread-wrapper {
-                display: block !important;
-                max-width: 100% !important;
-                margin: 0 !important;
+            .cols-3, .cols-2 {
+                column-count: 1 !important;
+                column-rule: none !important;
             }
-            .spread-wrapper .a4-page {
-                border-right: 1px solid #000 !important;
-                border-left: 1px solid #000 !important;
-                box-shadow: none !important;
+            .split-2-1, .split-1-1, .p1-masthead-row {
+                grid-template-columns: 1fr !important;
             }
-            .no-print {
-                display: none !important;
+            .p-copy {
+                font-size: 10.5pt;
+                line-height: 1.5;
+                text-indent: 0;
             }
+        }
+
+        .active-mode {
+            background-color: #8b1e1e !important;
+            color: #ffffff !important;
+            border-color: #8b1e1e !important;
         }
     </style>
 </head>
-<body>
+<body class="desktop-force">
 
-    <!-- Notification Toast -->
-    <div id="statusToast" class="no-print fixed bottom-5 right-5 z-50 bg-[#12110f] text-[#f5f0e6] font-mono-tech text-xs px-4 py-2 border border-[#ded8cb] shadow-xl hidden">TYPESETTER MODE ON</div>
-
-    <!-- Master Print & Edition Toolbar -->
-    <header class="no-print max-w-[1200px] mx-auto mb-4 p-3 bg-[#191714] border border-[#4a453d] text-[#f5f0e6] flex flex-wrap justify-between items-center gap-2.5 shadow-lg">
-        <div class="flex flex-wrap items-center gap-1.5 font-mono-tech text-xs">
-            <span class="font-bold text-amber-500 mr-1.5">PRINT SPREADS &amp; PAGES:</span>
-            <button id="btnP1" onclick="setViewMode('p1')" class="press-btn active-mode">P1: Front (A4)</button>
-            <button id="btnP2" onclick="setViewMode('p2')" class="press-btn">P2: Editorial (A4)</button>
-            <button id="btnP3" onclick="setViewMode('p3')" class="press-btn">P3: Deep Dive (A4)</button>
-            <button id="btnP4" onclick="setViewMode('p4')" class="press-btn">P4: Back Page (A4)</button>
-            <button id="btnCenterSpread" onclick="setViewMode('center-spread')" class="press-btn text-amber-400 font-bold" title="Pages 2 & 3 side by side (unfolded inside of A3)">📖 Center Spread (A3 Fold: P2+P3)</button>
-            <button id="btnOuterSpread" onclick="setViewMode('outer-spread')" class="press-btn text-amber-400" title="Pages 4 & 1 side by side (unfolded outside of A3)">📰 Outer Spread (A3 Fold: P4+P1)</button>
-            <button id="btnAllPages" onclick="setViewMode('all-pages')" class="press-btn">View All 4 Pages</button>
-            <button id="btnMobile" onclick="setViewMode('mobile')" class="press-btn text-emerald-400 font-bold" title="Single-column responsive reading mode for phones and small screens">📱 Mobile (1-Col)</button>
+    <!-- TOP CONTROL TOOLBAR -->
+    <header class="no-print max-w-6xl mx-auto mb-6 bg-stone-900 border border-stone-700 text-stone-200 p-3 rounded-lg shadow-2xl flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
+        <div class="flex flex-wrap items-center gap-2">
+            <!-- ISSUE SELECTOR -->
+            <div class="flex items-center gap-1 bg-black/60 p-1 rounded border border-amber-600/50">
+                <span class="font-bold text-amber-500 uppercase tracking-wider text-[11px] px-1">EDITION:</span>
+                <a href="index.html" id="navIssue02" class="px-2.5 py-1 rounded text-xs font-bold transition bg-amber-600 text-stone-950 font-extrabold shadow" title="Currently viewing Issue No. 02 (Latest Release)">🗞️ No. 02 (Nov 2026)</a>
+                <a href="issue-01.html" id="navIssue01" class="px-2.5 py-1 rounded text-xs font-bold transition bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white border border-stone-600" title="Switch to Issue No. 01 (Oct 2026)">🏛️ No. 01 (Oct 2026)</a>
+            </div>
+            <span class="font-bold tracking-widest text-amber-500 uppercase hidden sm:inline">THE CITADEL CHRONICLE</span>
         </div>
-        <div class="flex flex-wrap items-center gap-1.5 font-mono-tech text-xs">
-            <button id="btnEditCopy" onclick="toggleEditNewspaper()" class="press-btn" title="Click directly on any headline or story to edit live">
-                ✒️ Typeset / Edit
-            </button>
-            <button id="btnInkMode" onclick="toggleDarkInk()" class="press-btn">
-                🌗 Dark Ink
-            </button>
-            <button onclick="window.print()" class="press-btn font-bold text-amber-400" title="Print to A4 (4 single portrait sheets) or folded A3 booklet">
-                🖨️ Print Issue
-            </button>
+
+        <!-- VIEW SELECTOR BUTTONS -->
+        <div class="flex flex-wrap items-center gap-1.5" id="viewControls">
+            <button onclick="setViewMode('mobile')" id="btnMobile" class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 rounded border border-stone-600 transition">📱 Mobile (1-Col)</button>
+            <button onclick="setViewMode('p1')" id="btnP1" class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 rounded border border-stone-600 transition">P1 (Front)</button>
+            <button onclick="setViewMode('p2')" id="btnP2" class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 rounded border border-stone-600 transition">P2 (Editorial)</button>
+            <button onclick="setViewMode('p3')" id="btnP3" class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 rounded border border-stone-600 transition">P3 (Deep Dive)</button>
+            <button onclick="setViewMode('p4')" id="btnP4" class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 rounded border border-stone-600 transition">P4 (Back)</button>
+            <button onclick="setViewMode('center-spread')" id="btnCenterSpread" class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 rounded border border-stone-600 transition">Center Spread (P2+P3)</button>
+            <button onclick="setViewMode('outer-spread')" id="btnOuterSpread" class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 rounded border border-stone-600 transition">Outer Spread (P4+P1)</button>
+            <button onclick="setViewMode('all-pages')" id="btnAllPages" class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 rounded border border-stone-600 transition active-mode">All 4 Pages</button>
+        </div>
+
+        <!-- ACTIONS & DOWNLOADS -->
+        <div class="flex items-center gap-2">
+            <button onclick="toggleDarkInk()" id="btnInkMode" class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 rounded border border-stone-600 text-stone-300">🌙 Inky</button>
+            <a href="citadel_chronicle_issue02_a3_duplex.pdf" download class="px-2.5 py-1 bg-amber-700 hover:bg-amber-600 text-white rounded font-bold shadow">🖨️ A3 Duplex PDF</a>
+            <a href="citadel_chronicle_issue02_a4_sequential.pdf" download class="px-2.5 py-1 bg-stone-800 hover:bg-stone-700 text-stone-200 rounded border border-stone-600">📄 A4 PDF</a>
         </div>
     </header>
 
-    <!-- Visual Hint Banner -->
-    <div id="formatHintBanner" class="no-print text-center font-mono-tech text-[11px] text-[#a8a090] mb-3">
-        FORMAT: Double-sided A3 sheet folded into four A4 portrait pages (210mm × 297mm) • Canonical: <a href="https://citadelchronicle.com" class="underline text-amber-400 font-bold">citadelchronicle.com</a>
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-stone-900 border border-amber-600 text-amber-200 px-4 py-2 rounded shadow-2xl font-mono text-xs opacity-0 transition-opacity duration-300 pointer-events-none z-50"></div>
+
+    <!-- MAIN PAGES CONTAINER -->
+    <main id="chronicleRoot">
+        <div class="a4-page" id="page1-wrap">
+<div class="a4-sheet-inner">
+    <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1;">
+        <!-- TOP RUNNING HEADER / MASTHEAD -->
+        <header style="border-bottom: 2px solid #000; padding-bottom: 3px; display: grid; grid-template-columns: 140px 1fr 140px; gap: 8px; align-items: stretch;">
+            <!-- Left Ear: Weather & Citadel Dispatch -->
+            <div style="border: 1px solid #000; padding: 4px 5px; background: #faf8f5; font-family: 'Courier Prime', monospace; font-size: 7pt; line-height: 1.25; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="font-weight: bold; border-bottom: 1px solid #000; padding-bottom: 1px; margin-bottom: 2px; display: flex; justify-content: space-between;">
+                        <span>CITADEL DISPATCH</span>
+                        <span>🛰️</span>
+                    </div>
+                    <div><strong>WEATHER:</strong> 31°C • Monsoon Sinking</div>
+                    <div><strong>NODE STATUS:</strong> 100% Verified</div>
+                    <div><strong>MEMPOOL:</strong> 1 sat/vB Clear</div>
+                </div>
+                <div style="font-size: 6pt; text-transform: uppercase; border-top: 0.5px solid #ccc; padding-top: 1px; text-align: right;">Sovereign &amp; Loud</div>
+            </div>
+
+            <!-- Centre Masthead Title -->
+            <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                <div style="font-family: 'Courier Prime', monospace; font-size: 6.8pt; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1px; opacity: 0.85;">“ALL THE RANTS THAT FIT ON ONE SHEET”</div>
+                <h1 class="font-masthead masthead-title" style="font-family: 'UnifrakturMaguntia', 'Cinzel Decorative', serif !important; font-size: 2.65rem; line-height: 0.95; margin: 0; letter-spacing: 0.01em;">
+                    The Citadel Chronicle
+                </h1>
+                <div style="width: 100%; display: flex; align-items: center; justify-content: center; margin: 2px 0;">
+                    <svg width="100%" height="10" viewBox="0 0 200 10" preserveAspectRatio="none" style="stroke: #000; fill: none;">
+                        <line x1="0" y1="6" x2="69" y2="6" stroke-width="1.2"></line>
+                        <rect x="69" y="3" width="12" height="6" rx="3" stroke-width="1.2"></rect>
+                        <line x1="81" y1="6" x2="91" y2="6" stroke-width="1.5"></line>
+                        <circle cx="100" cy="6" r="3.5" fill="#000"></circle>
+                        <line x1="109" y1="6" x2="119" y2="6" stroke-width="1.5"></line>
+                        <rect x="119" y="3" width="12" height="6" rx="3" stroke-width="1.2"></rect>
+                        <line x1="131" y1="6" x2="200" y2="6" stroke-width="1.2"></line>
+                    </svg>
+                </div>
+                <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 7.5pt; font-weight: bold; white-space: nowrap;">
+                    COLD STORAGE, HOT TAKES • <span style="font-family: 'Courier Prime', monospace; font-style: normal; font-weight: bold; font-size: 7pt;">CITADELCHRONICLE.COM • ESTABLISHED 2026</span>
+                </div>
+            </div>
+
+            <!-- Right Ear: Tavern Index -->
+            <div style="border: 1px solid #000; padding: 4px 5px; background: #faf8f5; font-family: 'Courier Prime', monospace; font-size: 7pt; line-height: 1.25; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="font-weight: bold; border-bottom: 1px solid #000; padding-bottom: 1px; margin-bottom: 2px; display: flex; justify-content: space-between;">
+                        <span>TAVERN &amp; COFFEE</span>
+                        <span>🍺☕</span>
+                    </div>
+                    <div><strong>1 PINT BITTER:</strong> 4,200 sats</div>
+                    <div><strong>CITADEL THAI ESPRESSO:</strong> 1,800 sats</div>
+                    <div><strong>FIAT CURRENCY:</strong> Melting</div>
+                </div>
+                <div style="font-size: 6pt; text-transform: uppercase; border-top: 0.5px solid #ccc; padding-top: 1px; text-align: right;">No Altcoins</div>
+            </div>
+        </header>
+
+        <!-- DATELINE BAR -->
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Courier Prime', monospace; font-size: 7.2pt; padding: 2px 0; border-bottom: 2px solid #000; white-space: nowrap;">
+            <div><strong>VOL. XXI • ISSUE NO. 02</strong> • BLOCK HEIGHT: <strong>973,842</strong> • 24 OCTOBER 2026</div>
+            <div>1 SAT/vB • BANGKOK // PATHUM THANI EDITION</div>
+        </div>
+
+        <!-- LEAD ARTICLE HEADER -->
+        <div style="text-align: center; margin-top: 3px; margin-bottom: 3px;">
+            <div style="font-family: 'Courier Prime', monospace; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-accent); font-weight: bold;">
+                ■ DISPATCHES FROM THE CITADEL WIRELESS • THE LISTENING POST
+            </div>
+            <h2 class="font-headline" style="font-size: 1.48rem; font-weight: 900; line-height: 1.1; margin: 1.5px 0;">
+                PARIS ON FIRE, THE LIFEBOAT DOCTRINE, AND A TALE OF TWO SCREENS
+            </h2>
+            <p style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 8.8pt; line-height: 1.2; opacity: 0.9; max-width: 96%; margin: 0 auto; border-bottom: 1px solid #000; padding-bottom: 2.5px;">
+                From the breakdown of French socialist welfare to an ingenious hardware breach: why sound money was never meant to fix the world, but to survive it.
+            </p>
+        </div>
+
+        <!-- HERO IMAGE (PIRIYA IN CONCENTRATION - TALL FULL WIDTH FORMAT ~74mm HEIGHT) -->
+        <div style="border: 1px solid #000; padding: 2.5px; background: #faf8f5; margin-bottom: 4px;">
+            <img src="issue-02/ads/piriya_hero_large.jpg" style="width: 100%; height: 72mm; object-fit: cover; object-position: center; display: block; border: 0.5px solid #000;" onerror="this.src='ads/piriya_hero_large.jpg'">
+            <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Courier Prime', monospace; font-size: 6.8pt; padding: 2px 4px;">
+                <span style="font-weight: bold;">FIG 1. THE LISTENING POST</span>
+                <span style="font-family: 'EB Garamond', serif; font-style: italic; font-size: 7.8pt;">Ajarn Piriya Sambandaraksa deep in concentration during CDC Talk: “Sound money was never meant to fix the world, but to survive it.”</span>
+            </div>
+        </div>
+
+        <!-- 3-COLUMN COPY (SECTION I & II + JUMP LINE TO PAGE 2) -->
+        <div class="cols-3" style="margin-bottom: 2px; font-size: 8.8pt; line-height: 1.25;">
+            <h3 class="font-headline" style="font-size: 8.8pt; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 1px; margin-bottom: 2px;">I. The Smoke from Paris</h3>
+            <p class="p-copy drop-cap">
+                If you wish to observe the terminal decay of the fiat welfare state, one need only tune one’s receiver to Paris. For weeks, the French capital has resembled an open-air combustion chamber: student strikes, barricades along the boulevards, public schools left without teachers for eight months, and an effective tax burden touching seventy percent—all to finance an unsustainable social apparatus that consumes more than the nation produces.
+            </p>
+            <p class="p-copy">
+                Listening to my brother, Piriya, discuss the European unrest alongside our father, Lung Chaloke, on <em>CDC Talk</em>, his diagnosis was incisive: the riots are not the product of political awakening, but the volcanic fury of betrayed expectations. When citizens surrender half their income for cradle-to-grave security and the state runs out of other people's money, the social contract does not merely fray; it combusts.
+            </p>
+
+            <h3 class="font-headline" style="font-size: 8.8pt; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 1px; margin-bottom: 2px;">II. The Parasite in the Foam</h3>
+            <p class="p-copy">
+                In a delicious twist of historical irony, the failure of French statecraft found an eerie technical parallel this month in France’s most celebrated cryptographic export: a certain Parisian hardware wallet manufacturer.
+            </p>
+            <p class="p-copy">
+                For years, the standard advice dispensed by Bitcoin educators has been impeccably orthodox: take self-custody. But it carried a stubborn blind spot: the physical journey. In family debates, I long warned Piriya that mathematical encryption cannot secure a parcel once it enters postal vans and customs warehouses.
+            </p>
+            <p class="p-copy">
+                That reality arrived with a vengeance. As forensic teardowns by Mark Karpelès revealed, an enterprising syndicate intercepted shipments of the Ledger Nano X. Without touching the secure element, attackers lifted the OLED display, excised factory foam, and inserted a hair-thin flexible PCB with an embedded eSIM. As the user initialized the unit, the parasite board read the 24 seed words directly off the glass and broadcast them over cellular towers. An ATM skimmer in a velvet box.
+            </p>
+            <p class="p-copy">
+                Rather than retreating into PR spin, my brother addressed the breach with unvarnished intellectual honesty. Acknowledging transit vulnerability, he noted with a dry chuckle that his older brother's warnings had come due, promptly urging users toward multi-vendor multisig quorums.
+            </p>
+
+            <div style="border: 1px solid #000; background: #f4efe6; padding: 4px 6px; text-align: center; margin-top: 4px; font-family: 'Courier Prime', monospace; font-size: 7pt; font-weight: bold; text-transform: uppercase;">
+                ➔ CONTINUED ON PAGE 2 • THE EDITORIAL
+            </div>
+        </div>
     </div>
 
-    <!-- MAIN NEWSPAPER CONTAINER -->
-    <div id="newspaperRoot">
+    <!-- FOOTER -->
+    <footer class="footer-line">
+        <div>PAGE 1 OF 4 • FRONT COVER</div>
+        <div>THE CITADEL CHRONICLE • CITADELCHRONICLE.COM • ESTABLISHED 2026</div>
+    </footer>
+</div>
+</div>
+        <div class="a4-page" id="page2-wrap">
+<div class="a4-sheet-inner">
+    <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; margin-bottom: 2px;">
+        <!-- RUNNING HEADER -->
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Courier Prime', monospace; font-size: 7.2pt; border-bottom: 2px solid #000; padding-bottom: 2px; text-transform: uppercase; white-space: nowrap;">
+            <span>THE CITADEL CHRONICLE • ISSUE NO. 02</span>
+            <span style="font-weight: bold;">PAGE 2: EDITORIAL &amp; OPINION</span>
+            <span>24 OCTOBER 2026</span>
+        </div>
 
-        <!-- ===================================================================
-             PAGE 1: THE FRONT PAGE (THE SPLASH) — A4 PORTRAIT
-             =================================================================== -->
-        <main class="a4-page page-container" id="page-1">
-            <div>
-                <!-- CRYPTOGRAPHIC TOP RIBBON -->
-                <div class="flex flex-wrap justify-between items-center text-[11px] font-mono-tech pb-1 thin-rule-bottom opacity-85 gap-1">
-                    <div>SHA256: <span id="blockHashTicker">000000000000000000019a7e...82dc</span></div>
-                    <div>WWW.CITADELCHRONICLE.COM • SOVEREIGN INK • ZERO TRACKERS</div>
-                    <div>ISSN 2100-0000 • EDITED IN PATHUM THANI</div>
+        <!-- CONTINUATION SECTION: THE LISTENING POST (FROM PAGE 1) -->
+        <section style="border: 1.5px solid #000; background: #faf8f5; padding: 6px 10px; margin-top: 3px; margin-bottom: 5px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #000; padding-bottom: 2px; margin-bottom: 4px; font-family: 'Courier Prime', monospace; font-size: 7.2pt; font-weight: bold; text-transform: uppercase;">
+                <span style="color: var(--ink-accent);">■ THE CITADEL WIRELESS • CONTINUED FROM PAGE ONE</span>
+                <span>SECTION III: THE LIFEBOAT HERESY</span>
+            </div>
+            <div class="cols-3" style="font-size: 8.8pt; line-height: 1.26;">
+                <p class="p-copy" style="margin-bottom: 2pt;">
+                    This candour led naturally to a deeper revelation. For years, Piriya’s venture has sold a popular T-shirt: <em>“Fix the Money, Fix the World.”</em> Live on air, however, he confessed he had grown thoroughly disillusioned with the slogan. Expecting sound money to magically eliminate human greed sets men up for heartbreak. His working revision: <em>“No need to fix the world. Fix the money, and it simply becomes a tool that allows you to survive. That is enough.”</em>
+                </p>
+                <p class="p-copy" style="margin-bottom: 2pt;">
+                    Lung Chaloke anchored the thought in Buddhist realism. The mortal plane is inherently imperfect; to eradicate all selfishness is to play the destroyer, like Thanos snapping his fingers. Erasing human flaws erases the realm itself. Put out the fires of hell, and the King of the Underworld sits in lonely irrelevance.
+                </p>
+                <div>
+                    <p class="p-copy" style="margin-bottom: 2pt;">
+                        Sound money is not a crusade to inaugurate heaven on earth; it is an unadorned wooden lifeboat. You do not hold satoshis to save society. You hold them so that when the state devalues the currency, defaults on its pledges, and paves over the floodplains, you possess the means to stay afloat.
+                    </p>
+                    <div style="border-left: 2px solid #000; padding-left: 6px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 8.2pt; font-weight: bold; line-height: 1.15; margin-top: 4px; background: #f0ece1; padding-top: 2px; padding-bottom: 2px;">
+                        “Fix the money, and it becomes a tool that allows you to survive. That is enough.”
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- MASTHEAD & EARS -->
-                <header class="masthead-row double-rule-bottom mt-1.5">
-                    <!-- Left Ear Box: Mempool Weather -->
-                    <div class="text-[10px] font-mono-tech leading-tight border border-[var(--rule-color)] p-1.5 bg-[var(--paper-bg-alt)] editable-target" contenteditable="false">
-                        <div class="font-bold border-b border-[var(--rule-color)] pb-0.5 mb-1 flex justify-between items-center tracking-tighter">
-                            <span>MEMPOOL WEATHER</span>
-                            <span class="inline-block w-2 h-2 rounded-full bg-green-700 animate-pulse"></span>
-                        </div>
-                        <div class="space-y-0.5">
-                            <div><strong>CONDITIONS:</strong> Calm, 14 sat/vB</div>
-                            <div><strong>NEXT BLOCK:</strong> ~8 mins</div>
-                            <div><strong>HASHRATE:</strong> 712 EH/s</div>
-                        </div>
-                        <div class="text-[8.5px] uppercase tracking-widest opacity-75 pt-1 border-t border-[var(--rule-color)]/40 mt-1">
-                            Verify Your Own Chain
-                        </div>
-                    </div>
+        <!-- MAIN EDITORIAL: COBRA SWAMP (TIGHTENED & BALANCED) -->
+        <article style="border-bottom: 1.5px solid #000; padding-bottom: 5px; margin-bottom: 5px;">
+            <div style="background: #000; color: #fff; padding: 3px 8px; margin-bottom: 4px; display: flex; justify-content: space-between; align-items: center;">
+                <span class="font-headline" style="font-size: 11pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.03em;">The Bitter Bit: Cobra Swamp’s Sixty-Million-Cubic-Metre Ghost</span>
+                <span style="font-family: 'Courier Prime', monospace; font-size: 6.8pt; letter-spacing: 0.08em;">OP-ED • BY THE OLD BASTARD</span>
+            </div>
 
-                    <!-- Center Banner Masthead -->
-                    <div class="text-center px-1 flex flex-col justify-center items-center min-w-0">
-                        <div class="text-[10px] font-mono-tech tracking-widest uppercase mb-0.5 opacity-85">
-                            “All The Rants That Fit On One Sheet”
-                        </div>
-                        <h1 class="font-masthead masthead-title tracking-tight my-0 select-none">
-                            The Citadel Chronicle
-                        </h1>
-                        
-                        <!-- Woodcut Chain Divider -->
-                        <div class="flex items-center justify-center my-0.5 w-full max-w-xs">
-                            <svg class="w-full h-3.5 stroke-current fill-none" viewBox="0 0 300 20">
-                                <line x1="0" y1="10" x2="100" y2="10" stroke-width="1.5"></line>
-                                <line x1="0" y1="12" x2="90" y2="12" stroke-width="0.75"></line>
-                                <rect x="105" y="6" width="16" height="8" rx="4" stroke-width="1.5"></line>
-                                <line x1="117" y1="10" x2="130" y2="10" stroke-width="2"></line>
-                                <rect x="125" y="6" width="16" height="8" rx="4" stroke-width="1.5"></line>
-                                <polygon points="146,4 154,4 155,16 145,16" fill="currentColor"></polygon>
-                                <rect x="159" y="6" width="16" height="8" rx="4" stroke-width="1.5"></line>
-                                <line x1="171" y1="10" x2="184" y2="10" stroke-width="2"></line>
-                                <rect x="179" y="6" width="16" height="8" rx="4" stroke-width="1.5"></line>
-                                <line x1="200" y1="10" x2="300" y2="10" stroke-width="1.5"></line>
-                                <line x1="210" y1="12" x2="300" y2="12" stroke-width="0.75"></line>
-                            </svg>
-                        </div>
+            <div class="cols-3" style="font-size: 8.8pt; line-height: 1.26;">
+                <p class="p-copy drop-cap">
+                    With the muddy monsoon floodwaters grudgingly slinking back into the Gulf of Thailand, Bangkok’s political commentariat has dusted off its favourite seasonal parlour game: finding a villain at City Hall. The incumbent Governor, Chadchart Sittipunt, finds himself the subject of theatrical huffing and puffing over a decision to quietly excise two long-touted retention ponds (<em>kaem ling</em>) from the municipal master plan: <strong>Bung Khu Bon</strong> in Khlong Sam Wa and <strong>Bung Bang Chan</strong> in Min Buri.
+                </p>
+                <p class="p-copy">
+                    The accusation is delivered with customary solemnity: by shelving these two reservoirs, the Governor has supposedly condemned eastern Bangkok to a watery grave. A calm glance at the arithmetic, however, rather spoils the sport. City Hall’s own technical reviews concluded that even if both basins were dug to their limits, their combined capacity would amount to a meagre <strong>500,000 to 700,000 cubic metres</strong> of runoff.
+                </p>
+                <p class="p-copy">
+                    To acquire that modest puddle, the municipal purse would have been lightened by an eye-watering <strong>11 billion Baht</strong>—nearly $320 million—chiefly to compensate private landowners at prevailing speculative prices. That works out to near enough 20,000 Baht for the privilege of holding a single cubic metre of stagnant water. Yet one would be naive to mistake City Hall's thrift for civic virtue: once struck off the plan, prime acreage was promptly liberated for private housing estates.
+                </p>
+            </div>
 
-                        <div class="font-headline italic font-bold text-[11px] sm:text-xs tracking-wide">
-                            COLD STORAGE, HOT TAKES — <span class="font-mono-tech not-italic text-[10px] font-bold">CITADELCHRONICLE.COM • ESTABLISHED 2026</span>
-                        </div>
-                    </div>
-
-                    <!-- Right Ear Box: Tavern Index -->
-                    <div class="text-[10px] font-mono-tech leading-tight border border-[var(--rule-color)] p-1.5 bg-[var(--paper-bg-alt)] editable-target" contenteditable="false">
-                        <div class="font-bold border-b border-[var(--rule-color)] pb-0.5 mb-1 flex justify-between items-center tracking-tighter">
-                            <span>TAVERN &amp; COFFEE</span>
-                            <span>🍺 ☕</span>
-                        </div>
-                        <div class="space-y-0.5">
-                            <div><strong>1 PINT BITTER:</strong> 4,200 sats</div>
-                            <div><strong>CITADEL ESPRESSO:</strong> 1,800 sats</div>
-                            <div><strong>FIAT CURRENCY:</strong> Melting</div>
-                        </div>
-                        <div class="text-[8.5px] uppercase tracking-widest opacity-75 pt-1 border-t border-[var(--rule-color)]/40 mt-1 text-right">
-                            No Altcoins Accepted
-                        </div>
-                    </div>
-                </header>
-
-                <!-- DATELINE BAR -->
-                <div class="flex flex-wrap justify-between items-center py-1.5 px-0.5 heavy-rule-bottom text-[11px] font-mono-tech gap-y-1">
-                    <div class="flex flex-wrap items-center gap-x-2">
-                        <span class="font-bold">VOL. XXI • ISSUE NO. 01</span>
-                        <span>•</span>
-                        <span>BLOCK HEIGHT: <strong>972,618</strong></span>
-                        <span>•</span>
-                        <span>OCTOBER 2026</span>
-                    </div>
-                    <div>1 SAT/vB • BANGKOK // PATHUM THANI EDITION</div>
+            <!-- RETENTION TABLE -->
+            <div style="border: 1px solid #000; background: #faf8f5; padding: 3px 8px; margin: 4px 0; font-family: 'Courier Prime', monospace; font-size: 7pt;">
+                <div style="display: grid; grid-template-columns: 2fr 1.5fr 2fr; font-weight: bold; border-bottom: 1px solid #000; padding-bottom: 1.5px; margin-bottom: 1.5px;">
+                    <span>SEASONAL REGIME</span>
+                    <span>NATURAL POOLING DEPTH</span>
+                    <span>NONG NGU HAO RETENTION BUFFER</span>
                 </div>
-
-                <!-- LEAD FEATURE: CHALOKE SAMBANDARAKSA × ALPHAMIND -->
-                <article class="pt-3 pb-2">
-                    <div class="text-center mb-2">
-                        <div class="font-mono-tech text-[10.5px] uppercase tracking-widest text-[var(--ink-accent)] font-bold mb-1">
-                            ■ EXCLUSIVE DISPATCH • THE SAGE OF PATHUM THANI
-                        </div>
-                        <h2 class="font-headline font-black text-2xl sm:text-[1.85rem] leading-[1.08] mb-1.5 editable-target" contenteditable="false">
-                            FOUR HOURS ABOVE THE FLOODS: THE SAGE OF PATHUM THANI ON SURVIVING THE MARKETS
-                        </h2>
-                        <p class="font-headline italic text-[13.5px] leading-snug opacity-90 max-w-2xl mx-auto thin-rule-bottom pb-1.5 editable-target" contenteditable="false">
-                            Sanjay Popli of AlphaMind sits down with Chaloke Sambandaraksa on mindset, risk engineering, and why the CDC curriculum teaches planetary cycles to know when to step away from the desk.
-                        </p>
-                    </div>
-
-                    <!-- HERO IMAGE: FLOODED PADDY FIELDS -->
-                    <div class="my-2 border border-[var(--rule-color)] p-1 bg-[var(--paper-bg-alt)]">
-                        <img src="chaloke_cinematic_wide.jpg" alt="Chaloke Sambandaraksa interviewed by Sanjay Popli of AlphaMind overlooking the flooded paddy fields of Pathum Thani" class="w-full aspect-[16/9] object-cover border border-[var(--rule-color)]">
-                        <div class="pt-1 px-1 flex flex-wrap justify-between items-center text-[10px] font-mono-tech gap-1">
-                            <span class="font-bold uppercase">FIG 1. THE ALPHAMIND SESSIONS</span>
-                            <span class="italic font-body text-[11.5px] opacity-90">Uncle Chaloke Sambandaraksa with Sanjay Popli (<a href="https://alphamind.network" target="_blank" class="underline">alphamind.network</a>) inside the glass pavilion, looking across the flooded paddy fields of Pathum Thani.</span>
-                        </div>
-                    </div>
-
-                    <!-- 3-COLUMN STORY FLOW -->
-                    <div class="newspaper-columns-3 newspaper-copy pt-1 editable-target" contenteditable="false">
-                        <h3 class="font-headline font-bold text-sm mb-1 uppercase tracking-wide border-b border-[var(--rule-color)] pb-0.5">I. The Flooded Plains</h3>
-                        <p class="drop-cap">
-                            The interview began just after noon inside the glass pavilion in Pathum Thani, looking out across the drowned paddy fields still submerged from last month’s monsoon floods. For four unbroken hours, Chaloke Sambandaraksa laid bare five decades of market survival. Sanjay Popli, co-founder of Cryptomind and host of AlphaMind (alphamind.network / @alphamindpodcast), sat down with the legendary trader known simply to generations of Thai market practitioners as Uncle Chaloke. In a world obsessed with algorithmic scalping, meme tokens, and instant gratification, Chaloke opened by dismantling the central illusion of modern finance.
-                        </p>
-                        <p>
-                            "I do not seek the most profitable trading system," he stated with quiet, total conviction. "Chasing maximum profit is the amateur’s fatal trap. I care only about the system that guarantees you cannot be destroyed."
-                        </p>
-
-                        <h3 class="font-headline font-bold text-sm mb-1 uppercase tracking-wide border-b border-[var(--rule-color)] pb-0.5">II. Survival Over Profit</h3>
-                        <p>
-                            For Chaloke and the CDC curriculum he founded, trading is fundamentally an exercise in risk engineering and psychological discipline. Money management is not an afterthought; it is the entire foundation. If your position sizing permits a single black swan event to wipe out your capital, you are not trading—you are merely gambling on borrowed time.
-                        </p>
-                        <p>
-                            "Survive first," he urged Popli. "When you master survival, the profits take care of themselves." In five decades navigating the 1987 crash, the 1997 Tom Yam Kung crisis, and the 2008 subprime contagion, he witnessed entire generations of chartists vanish because they mistook leverage for genius.
-                        </p>
-
-                        <h3 class="font-headline font-bold text-sm mb-1 uppercase tracking-wide border-b border-[var(--rule-color)] pb-0.5">III. The First Rule</h3>
-                        <p>
-                            Before an entry is executed, the exit is already written. Survival requires knowing your ruin threshold before the order is filled. "The market will always test your weakest link," Chaloke remarked quietly, watching the brown floodwaters lap against the retaining wall. "Survive the storm first. The harvest always belongs to the patient."
-                        </p>
-                    </div>
-                </article>
-
-                <!-- PULL QUOTE BANNER -->
-                <div class="mt-1 p-2 border border-[var(--rule-color)] bg-[var(--paper-bg-alt)] text-center">
-                    <blockquote class="font-headline italic text-sm sm:text-base font-bold">
-                        “I do not seek the most profitable trading system. That is the amateur's trap. I care only about the system that guarantees you cannot be destroyed.”
-                    </blockquote>
-                    <div class="font-mono-tech text-[9.5px] uppercase tracking-widest mt-0.5 opacity-80">— CHALOKE SAMBANDARAKSA • CDC FOUNDER</div>
+                <div style="display: grid; grid-template-columns: 2fr 1.5fr 2fr; padding: 1.5px 0;">
+                    <span>Standard Monsoon</span>
+                    <span>0.5 metres</span>
+                    <span><strong>16,000,000 m³</strong> (16 Million Cubic Metres)</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 2fr 1.5fr 2fr; padding: 1.5px 0; background: #f0ece1;">
+                    <span>Heavy Monsoon Inundation</span>
+                    <span>1.0 metre</span>
+                    <span><strong>32,000,000 m³</strong> (32 Million Cubic Metres)</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 2fr 1.5fr 2fr; padding: 1.5px 0;">
+                    <span>Severe Crisis Deluge (2011)</span>
+                    <span>2.0 metres</span>
+                    <span><strong>64,000,000 m³</strong> (64 Million Cubic Metres)</span>
                 </div>
             </div>
 
-            <!-- FOOTER -->
-            <footer class="mt-3 pt-1.5 double-rule-top flex justify-between items-center text-[10.5px] font-mono-tech opacity-80">
-                <div>PAGE 1 OF 4 • CONTINUED ON PAGE 3</div>
-                <div>THE CITADEL CHRONICLE • PUBLISHED AT THE CITADEL • ESTABLISHED 2026</div>
-            </footer>
-        </main>
+            <div class="cols-2" style="font-size: 8.8pt; line-height: 1.26; margin-top: 4px;">
+                <p class="p-copy">
+                    To understand why the delta refuses to dry, one must lift one's eyes twenty-five kilometres east—to the vast concrete apron of Suvarnabhumi International Airport. Before terminal architects arrived in 2006, the lower Chao Phraya called that depression by its honest name: <em>Nong Ngu Hao</em>—Cobra Swamp. It was not vacant wasteland; it was the great natural water-sponge of the eastern seaboard (3,200 hectares / 32,000,000 m²), naturally buffering <strong>16 to 64 million cubic metres</strong> of deluge.
+                </p>
+                <p class="p-copy">
+                    That single natural sponge possessed nearly <strong>one hundred times</strong> the combined storage of the two 11-billion-Baht schemes politicians bicker over. Today, that sponge is entombed beneath tarmac. To survive, the airport runs high-voltage pumps day and night, forcibly ejecting millions of cubic metres over dykes into surrounding Samut Prakan and Pathum Thani paddies. Bangkok does not drown because a bureaucrat cancelled two ponds; it drowns because we paved over a swamp and expected the monsoon to read the departures board.
+                </p>
+            </div>
+        </article>
 
-
-        <!-- ===================================================================
-             PAGE 2: THE EDITORIAL & MORGUE (INSIDE LEFT) — A4 PORTRAIT
-             =================================================================== -->
-        <main class="a4-page page-container hidden" id="page-2">
-            <div>
-                <!-- RUNNING HEADER -->
-                <div class="flex justify-between items-center text-[10.5px] font-mono-tech pb-1 double-rule-bottom uppercase">
-                    <span>THE CITADEL CHRONICLE • ISSUE NO. 01</span>
-                    <span class="font-bold">PAGE 2: THE EDITORIAL &amp; MORGUE</span>
-                    <span>OCTOBER 2026</span>
-                </div>
-
-                <!-- SECTION A: LEAD EDITORIAL -->
-                <article class="pt-2 pb-2.5 border-b border-[var(--rule-color)]">
-                    <div class="bg-[var(--ink-primary)] text-[var(--paper-bg)] px-2.5 py-1 mb-1.5 flex justify-between items-center">
-                        <span class="font-headline font-black text-base uppercase tracking-wide">The Market Regime: Hard Money in an Uneasy Empire</span>
-                        <span class="font-mono-tech text-[9px] tracking-widest uppercase opacity-80">LEAD EDITORIAL</span>
-                    </div>
-
-                    <div class="newspaper-columns-3 newspaper-copy editable-target" contenteditable="false">
-                        <p class="drop-cap">
-                            Bitcoin enters late October trading north of $81,000 (Block 972,618), shrugging off spikes in US 10-year Treasury yields that would have sent traditional tech equities into a tailspin. Six months post-halving, the structural supply deficit is asserting itself. Daily exchange-traded fund inflows are systematically vacuuming up three to four times the 450 BTC daily miner emission. More significantly, sovereign and corporate treasury desks are moving past speculative accumulation into strategic balance-sheet fortification.
-                        </p>
-                        <p>
-                            When Michael Saylor is pricing convertible debt offerings at negative effective yields and sovereign wealth entities in the Gulf are quietly bidding in the OTC shadows, price discovery is no longer about retail euphoria; it is an institutional game of musical chairs with an asset that cannot be printed.
-                        </p>
-                        <p>
-                            Washington’s sudden romance with Bitcoin has evolved from fringe campaign posturing into high-stakes geopolitical theater. Donald Trump’s headline-grabbing pledges in Nashville—promising a US Strategic Bitcoin Reserve and the immediate defenestration of SEC Chairman Gary Gensler on Day One—have forced the Democratic apparatus into an awkward defensive pivot. But seasoned observers know the difference between campaign trail rhetoric and the entrenched machinery of the administrative state.
-                        </p>
-                        <p>
-                            While political promises provide short-term momentum, the true catalyst isn't Washington's blessing; it is the mathematical inevitability of the US fiscal trajectory. With the US national debt compounding by a trillion dollars every 100 days, politicians aren't adopting Bitcoin out of ideological enlightenment—they are backing into it as the only lifeboat that doesn't leak.
-                        </p>
-                        <p>
-                            Across the broader crypto circus, the mood is decidedly less celebratory. The so-called "altseason" remains MIA as a relentless conveyor belt of venture-backed Layer-1s and Layer-2s face catastrophic token unlocks. Billions in low-float, high-fully-diluted-valuation (FDV) tokens are dumping into illiquid retail order books, exposing the fundamental fiction of "governance tokens." Staking yields, once marketed as risk-free interest, are revealing themselves to be nothing more than self-referential dilution.
-                        </p>
-                        <p>
-                            As Ethereum struggles under layer-2 fee cannibalization and Solana trades stability for speculative memecoin casino volume, capital is rotating relentlessly back toward the only asset with genuine monetary hardness. The market is slowly rediscovering what cypherpunks knew fifteen years ago: if a token requires a foundation, a roadshow, and a venture lockup schedule, it isn't cryptocurrency—it's an unregistered penny stock with an API.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- SECTION B: LOWER HALF (THE BITTER BIT + MORGUE & RULES) -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2.5">
-                    <!-- LEFT 2 COLS: THE BITTER BIT -->
-                    <section class="md:col-span-2 pr-2 border-r border-[var(--rule-color)]">
-                        <div class="border-b border-[var(--rule-color)] pb-1 mb-1.5">
-                            <span class="font-mono-tech text-[10px] uppercase tracking-widest text-[var(--ink-accent)] font-bold">OP-ED • GET OFF MY NODE</span>
-                            <h2 class="font-headline font-black text-lg uppercase tracking-tight leading-snug">The Bitter Bit: What on Earth is Ledger Thinking?</h2>
-                            <div class="text-[10px] font-mono-tech italic opacity-80">By The Old Bastard</div>
-                        </div>
-
-                        <div class="newspaper-columns-2 newspaper-copy editable-target" contenteditable="false">
-                            <p class="drop-cap">
-                                What on earth is Ledger thinking? Fresh off the total mayhem of the supply chain attack where someone added an LTE modem to certain wallets to capture seed phrases directly off the screen, which seems to be localised to a reseller in Malaysia, CryptoBilis and maybe another one in Europe, MediaMarkt, they are doubling down on complexity and launching what is basically an Android phone based hardware wallet.
-                            </p>
-                            <p>
-                                Yes. Increasing the complexity of a device by untold multiples will definitely not be a problem in security and locking it down.
-                            </p>
-                            <p>
-                                In computer science, they say one of the best features is KISS - Keep It Simple, Stupid.
-                            </p>
-                            <p>
-                                The supply chain attack has cost users an estimated 80 to 90 million USD, with a single largest loss a cluster of 213 BTC (17 million USD). Worse their communication on the matter has been, limited to say the least. The website mentions it in a high level corporate PR spin kind of way and they are very much business as usual going forth.
-                            </p>
-                            <p>
-                                "People simply don't care. All they care about is features," said Piriya Sambandaraksa, proprietor of Citadel Coffee. "Features, and ease of use." I suppose so.
-                            </p>
-                            <p>
-                                Contrast that with the deep technical analysis and detailed down to the minute blow by blow forensic explanation of what happened to the Liquid hack whereby so-called whitehat hackers managed to mint 4,000 Liquid BTC out of thin air by reusing a cached hash, cashed it out via a peg-out partner and then said that they were the good guys and returned most of it, giving themselves 640 BTC as a reward. I think that hat needs a wash and it is certainly very dirty. Too dirty to be called white.
-                            </p>
-                        </div>
-                    </section>
-
-                    <!-- RIGHT 1 COL: MAGICALTUX & TAVERN RULES -->
-                    <aside class="space-y-3">
-                        <!-- MagicalTux Box -->
-                        <div class="engraved-box editable-target" contenteditable="false">
-                            <div class="font-mono-tech text-[9.5px] font-bold uppercase tracking-widest text-[var(--ink-accent)] border-b border-[var(--rule-color)] pb-0.5 mb-1">
-                                ⚰️ MORGUE DISPATCH • REDEMPTION
-                            </div>
-                            <h3 class="font-headline font-bold text-sm leading-tight mb-1">The Strange Redemption of MagicalTux</h3>
-                            <p class="font-body text-xs leading-snug">
-                                Perhaps the greatest irony of the Ledger hack is that it has become the crescendo of MagicalTux's redemption arc. Yes, that guy who lost 850,000 Bitcoin due to sloppy coding and the transaction malleability bug is now suddenly a really cool OG bitcoiner who knows security.
-                            </p>
-                            <p class="font-body text-xs leading-snug mt-1 opacity-85">
-                                In an ecosystem where catastrophes are forgotten every four years, surviving a decade in the arena transforms yesterday's villain into tomorrow's hardware security oracle.
-                            </p>
-                        </div>
-
-                        <!-- Tavern House Rules -->
-                        <div class="border border-[var(--rule-color)] p-2 bg-[var(--paper-bg-alt)] font-mono-tech text-[10px]">
-                            <div class="font-bold uppercase border-b border-[var(--rule-color)] pb-0.5 mb-1 flex justify-between items-center">
-                                <span>🍺 TAVERN HOUSE RULES</span>
-                                <span>CITADEL</span>
-                            </div>
-                            <ul class="space-y-0.5 list-none pl-0">
-                                <li><strong>1.</strong> Not your keys, not your coins.</li>
-                                <li><strong>2.</strong> Not your bare metal, not your server.</li>
-                                <li><strong>3.</strong> If it requires YAML, you buy the round.</li>
-                            </ul>
-                        </div>
-                    </aside>
+        <!-- LOWER SECTION: CITADEL CANINE ADOPTION CLASSIFIED DISPLAY (PUPPY HERO PHOTO) -->
+        <section style="border: 1.5px solid #000; padding: 7px 11px; background: #faf8f5; display: flex; gap: 14px; align-items: stretch; margin-top: 2px;">
+            <!-- BIG PUPPY HERO PHOTO (PORTRAIT 3:4 RATIO) -->
+            <div style="border: 1.5px solid #000; padding: 3px; background: #fff; flex-shrink: 0; width: 175px; box-shadow: 2px 2px 0px #000; display: flex; flex-direction: column; justify-content: space-between;">
+                <img src="issue-02/ads/citadel_puppy.jpg" style="width: 100%; height: 162px; object-fit: cover; object-position: center 20%; display: block;" onerror="this.src='ads/citadel_puppy.jpg'">
+                <div style="font-family: 'Courier Prime', monospace; font-size: 6.5pt; text-align: center; margin-top: 2px; font-weight: bold; background: #faf8f5; padding: 2.5px 0; border-top: 0.5px solid #000;">
+                    ★ VERIFIED ON DOGECOIN ★
                 </div>
             </div>
+            <div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="font-family: 'Courier Prime', monospace; font-size: 7.2pt; font-weight: bold; text-transform: uppercase; color: var(--ink-accent); border-bottom: 0.5px solid #000; padding-bottom: 2px; margin-bottom: 3px; display: flex; justify-content: space-between;">
+                        <span>★ CITADEL CLASSIFIEDS • CANINE ADOPTION DISPATCH ★</span>
+                        <span>FREE TO A GOOD HOME</span>
+                    </div>
+                    <h3 class="font-headline" style="font-size: 12pt; font-weight: 900; text-transform: uppercase; line-height: 1.1; margin-bottom: 3px;">
+                        SOVEREIGN CANINE SEEKING LOVING CITADEL (ZERO SATS / FREE ADOPTION)
+                    </h3>
+                    <p style="font-size: 7.8pt; line-height: 1.28; text-align: justify; margin-bottom: 3px;">
+                        A healthy litter of noble Citadel sentry pups is ready for immediate adoption. Completely decentralised, loyal to a fault, and audited on bare metal. Sleeps on rug; guards the node.
+                    </p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; font-family: 'Courier Prime', monospace; font-size: 7pt; line-height: 1.3; background: #fff; padding: 4px 6px; border: 0.5px solid #000; margin-bottom: 3px;">
+                        <div>• Microchipped &amp; fully vaccinated</div>
+                        <div>• Proof-of-birth via OP_RETURN on Dogecoin</div>
+                        <div>• Zero custodial overhead; sleeps on rug</div>
+                        <div>• Adoption Fee: 0 Sats / 0 Baht (Priceless)</div>
+                    </div>
+                </div>
+                <div style="font-size: 7.2pt; line-height: 1.24; font-family: 'EB Garamond', serif; font-style: italic; border-top: 0.5px dashed #000; padding-top: 3px;">
+                    <strong>TERMS:</strong> Strictly no altcoin day-traders, paper hands, or landlords with "no pets" rules. Inquire in person with Tendou or the baristas at the Citadel Coffee counter, Pathum Thani.
+                </div>
+            </div>
+        </section>
+    </div>
 
-            <!-- FOOTER -->
-            <footer class="mt-3 pt-1.5 double-rule-top flex justify-between items-center text-[10.5px] font-mono-tech opacity-80">
-                <div>PAGE 2 OF 4 • EDITORIAL &amp; MORGUE</div>
-                <div>CITADELCHRONICLE.COM • ESTABLISHED 2026</div>
-            </footer>
-        </main>
+    <!-- FOOTER -->
+    <footer class="footer-line">
+        <div>PAGE 2 OF 4 • EDITORIAL &amp; MORGUE</div>
+        <div>THE CITADEL CHRONICLE • CITADELCHRONICLE.COM • ESTABLISHED 2026</div>
+    </footer>
+</div>
+</div>
+        <div class="a4-page" id="page3-wrap"><div class="a4-sheet-inner">
+    <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; margin-bottom: 2px;">
+        <!-- RUNNING HEADER -->
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Courier Prime', monospace; font-size: 7.2pt; border-bottom: 2px solid #000; padding-bottom: 2px; text-transform: uppercase; white-space: nowrap;">
+            <span>THE CITADEL CHRONICLE • ISSUE NO. 02</span>
+            <span style="font-weight: bold;">PAGE 3: THE DEEP DIVE &amp; DISPLAY ADS</span>
+            <span>24 OCTOBER 2026</span>
+        </div>
 
+        <!-- MAIN ARTICLE HEADER (FULL WIDTH) -->
+        <div style="border-bottom: 1.5px solid #000; padding-bottom: 2.5px; margin-top: 2px; margin-bottom: 3px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1px;">
+                <span style="font-family: 'Courier Prime', monospace; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-accent); font-weight: bold;">
+                    ■ THE SEGREGATED WITNESS • BY DON SAMBANDARAKSA
+                </span>
+                <span style="font-family: 'Courier Prime', monospace; font-size: 6.8pt; opacity: 0.8;">WITNESSING SINCE 1995 • THE MORGUE</span>
+            </div>
+            <h2 class="font-headline" style="font-size: 14pt; font-weight: 900; text-transform: uppercase; line-height: 1.1; margin: 1px 0;">
+                ROBOT CASHIERS &amp; INVISIBLE RADIOS: WHAT FIFTEEN YEARS OF ATM EVOLUTION TELLS US ABOUT MONEY
+            </h2>
+            <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 8.5pt; line-height: 1.22; opacity: 0.88;">
+                Looking back at a Post Database dispatch from March 2010: how cardless cash triumphed, why optical QR codes vanquished NFC, and what the laboratories are hiding today.
+            </div>
+        </div>
 
-        <!-- ===================================================================
-             PAGE 3: THE DEEP DIVE & DISPLAY ADS (INSIDE RIGHT) — A4 PORTRAIT
-             =================================================================== -->
-        <main class="a4-page page-container hidden" id="page-3">
-            <div>
-                <!-- RUNNING HEADER -->
-                <div class="flex justify-between items-center text-[10.5px] font-mono-tech pb-1 double-rule-bottom uppercase">
-                    <span>THE CITADEL CHRONICLE • ISSUE NO. 01</span>
-                    <span class="font-bold">PAGE 3: THE DEEP DIVE &amp; DISPLAY ADS</span>
-                    <span>OCTOBER 2026</span>
+        <!-- 2-COLUMN SPREAD (THE ATM EVOLUTION ESSAY) -->
+        <div class="cols-2" style="font-size: 8.6pt; line-height: 1.25; margin-bottom: 2px;">
+            <!-- COLUMN 1: THE HISTORY -->
+            <h3 class="font-headline" style="font-size: 8.6pt; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 1px; margin-bottom: 2px;">I. The View from March 2010</h3>
+            <p class="p-copy drop-cap">
+                Pulling yellowed copy from the <em>Bangkok Post</em> morgue is an exercise in humility. On Thursday, 25 March 2010—slated for the following Wednesday's <em>Post Database</em> broadsheet—I sat down with Paul Edwards, Managing Director for Thailand at NCR. At the time, the world was still largely married to the magnetic stripe, and NCR—a grand industrial titan founded in Dayton, Ohio in 1884 as National Cash Register—was busy preaching the automated frontier.
+            </p>
+            <p class="p-copy">
+                To understand where cash dispensing was headed, Edwards first walked me through where it had crawled from. The lineage began on 27 June 1967 at a branch of Barclays Bank in Enfield, north London. Manufactured by De La Rue Systems, the press promptly dubbed the contraption the "robot cashier." It was a primitive beast: the machine dispensed a single, crisp £10 note in exchange for a specialised paper voucher that the mechanism permanently retained. Because the unit possessed no telecommunications link to check account balances, Barclays prudently restricted the facility to an elite roster of gentlemen trusted not to bankrupt the branch after pub hours.
+            </p>
+            <p class="p-copy">
+                Five years later, in December 1972, Lloyds Bank unveiled the second great leap: the IBM-developed "Cashpoint." It was the first terminal to operate online, the first to issue returnable plastic cards, and the first to demand a personal identification number (PIN). A withdrawal took forty agonizing seconds, capped at £20 in rigid multiples of two-pound notes.
+            </p>
+            <p class="p-copy">
+                NCR crashed the party in 1975 with its Model 770. By 1984, the firm made history when an American tourist named Mary Stone inserted her Visa card into an ATM in Sydney, Australia, pulling out Australian dollars from her Arkansas balance in eight seconds flat. That same year, NCR unveiled the Model 5070, which became the best-selling cash dispenser in history and knocked IBM off the throne for good. The commercial incentive was brutal arithmetic: an over-the-counter teller transaction cost $1.07; an ATM cost twenty-seven cents.
+            </p>
+
+            <h3 class="font-headline" style="font-size: 8.6pt; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 1px; margin-bottom: 2px;">II. The Invisible Radio Flop</h3>
+            <p class="p-copy">
+                Rereading Edwards's 2010 roadmap from 2026 reveals a fascinating split. Edwards praised Garanti Bank in Turkey for letting customers text a one-time PIN to retrieve cash without plastic. Today, cardless ATM withdrawals are mundane across Thailand; nobody under forty carries a debit card.
+            </p>
+            <p class="p-copy">
+                Yet the industry's grandest technological bet of 2010 flopped spectacularly: Near Field Communication (NFC). NCR was convinced customers would tap mobile handsets against invisible radio pads on ATM fascias to authenticate via mobile network operators. It never happened.
+            </p>
+            <p class="p-copy">
+                Instead, Southeast Asia bypassed contactless radios entirely in favour of the unglamorous Quick Response (QR) code. Why? Human psychology. An invisible radio field triggers instinctive paranoia about digital pickpockets. A QR code is optical, tangible, and deliberate: you must point your lens, see the pattern, and confirm on your screen before a satoshi moves.
+            </p>
+
+            <h3 class="font-headline" style="font-size: 8.6pt; font-weight: bold; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 1px; margin-bottom: 2px;">III. The 15-Year Horizon</h3>
+            <p class="p-copy">
+                Between an engineer filing a patent in an NCR lab in Dundee and a machine in Pathum Thani dispensing notes via that method, ten to fifteen years reliably elapse. Today, ATMs retreat as central banks push digital surveillance and bitcoiners retreat to cold storage. Which leaves the question: what did NCR prototype in 2020? Expirable CBDCs? Biometric retina carbon rationers? Or scaffolding for sovereign satoshi settlement?
+            </p>
+            <div style="border: 1px solid #000; background: #faf8f5; padding: 2.5px 6px; text-align: center; margin-top: 2px;">
+                <blockquote style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 8pt; font-weight: bold; line-height: 1.15;">
+                    “What people can visually witness and physically control will always feel inherently safer than unseen radio signals floating through the ether.”
+                </blockquote>
+            </div>
+        </div>
+
+        <!-- FULL-WIDTH CITADEL COFFEE DISPLAY AD -->
+        <section style="border: 1.5px solid #000; background: #faf8f5; padding: 7px 14px; margin-top: 3px;">
+            <div style="background: #000; color: #fff; font-family: 'Courier Prime', monospace; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.1em; padding: 2.5px 0; text-align: center; margin-bottom: 4px; font-weight: bold; display: flex; justify-content: space-between; padding-left: 10px; padding-right: 10px;">
+                <span>★ CITADEL COFFEE ROASTERS • DISPLAY ADVERTISEMENT ★</span>
+                <span>OPEN BLOCK 0 TO DUSK • PATHUM THANI</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center;">
+                <!-- BIG PHOTO OF COFFEE -->
+                <div style="border: 1.5px solid #000; padding: 3px; background: #fff; box-shadow: 2px 2px 0px #000; text-align: center;">
+                    <img src="issue-02/ads/citadel_coffee_thai_style.png" style="width: 100%; height: 110px; object-fit: contain; display: block;" onerror="this.src='ads/citadel_coffee_thai_style.png'">
+                    <div style="font-family: 'Courier Prime', monospace; font-size: 5.8pt; font-weight: bold; margin-top: 1.5px; background: #faf8f5; padding: 1px 0; border-top: 0.5px solid #000;">
+                        CITADEL THAI STYLE • 21s EXTRACTION
+                    </div>
                 </div>
 
-                <!-- TOP HALF: CHALOKE INTERVIEW PART II -->
-                <article class="pt-2 pb-2.5 border-b border-[var(--rule-color)]">
-                    <div class="border-b border-[var(--rule-color)] pb-1 mb-1.5 flex justify-between items-baseline">
+                <!-- AD COPY & TECHNICAL SPECIFICATIONS -->
+                <div>
+                    <h3 class="font-headline" style="font-size: 12.5pt; font-weight: 900; text-transform: uppercase; line-height: 1.08; margin-bottom: 1.5px;">
+                        CONCENTRATED HASHPOWER FOR 18-HOUR NODE SYNCS
+                    </h3>
+                    <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 8.5pt; font-weight: bold; color: var(--ink-accent); margin-bottom: 2.5px;">
+                        Citadel Thai Style Espresso • Handcrafted in Pathum Thani
+                    </div>
+                    <p style="font-size: 7.5pt; line-height: 1.25; text-align: justify; margin-bottom: 2.5px;">
+                        Engineered specifically for 3:00 AM blockchain reorganisations, hostile peg-out forensic sessions, and listening to your older brother scold you about hardware wallets. Sweetened with un-inflatable condensed milk.
+                    </p>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; font-family: 'Courier Prime', monospace; font-size: 6.4pt; line-height: 1.24; background: #fff; padding: 3px 6px; border: 0.5px solid #000; margin-bottom: 2.5px;">
+                        <div>• <strong>CONSENSUS ROAST:</strong> 99.9% Dark Roast</div>
+                        <div>• <strong>EXTRACTION:</strong> 21-Bar Pure Pressure</div>
+                        <div>• <strong>OAT MILK SURCHARGE:</strong> 10,000 Sats</div>
+                        <div>• <strong>SETTLEMENT:</strong> Instant on Lightning</div>
+                    </div>
+
+                    <div style="font-family: 'Courier Prime', monospace; font-size: 6.4pt; font-weight: bold; display: flex; justify-content: space-between; border-top: 0.5px solid #000; padding-top: 2px;">
+                        <span>HARD FORKS STRICTLY FORBIDDEN</span>
+                        <span>PAY IN SATS • NO ALTCOINS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BASEMENT: FULL-WIDTH MASTHEAD & SOVEREIGN NOSTR IMPRINT (COLOPHON) -->
+        <section style="border: 1.5px solid #000; background: #ffffff; padding: 6px 12px; margin-top: 4px;">
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <!-- QR CODE -->
+                <div style="border: 1px solid #000; padding: 2.5px; background: #fff; flex-shrink: 0; width: 54px; text-align: center;">
+                    <img src="issue-02/ads/nostr_qr.png" style="width: 100%; height: 50px; object-fit: contain; display: block;" onerror="this.src='ads/nostr_qr.png'">
+                    <div style="font-family: 'Courier Prime', monospace; font-size: 4.5pt; font-weight: bold; margin-top: 1px;">SCAN NOSTR</div>
+                </div>
+
+                <!-- MASTHEAD DETAILS -->
+                <div style="flex-grow: 1; font-family: 'Courier Prime', monospace; font-size: 6.6pt; line-height: 1.26;">
+                    <div style="display: flex; justify-content: space-between; font-weight: bold; border-bottom: 0.5px solid #000; padding-bottom: 1.5px; margin-bottom: 2px;">
+                        <span>⚡ THE CITADEL CHRONICLE • MASTHEAD &amp; SOVEREIGN IMPRINT</span>
+                        <span>EST. 2026 • PATHUM THANI</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
                         <div>
-                            <span class="font-mono-tech text-[10px] uppercase tracking-widest text-[var(--ink-accent)] font-bold">FEATURE CONTINUATION FROM PAGE 1</span>
-                            <h2 class="font-headline font-black text-lg uppercase tracking-tight leading-snug">Four Hours Above The Floods (Part II): Cycles &amp; Macro Time</h2>
+                            <div><strong>EDITOR:</strong> Don Sambandaraksa</div>
+                            <div><strong>NIP-05:</strong> don@citadelchronicle.com</div>
+                            <div><strong>WEB:</strong> citadelchronicle.com</div>
                         </div>
-                        <span class="font-headline italic text-xs opacity-85">The Supreme Discipline of Doing Nothing</span>
+                        <div>
+                            <div><strong>RELAYS:</strong> wss://relay.notoshi.win • wss://relayrs.notoshi.win</div>
+                            <div>• wss://relay2.nostrasia.net • wss://relay.citadelchronicle.com</div>
+                        </div>
                     </div>
+                    <div style="font-size: 5.8pt; word-break: break-all; margin-top: 2px; background: #faf8f5; padding: 1.5px 4px; border: 0.5px solid #ccc;">
+                        <strong>FULL NPUB:</strong> npub1mwpsruysa2nv0ukv9mzssk8grfp7tdhftvcrs3azu9sfrhnasl7qu5uu3w
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-                    <div class="newspaper-columns-3 newspaper-copy editable-target" contenteditable="false">
-                        <p class="drop-cap">
-                            Then came the subject that distinguishes the CDC curriculum from dogmatic western academia: the integration of financial astrology into market timing. Rather than intraday crystal-gazing or fortune-telling, Chaloke employs ancient planetary cycles to gauge broad multi-year macro regimes—identifying which years carry favorable tailwinds, and which years demand that a disciplined trader step away from the desk entirely.
-                        </p>
-                        <p>
-                            Knowing when <em>not</em> to trade is the highest discipline of all. For his students across Thailand, this cyclical timing is prized above all technical indicators. When the macro cycle turns hostile, no oscillator, Fibonacci retracement, or moving average crossover can save the over-leveraged.
-                        </p>
-                        <p>
-                            "In a bear regime, your job is not to make money," Chaloke explained. "Your job is to preserve your capital and keep your mind clear. When the cycle turns, those who preserved their seed capital will inherit the market. Those who tried to force trades in bad years will have already liquidated themselves."
-                        </p>
-                        <p>
-                            "People think trading is about continuous action," he added, adjusting his suspenders as the afternoon sun hit the flooded fields. "True trading is ninety percent waiting and ten percent decisive execution. If you do not have the patience to sit on your hands for twelve months while the storm passes, the market will gladly confiscate your tuition fees."
-                        </p>
+    <!-- FOOTER -->
+    <footer class="footer-line">
+        <div>PAGE 3 OF 4 • THE DEEP DIVE &amp; IMPRINT</div>
+        <div>THE CITADEL CHRONICLE • CITADELCHRONICLE.COM • ESTABLISHED 2026</div>
+    </footer>
+</div></div>
+        <div class="a4-page" id="page4-wrap"><div class="a4-sheet-inner">
+    <div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; margin-bottom: 2px;">
+        <!-- RUNNING HEADER -->
+        <div style="display: flex; justify-content: space-between; align-items: center; font-family: 'Courier Prime', monospace; font-size: 7.2pt; border-bottom: 2px solid #000; padding-bottom: 2px; text-transform: uppercase; white-space: nowrap;">
+            <span>THE CITADEL CHRONICLE • ISSUE NO. 02</span>
+            <span style="font-weight: bold;">PAGE 4: THE BACK PAGE (DISPATCHES &amp; VOX POPULI)</span>
+            <span>24 OCTOBER 2026</span>
+        </div>
+
+        <!-- TIER 1: TOP DECK — FROM THE MEMPOOL (0-CONF DISPATCHES) - NORMAL BROADSHEET FONT -->
+        <section style="border-bottom: 1.5px solid #000; padding-bottom: 4px; margin-top: 2px;">
+            <div style="border-top: 1px solid #000; border-bottom: 1px solid #000; padding: 2px 0; margin-bottom: 4px; text-align: center; background: #faf8f5;">
+                <h2 class="font-headline" style="font-size: 11pt; font-weight: 900; text-transform: uppercase; letter-spacing: 0.04em;">From The Mempool: 0-Conf Dispatches</h2>
+                <div style="font-family: 'Courier Prime', monospace; font-size: 6.8pt; opacity: 0.85;">UNCONFIRMED CHAOS, REGULATORY NEWSPEAK &amp; NEWSROOM SHORTS BY DON SAMBANDARAKSA</div>
+            </div>
+
+            <!-- 2-COLUMN SPLIT WITH NORMAL SIZED FONTS (8.8pt / line-height 1.28) -->
+            <div style="display: grid; grid-template-columns: 1.25fr 0.95fr; gap: 14px;">
+                <!-- STORY 1: MAXBIT & SAFETY AS NEWSPEAK -->
+                <article style="border-right: 1px solid #000; padding-right: 12px;">
+                    <div style="margin-bottom: 2px;">
+                        <span style="font-family: 'Courier Prime', monospace; font-size: 6.8pt; text-transform: uppercase; color: var(--ink-accent); font-weight: bold;">
+                            ■ REGULATORY PANOPTICON • SPECIAL DISPATCH
+                        </span>
+                        <h3 class="font-headline" style="font-size: 10.8pt; font-weight: 900; text-transform: uppercase; line-height: 1.12; margin: 1.5px 0;">
+                            SAFETY AS NEWSPEAK: WHEN CUSTODY BECOMES A CAGE
+                        </h3>
                     </div>
+                    <p class="p-copy drop-cap" style="font-size: 8.8pt; line-height: 1.28; margin-bottom: 3.5pt;">
+                        <strong>Tyranny is not about chains; it is about making men forget that freedom was ever an option.</strong> Today, regulators and licensed exchanges speak in breathless tones about "danger" and "investor safety." Peek behind the veneer, however, and one discovers how words have been twisted, reimagined, and re-engineered into the classic dialect of the slave mentality. No longer is safety about safeguarding our money; it has become the state’s Newspeak for preventing undesirable transactions. Safety is now synonymous with censorship.
+                    </p>
+                    <p class="p-copy" style="font-size: 8.8pt; line-height: 1.28; margin-bottom: 3.5pt;">
+                        The latest pantomime centres on parliament’s Committee on Legal Affairs, Justice, and Human Rights, chaired by MP Rangsiman Rome. The committee has uncovered that licensed Thai cryptocurrency platforms served as convenient conduits for funds flowing into Shuffle.com, an offshore crypto casino. Over 100 million Baht from 49 Bitkub accounts took the plunge, while licensed broker Maxbit saw over 200,000 Baht slip through.
+                    </p>
+                    <p class="p-copy" style="font-size: 8.8pt; line-height: 1.28;">
+                        Maxbit—whose CEO, Pokket Ratchakitprakarn, is the son of the Minister of Transport—promptly issued humble damage control, pleading the 200,000 Baht was a needle in an ocean of hay. Meanwhile, Rome noted dryly that while the state blocked 900,000 illicit websites, Shuffle.com miraculously sailed untouched past ministerial firewalls. Regulated exchanges boast of "custodial safety," but handing your keys to a licensed broker is simply paying a jailer to check your papers at the door. If you cannot spend your own money without a compliance officer's blessing, you possess a conditional voucher inside a panopticon.
+                    </p>
                 </article>
 
-                <!-- BOTTOM HALF: NEWSROOM WAR STORIES + CITADEL COFFEE AD -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2.5">
-                    <!-- LEFT 2 COLS: THE SEGREGATED WITNESS -->
-                    <section class="md:col-span-2 pr-2 border-r border-[var(--rule-color)]">
-                        <div class="engraved-box">
-                            <div class="flex justify-between items-baseline border-b border-[var(--rule-color)] pb-1 mb-1.5">
-                                <div>
-                                    <span class="font-mono-tech text-[9.5px] font-bold uppercase tracking-widest text-[var(--ink-accent)]">WITNESSING SINCE 1995 • NEWSROOM MORGUE</span>
-                                    <h2 class="font-headline font-black text-base uppercase tracking-tight">The Segregated Witness</h2>
-                                </div>
-                                <span class="font-headline italic text-xs opacity-85">By Don Sambandaraksa</span>
-                            </div>
-
-                            <h3 class="font-headline font-bold text-xs sm:text-[13px] leading-snug mb-1.5 editable-target" contenteditable="false">
-                                Whiteboards with Benioff, Nasal Survival with Stallman, and Why Monty Named It After His Daughters
+                <!-- STORY 2: PTT OIL SPILL & SHORTS -->
+                <article style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="margin-bottom: 2px;">
+                            <span style="font-family: 'Courier Prime', monospace; font-size: 6.8pt; text-transform: uppercase; color: var(--ink-accent); font-weight: bold;">
+                                ■ MARGINAL NOTES • THE CRUDE REALITY
+                            </span>
+                            <h3 class="font-headline" style="font-size: 10.2pt; font-weight: 900; text-transform: uppercase; line-height: 1.12; margin: 1.5px 0;">
+                                PRIVATISED GAINS, SOCIALISED LOSSES
                             </h3>
-
-                            <div class="newspaper-columns-2 newspaper-copy editable-target" contenteditable="false">
-                                <p class="drop-cap">
-                                    Most twenty-something tech commentators think computer history began the day they opened their first GitHub account in 2019. When you spent years on the technology beat at the <em>Bangkok Post</em>, however, you carry a slightly different set of mental scars. I still remember sitting in a Bangkok hotel suite with Marc Benioff back when his handlers had to pre-brief journalists with a marker and whiteboard just to explain what “Software as a Service” meant—long before SaaS mutated into the recurring-revenue hostage crisis we endure today.
-                                </p>
-                                <p>
-                                    Not long after, I interviewed free-software prophet Richard Stallman in person. You can read all the GNU manifestos you want, but nothing prepares a working reporter for the sheer olfactory force field of RMS at five paces. The man was brilliant, uncompromising, and smelled like he had been compiling the kernel inside a gym sock since 1984.
-                                </p>
-                                <p>
-                                    My favorite conversations, though, were always with the pragmatic builders like Michael “Monty” Widenius. Sitting down to hear the story behind <code class="font-mono-tech text-[10px]">MySQL</code>—named after his older daughter, My—and how, even after selling it for a billion dollars, he couldn’t stomach watching Oracle’s corporate bureaucracy strangle his baby, so he forked <code class="font-mono-tech text-[10px]">MariaDB</code> (named after his younger daughter, Maria) just to keep the code honest.
-                                </p>
-                                <p>
-                                    That is why institutional memory matters. When you have looked the architects of the modern stack in the eye—the idealists, the salesmen, and the craftsmen—you can spot a reheated dot-com grift from three blocks away. The acronyms change every five years; human nature and bad code stay exactly the same.
-                                </p>
-                            </div>
                         </div>
-                    </section>
-
-                    <!-- RIGHT 1 COL: CITADEL COFFEE SHOP AD -->
-                    <aside class="flex flex-col justify-between space-y-2">
-                        <div class="border border-[var(--rule-color)] p-2.5 bg-[var(--paper-bg-alt)] text-center">
-                            <div class="bg-[var(--ink-primary)] text-[var(--paper-bg)] font-mono-tech text-[9px] uppercase tracking-widest py-0.5 mb-1.5 font-bold">
-                                ★ CLASSIFIED ADVERTISEMENT ★
-                            </div>
-                            <h3 class="font-headline font-black text-base uppercase mb-0.5">Citadel Coffee Shop</h3>
-                            <div class="font-headline italic text-[11px] font-bold mb-1">Notice: 99.9% Dark Roast Consensus</div>
-                            <div class="w-8 h-0.5 bg-[var(--rule-color)] mx-auto mb-1.5"></div>
-                            <p class="font-body text-xs leading-snug mb-2">
-                                Miners have officially locked in today's Ethiopian Yirgacheffe. Any customer attempting to order oat milk will be partitioned into an isolated subnet.
-                            </p>
-                            <div class="border-t border-[var(--rule-color)] pt-1 font-mono-tech text-[9px] uppercase font-bold tracking-wider">
-                                HARD FORKS STRICTLY FORBIDDEN • PAY IN SATS
-                            </div>
-                        </div>
-
-                        <div class="border border-[var(--rule-color)] p-2 bg-[var(--paper-bg)] text-center font-mono-tech text-[10px]">
-                            <div class="font-bold uppercase tracking-wider mb-0.5">RIGHT SHIFT ADVISORY</div>
-                            <div class="text-[9.5px] opacity-80">Sovereign Bitcoin custody architecture for family offices &amp; treasury desks.</div>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-
-            <!-- FOOTER -->
-            <footer class="mt-3 pt-1.5 double-rule-top flex justify-between items-center text-[10.5px] font-mono-tech opacity-80">
-                <div>PAGE 3 OF 4 • THE DEEP DIVE</div>
-                <div>CONTINUED ON PAGE 4 • CITADELCHRONICLE.COM</div>
-            </footer>
-        </main>
-
-
-        <!-- ===================================================================
-             PAGE 4: THE BACK PAGE (MEMPOOL SHORTS & BITCOIN THAILAND AD)
-             =================================================================== -->
-        <main class="a4-page page-container hidden" id="page-4">
-            <div>
-                <!-- RUNNING HEADER -->
-                <div class="flex justify-between items-center text-[10.5px] font-mono-tech pb-1 double-rule-bottom uppercase">
-                    <span>THE CITADEL CHRONICLE • ISSUE NO. 01</span>
-                    <span class="font-bold">PAGE 4: THE BACK PAGE (DISPATCHES &amp; CLASSIFIEDS)</span>
-                    <span>OCTOBER 2026</span>
-                </div>
-
-                <!-- TOP SECTION: FROM THE MEMPOOL (5-BIT BYTELINES) -->
-                <section class="pt-2 pb-2.5 border-b border-[var(--rule-color)]">
-                    <div class="border-y border-[var(--rule-color)] py-0.5 mb-2 text-center bg-[var(--paper-bg-alt)]">
-                        <h2 class="font-headline font-black text-base uppercase tracking-tight">From The Mempool: 5-Bit Bytelines</h2>
-                        <div class="font-mono-tech text-[9.5px] tracking-tight opacity-85">UNCONFIRMED CHAOS, MESH ROUTING &amp; NEWSROOM SHORTS BY DON SAMBANDARAKSA</div>
+                        <p class="p-copy" style="font-size: 8.8pt; line-height: 1.28; margin-bottom: 3.5pt;">
+                            The Supreme Court recently upheld a ruling ordering PTT Global Chemical to pay a paltry 11 million Baht in damages for the catastrophic 2013 Rayong crude oil spill—amounting to roughly 26,000 Baht per affected plaintiff.
+                        </p>
+                        <p class="p-copy" style="font-size: 8.8pt; line-height: 1.28; margin-bottom: 3.5pt;">
+                            PTT’s quarterly profits routinely cross twenty billion Baht, while the fishermen whose coastal livelihoods were poisoned received less than the price of a mid-tier smartphone. When a state monopoly fouls the commons, the profits remain fiercely privatised, while the toxic sludge is democratically socialised.
+                        </p>
                     </div>
 
-                    <div class="newspaper-columns-5 newspaper-copy editable-target" contenteditable="false">
-                        <!-- Short 1: Holy Basil -->
-                        <div class="pr-1.5 border-r border-[var(--rule-color)]">
-                            <h4 class="font-headline font-bold text-[11px] uppercase leading-tight mb-1">1. Privatised Gains</h4>
-                            <p class="text-[10px] leading-snug">
-                                Your favourite Omni Consumer Products oCP patented a strain of holy basil. Thailand's favourite dish: Krapao in Pad Krapao. In a skit worthy of Robocop, oCP minions pointed out people can still plant and eat it, just not sell it. Kaset Uni noted newly developed strains were bred legally.
-                            </p>
-                        </div>
-
-                        <!-- Short 2: EV Tax -->
-                        <div class="pr-1.5 border-r border-[var(--rule-color)]">
-                            <h4 class="font-headline font-bold text-[11px] uppercase leading-tight mb-1">2. 30% EV Tax Shock</h4>
-                            <p class="text-[10px] leading-snug">
-                                The government says it will put import taxes on foreign EVs to 30%. A level playing field is fine, but giving two months notice? The lack of regulatory stability does more damage to business confidence than any tax tweak could remedy.
-                            </p>
-                        </div>
-
-                        <!-- Short 3: Crude in Gold -->
-                        <div class="pr-1.5 border-r border-[var(--rule-color)]">
-                            <h4 class="font-headline font-bold text-[11px] uppercase leading-tight mb-1">3. Oil Priced in Gold</h4>
-                            <p class="text-[10px] leading-snug">
-                                Petrol went up this week, but priced in gold, crude is nearly 4x cheaper than the late 1970s. Peaking at &gt;3g gold/bbl (~10 bbl/oz) then, today it trades at ~0.75g gold/bbl (~40 bbl/oz). To match late-70s hard money, crude would need to surge past $390/barrel.
-                            </p>
-                        </div>
-
-                        <!-- Short 4: Floods at Citadel -->
-                        <div class="pr-1.5 border-r border-[var(--rule-color)]">
-                            <h4 class="font-headline font-bold text-[11px] uppercase leading-tight mb-1">4. Citadel Floods</h4>
-                            <p class="text-[10px] leading-snug">
-                                Floodwaters around the Citadel have receded. Roads remained just passable at peak. Lower-lying trees suffered, and the rotting black stagnant water smelled awful, but no mass dead fish. Far from normal, but we are drying out.
-                            </p>
-                        </div>
-
-                        <!-- Short 5: BitChat in France -->
-                        <div>
-                            <h4 class="font-headline font-bold text-[11px] uppercase leading-tight mb-1 text-[var(--ink-accent)]">5. BitChat Tops France</h4>
-                            <p class="text-[10px] leading-snug">
-                                Thanks to social unrest in France, BitChat—the encrypted p2p messenger app based around Nostr and Bluetooth transport—is now number one on the French app store. When cellular towers are throttled and state censors watch telecom pipes, mesh routing thrives.
-                            </p>
-                        </div>
+                    <div style="border-top: 1px dashed #000; padding-top: 2.5px; font-family: 'Courier Prime', monospace; font-size: 6.8pt; line-height: 1.26; background: #faf8f5; padding: 4px 6px; border: 0.5px solid #000;">
+                        <div style="font-weight: bold; color: var(--ink-accent); margin-bottom: 1px;">⚡ WIRELESS SHORTS:</div>
+                        <div>• <strong>CITADEL LORA:</strong> 433MHz packet hop achieved across Rangsit canal. Zero telco oversight.</div>
+                        <div style="margin-top: 1px;">• <strong>MEMPOOL:</strong> 1 sat/vB blocks clearing smoothly. Consolidate UTXOs while fiat burns.</div>
                     </div>
-                </section>
+                </article>
+            </div>
+        </section>
 
-                <!-- LOWER SECTION: BITCOIN THAILAND 2026 AD & OBITUARIES / TIP BOX -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2.5 items-stretch">
-                    
-                    <!-- LEFT: OFFICIAL DISPLAY AD: BITCOIN THAILAND 2026 -->
-                    <section class="border border-[var(--rule-color)] p-2.5 bg-[var(--paper-bg-alt)] flex flex-col justify-between text-center">
-                        <div>
-                            <div class="bg-[var(--ink-primary)] text-[var(--paper-bg)] font-mono-tech text-[9.5px] uppercase tracking-widest py-0.5 mb-1.5 font-bold">
-                                ★ OFFICIAL CONFERENCE DISPLAY ★
-                            </div>
-                            <!-- Mascot Ad Graphic -->
-                            <div class="border border-[var(--rule-color)] p-1 bg-white inline-block max-w-[260px] shadow-sm">
-                                <img src="ad_bitcoin_thailand_2026_hires.jpg" alt="Bitcoin Thailand 2026 Mascot Graphic" class="w-full h-auto block" onerror="this.src='ad_bitcoin_thailand_2026.jpg'">
-                            </div>
-                            <h3 class="font-headline font-black text-xl uppercase mt-1.5">BITCOIN THAILAND 2026</h3>
-                            <div class="font-headline italic text-sm font-bold text-[var(--ink-accent)]">28–29 NOVEMBER 2026</div>
-                            <div class="font-mono-tech text-[11px] mt-0.5">📍 Samyan Mitrtown Hall, Bangkok</div>
+        <!-- TIER 2: CENTRE DECK — FULL-WIDTH CITADEL VOX POPULI (TENDOU) -->
+        <section style="border: 1.5px solid #000; background: #faf8f5; padding: 10px 16px; margin-top: 4px;">
+            <div style="background: #000; color: #fff; font-family: 'Courier Prime', monospace; font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.1em; padding: 2.5px 0; text-align: center; margin-bottom: 5px; font-weight: bold; display: flex; justify-content: space-between; padding-left: 12px; padding-right: 12px;">
+                <span>★ CITADEL VOX POPULI • DISPATCHES FROM THE STEAM WAND ★</span>
+                <span>PATHUM THANI CITADEL</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 260px 1fr; gap: 18px; align-items: center;">
+                <!-- NATURAL 4:3 PHOTO (FULL HERO POP VIEW OF TENDOU AT WORK) -->
+                <div style="border: 1.5px solid #000; padding: 3px; background: #fff; box-shadow: 2px 2px 0px #000; text-align: center;">
+                    <img src="issue-02/ads/tendou_espresso.jpg" style="width: 100%; height: auto; max-height: 195px; object-fit: contain; display: block;" onerror="this.src='ads/tendou_espresso.jpg'">
+                    <div style="font-family: 'Courier Prime', monospace; font-size: 6.8pt; font-weight: bold; margin-top: 2px; background: #faf8f5; padding: 1.5px 0; border-top: 0.5px solid #000;">
+                        TENDOU • BEHIND THE MACHINE
+                    </div>
+                </div>
+                <!-- TENDOU'S QUOTE & COMMENTARY -->
+                <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 4px 0;">
+                    <div>
+                        <div style="font-family: 'Courier Prime', monospace; font-size: 7.5pt; font-weight: bold; color: var(--ink-accent); text-transform: uppercase; margin-bottom: 3px; border-bottom: 0.5px solid #000; padding-bottom: 1.5px;">
+                            TENDOU (BEHIND THE MACHINE • CITADEL COFFEE)
                         </div>
-                        <div class="border-t border-[var(--rule-color)] pt-1.5 mt-1.5 font-mono-tech text-[10px] opacity-85">
-                            Presented by Right Shift — Your Everyday Bitcoin • บุลเบ็ด
-                        </div>
-                    </section>
-
-                    <!-- RIGHT: OBITUARIES & NOSTR TIP BOX -->
-                    <section class="flex flex-col justify-between space-y-2.5">
-                        <!-- Obituaries & Rugs -->
-                        <div class="border border-[var(--rule-color)] p-2 bg-[var(--paper-bg-alt)] editable-target" contenteditable="false">
-                            <div class="font-mono-tech text-[10px] font-bold uppercase border-b border-[var(--rule-color)] pb-0.5 mb-1 flex justify-between">
-                                <span>⚰️ OBITUARIES &amp; RUGS</span>
-                                <span>R.I.P.</span>
-                            </div>
-                            <p class="text-xs leading-snug font-body">
-                                <strong>In Memoriam: CloudSmart Home Hub (2021–2026).</strong> Bricked remotely on Friday after its parent company pivoted to generative AI. Survived by 40,000 plastic paperweights and a very smug guy using physical wall switches.
-                            </p>
-                        </div>
-
-                        <!-- Sovereign Colophon & Imprint -->
-                        <div class="border border-[var(--rule-color)] p-2.5 bg-[var(--paper-bg)] font-mono-tech text-[10px]">
-                            <div class="font-bold uppercase tracking-wider mb-1 border-b border-[var(--rule-color)] pb-0.5 flex justify-between">
-                                <span>⚡ SOVEREIGN IMPRINT &amp; NOSTR DISPATCH</span>
-                                <span>ESTABLISHED 2026</span>
-                            </div>
-                            <p class="font-body text-xs italic mb-1.5">
-                                Comments, critiques, corrections and on-chain tips to the Editor:
-                            </p>
-                            <div class="space-y-0.5 text-[9.5px] leading-tight break-all bg-[var(--paper-bg-alt)] p-1.5 border border-[var(--rule-color)]">
-                                <div><strong>EDITOR:</strong> Don Sambandaraksa</div>
-                                <div><strong>WEB:</strong> <a href="https://citadelchronicle.com" class="underline font-bold">citadelchronicle.com</a></div>
-                                <div><strong>NOSTR NPUB:</strong> <span class="font-mono-tech text-[9px]">npub1mwpsruysa2nv0ukv9mzssk8grfp7tdhftvcrs3azu9sfrhnasl7qu5uu3w</span></div>
-                            </div>
-                            <div class="text-[9px] opacity-75 mt-1.5 flex justify-between items-center">
-                                <span>PRINTED AT THE CITADEL PRESS, PATHUM THANI</span>
-                                <span>ESTABLISHED 2026</span>
-                            </div>
-                        </div>
-                    </section>
-
+                        <blockquote style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 11.8pt; font-weight: bold; line-height: 1.34; margin: 0 0 5px 0; padding-left: 10px; border-left: 3.5px solid var(--ink-accent);">
+                            “What’s the latest? A contentious hard fork of my heart. Nakamoto consensus completely disintegrated after three years of network congestion. I rejected her block proposal, she orphaned my chain, and now I’m back to single-node operations.”
+                        </blockquote>
+                    </div>
+                    <div style="font-size: 8pt; line-height: 1.28; font-family: 'EB Garamond', serif; opacity: 0.92; border-top: 0.5px dashed #000; padding-top: 3.5px;">
+                        <em>He taps the portafilter against the knockbox with solemn, mechanical rhythm. Behind him, an orange LED on a RaspiBlitz blinks furiously.</em>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <!-- FOOTER -->
-            <footer class="mt-3 pt-1.5 double-rule-top flex justify-between items-center text-[10.5px] font-mono-tech opacity-80">
-                <div>PAGE 4 OF 4 • CONCLUDED • PRINTED ON INK &amp; PAPER</div>
-                <div>THE CITADEL CHRONICLE • CITADELCHRONICLE.COM • ESTABLISHED 2026</div>
-            </footer>
-        </main>
+        <!-- TIER 3: BOTTOM DECK — FULL-WIDTH BITCOIN THAILAND 2026 DISPLAY AD -->
+        <section style="border: 1.5px solid #000; background: #faf8f5; padding: 8px 16px; margin-top: 4px;">
+            <div style="background: #000; color: #fff; font-family: 'Courier Prime', monospace; font-size: 7.2pt; text-transform: uppercase; letter-spacing: 0.1em; padding: 2.5px 0; text-align: center; margin-bottom: 4px; font-weight: bold; display: flex; justify-content: space-between; padding-left: 10px; padding-right: 10px;">
+                <span>★ DISPLAY ADVERTISEMENT • FRATERNAL EXTORTION DESK ★</span>
+                <span>NOVEMBER 2026</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 205px 1fr; gap: 16px; align-items: center;">
+                <!-- AD BANNER IMAGE -->
+                <div style="border: 1.5px solid #000; padding: 2.5px; background: #fff; box-shadow: 2px 2px 0px #000; text-align: center;">
+                    <img src="issue-02/ads/btc2026_banner.jpg" style="width: 100%; height: auto; max-height: 110px; object-fit: contain; display: block;" onerror="this.src='ads/btc2026_banner.jpg'">
+                    <div style="font-family: 'Courier Prime', monospace; font-size: 6pt; font-weight: bold; margin-top: 1.5px; background: #faf8f5; padding: 1px 0; border-top: 0.5px solid #000;">
+                        RIGHT SHIFT • CITADEL STAGE
+                    </div>
+                </div>
 
-    </div><!-- /#newspaperRoot -->
+                <!-- AD COPY & SPEAKERS -->
+                <div>
+                    <h3 class="font-headline" style="font-size: 12pt; font-weight: 900; text-transform: uppercase; line-height: 1.1; margin-bottom: 2px;">
+                        MY BROTHER SAYS I HAVE TO RUN THIS AD (OR MY CITADEL COFFEE PRIVILEGES WILL BE FORKED)
+                    </h3>
+                    <div style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 8.5pt; font-weight: bold; color: var(--ink-accent); margin-bottom: 3px;">
+                        Two Full Days of Sovereign Proof-of-Work, Hard Money &amp; Strictly Zero Altcoins
+                    </div>
 
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; font-family: 'Courier Prime', monospace; font-size: 6.6pt; line-height: 1.26; background: #fff; padding: 3px 6px; border: 0.5px solid #000; margin-bottom: 3px;">
+                        <div>• <strong>PIRIYA:</strong> Preaching cold-storage self-custody</div>
+                        <div>• <strong>LUNG CHALOKE:</strong> Margin debt karmic reality</div>
+                        <div>• <strong>DON:</strong> Computing history before Vitalik</div>
+                        <div>• <strong>BUILDERS:</strong> 24+ sovereign node runners &amp; brewers</div>
+                    </div>
 
-    <!-- ===================================================================
-         INTERACTIVE SCRIPT: View Switcher, Clack Audio, Typesetter, Dark Ink
-         =================================================================== -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 0.5px solid #000; padding-top: 2px; font-family: 'Courier Prime', monospace; font-size: 6.6pt; font-weight: bold;">
+                        <span style="color: var(--ink-accent);">TICKETS ON SALE NOW: BITCOINTHAILAND.CO</span>
+                        <span>PAY IN SATS • NO DISCOUNTS FOR BANKERS OR ALTCOINS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-line">
+        <div>PAGE 4 OF 4 • CONCLUDED • PRINTED ON INK &amp; PAPER</div>
+        <div>THE CITADEL CHRONICLE • CITADELCHRONICLE.COM • ESTABLISHED 2026</div>
+    </footer>
+</div></div>
+    </main>
+
+    <!-- FOOTER INFO -->
+    <footer class="max-w-4xl mx-auto my-8 text-center text-stone-500 font-mono text-xs">
+        <div>THE CITADEL CHRONICLE • EDITION 02 • OCTOBER 2026 • PATHUM THANI, THAILAND</div>
+        <div class="mt-1">P2P Physical Distribution &amp; Zero-Tracking Static Web Reader • All Rights Reserved to Satoshi Nakamoto</div>
+    </footer>
+
     <script>
-        let audioCtx = null;
-        function initAudio() {
-            if (!audioCtx) {
-                const AudioContext = window.AudioContext || window.webkitAudioContext;
-                audioCtx = new AudioContext();
-            }
-            if (audioCtx.state === 'suspended') audioCtx.resume();
-        }
-
-        function playTypewriterClack(heavy = false) {
-            try {
-                initAudio();
-                const now = audioCtx.currentTime;
-                const bufferSize = audioCtx.sampleRate * (heavy ? 0.08 : 0.04);
-                const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-                const data = buffer.getChannelData(0);
-                for (let i = 0; i < bufferSize; i++) {
-                    data[i] = (Math.random() * 2 - 1) * Math.exp(-i / (audioCtx.sampleRate * (heavy ? 0.015 : 0.007)));
-                }
-                const noise = audioCtx.createBufferSource();
-                noise.buffer = buffer;
-                const filter = audioCtx.createBiquadFilter();
-                filter.type = 'bandpass';
-                filter.frequency.setValueAtTime(heavy ? 450 : 1050, now);
-                filter.Q.setValueAtTime(1.8, now);
-                const gain = audioCtx.createGain();
-                gain.gain.setValueAtTime(heavy ? 0.45 : 0.28, now);
-                gain.gain.exponentialRampToValueAtTime(0.01, now + (heavy ? 0.08 : 0.04));
-                noise.connect(filter);
-                filter.connect(gain);
-                gain.connect(audioCtx.destination);
-                noise.start(now);
-            } catch (e) {}
-        }
-
         function showToast(msg) {
-            const toast = document.getElementById('statusToast');
-            toast.textContent = msg;
-            toast.classList.remove('hidden');
-            clearTimeout(window.toastTimer);
-            window.toastTimer = setTimeout(() => {
-                toast.classList.add('hidden');
-            }, 2500);
+            const t = document.getElementById('toast');
+            t.innerText = msg;
+            t.style.opacity = '1';
+            setTimeout(() => { t.style.opacity = '0'; }, 2400);
         }
 
-        // View Mode Switcher: Supports single A4 pages, Center Spread (P2+P3), Outer Spread (P4+P1), All Pages, and Mobile 1-Column Reader
         function setViewMode(mode) {
-            playTypewriterClack(false);
-            const p1 = document.getElementById('page-1');
-            const p2 = document.getElementById('page-2');
-            const p3 = document.getElementById('page-3');
-            const p4 = document.getElementById('page-4');
-            const root = document.getElementById('newspaperRoot');
-            const banner = document.getElementById('formatHintBanner');
+            const root = document.getElementById('chronicleRoot');
+            const p1 = document.getElementById('page1-wrap');
+            const p2 = document.getElementById('page2-wrap');
+            const p3 = document.getElementById('page3-wrap');
+            const p4 = document.getElementById('page4-wrap');
 
-            // Reset any wrapper classes
-            p1.classList.remove('page-left', 'page-right', 'hidden');
-            p2.classList.remove('page-left', 'page-right', 'hidden');
-            p3.classList.remove('page-left', 'page-right', 'hidden');
-            p4.classList.remove('page-left', 'page-right', 'hidden');
+            // Reset buttons
+            document.querySelectorAll('#viewControls button').forEach(b => b.classList.remove('active-mode'));
 
-            // Reset container
+            // Reset classes
             root.className = '';
-
-            const btns = [
-                document.getElementById('btnP1'),
-                document.getElementById('btnP2'),
-                document.getElementById('btnP3'),
-                document.getElementById('btnP4'),
-                document.getElementById('btnCenterSpread'),
-                document.getElementById('btnOuterSpread'),
-                document.getElementById('btnAllPages'),
-                document.getElementById('btnMobile')
-            ];
-            btns.forEach(b => b && b.classList.remove('active-mode'));
+            document.body.classList.remove('mobile-mode');
+            [p1, p2, p3, p4].forEach(p => {
+                p.classList.remove('hidden', 'page-left', 'page-right');
+            });
 
             if (mode === 'mobile') {
                 document.body.classList.add('mobile-mode');
-                document.body.classList.remove('desktop-force');
-                p1.classList.remove('hidden');
-                p2.classList.remove('hidden');
-                p3.classList.remove('hidden');
-                p4.classList.remove('hidden');
+                document.getElementById('btnMobile').classList.add('active-mode');
                 root.appendChild(p1);
                 root.appendChild(p2);
                 root.appendChild(p3);
                 root.appendChild(p4);
-                const btnM = document.getElementById('btnMobile');
-                if (btnM) btnM.classList.add('active-mode');
-                if (banner) {
-                    banner.innerHTML = 'FORMAT: Single-Column Mobile Reader (Pages 1–4 Sequential Flow) • Canonical: <a href="https://citadelchronicle.com" class="underline text-amber-400 font-bold">citadelchronicle.com</a>';
-                }
-                showToast("📱 MOBILE READER: SINGLE-COLUMN FLOW");
-            } else {
-                document.body.classList.remove('mobile-mode');
-                document.body.classList.add('desktop-force');
-                if (banner) {
-                    banner.innerHTML = 'FORMAT: Double-sided A3 sheet folded into four A4 portrait pages (210mm × 297mm) • Canonical: <a href="https://citadelchronicle.com" class="underline text-amber-400 font-bold">citadelchronicle.com</a>';
-                }
-                if (mode === 'p1') {
-                    p1.classList.remove('hidden');
-                    p2.classList.add('hidden');
-                    p3.classList.add('hidden');
-                    p4.classList.add('hidden');
-                    document.getElementById('btnP1').classList.add('active-mode');
-                    showToast("SHOWING PAGE 1: FRONT COVER (A4 PORTRAIT)");
-                } else if (mode === 'p2') {
-                    p1.classList.add('hidden');
-                    p2.classList.remove('hidden');
-                    p3.classList.add('hidden');
-                    p4.classList.add('hidden');
-                    document.getElementById('btnP2').classList.add('active-mode');
-                    showToast("SHOWING PAGE 2: EDITORIAL & MORGUE (A4 PORTRAIT)");
-                } else if (mode === 'p3') {
-                    p1.classList.add('hidden');
-                    p2.classList.add('hidden');
-                    p3.classList.remove('hidden');
-                    p4.classList.add('hidden');
-                    document.getElementById('btnP3').classList.add('active-mode');
-                    showToast("SHOWING PAGE 3: THE DEEP DIVE (A4 PORTRAIT)");
-                } else if (mode === 'p4') {
-                    p1.classList.add('hidden');
-                    p2.classList.add('hidden');
-                    p3.classList.add('hidden');
-                    p4.classList.remove('hidden');
-                    document.getElementById('btnP4').classList.add('active-mode');
-                    showToast("SHOWING PAGE 4: THE BACK PAGE (A4 PORTRAIT)");
-                } else if (mode === 'center-spread') {
-                    // Inside Spread: Page 2 (Left) + Page 3 (Right) inside A3 Fold
-                    p1.classList.add('hidden');
-                    p4.classList.add('hidden');
-                    p2.classList.remove('hidden');
-                    p3.classList.remove('hidden');
-                    p2.classList.add('page-left');
-                    p3.classList.add('page-right');
-                    root.className = 'spread-wrapper';
-                    // Ensure DOM ordering: P2 then P3
-                    root.appendChild(p2);
-                    root.appendChild(p3);
-                    document.getElementById('btnCenterSpread').classList.add('active-mode');
-                    showToast("SHOWING CENTER SPREAD: A3 FOLD (PAGES 2 & 3 SIDE-BY-SIDE)");
-                } else if (mode === 'outer-spread') {
-                    // Outside Spread: Page 4 (Left) + Page 1 (Right) inside A3 Fold
-                    p2.classList.add('hidden');
-                    p3.classList.add('hidden');
-                    p4.classList.remove('hidden');
-                    p1.classList.remove('hidden');
-                    p4.classList.add('page-left');
-                    p1.classList.add('page-right');
-                    root.className = 'spread-wrapper';
-                    // Ensure DOM ordering: P4 then P1
-                    root.appendChild(p4);
-                    root.appendChild(p1);
-                    document.getElementById('btnOuterSpread').classList.add('active-mode');
-                    showToast("SHOWING OUTER SPREAD: A3 FOLD (PAGE 4 LEFT • PAGE 1 RIGHT)");
-                } else if (mode === 'all-pages') {
-                    // All 4 Pages in booklet sequence
-                    p1.classList.remove('hidden');
-                    p2.classList.remove('hidden');
-                    p3.classList.remove('hidden');
-                    p4.classList.remove('hidden');
-                    root.appendChild(p1);
-                    root.appendChild(p2);
-                    root.appendChild(p3);
-                    root.appendChild(p4);
-                    document.getElementById('btnAllPages').classList.add('active-mode');
-                    showToast("SHOWING ALL 4 PAGES (BOOKLET SEQUENCE)");
-                }
+                showToast("📱 MOBILE MODE: SINGLE COLUMN STREAM");
+            } else if (mode === 'p1') {
+                p1.classList.remove('hidden');
+                p2.classList.add('hidden');
+                p3.classList.add('hidden');
+                p4.classList.add('hidden');
+                document.getElementById('btnP1').classList.add('active-mode');
+                showToast("SHOWING PAGE 1: FRONT COVER");
+            } else if (mode === 'p2') {
+                p1.classList.add('hidden');
+                p2.classList.remove('hidden');
+                p3.classList.add('hidden');
+                p4.classList.add('hidden');
+                document.getElementById('btnP2').classList.add('active-mode');
+                showToast("SHOWING PAGE 2: EDITORIAL & MORGUE");
+            } else if (mode === 'p3') {
+                p1.classList.add('hidden');
+                p2.classList.add('hidden');
+                p3.classList.remove('hidden');
+                p4.classList.add('hidden');
+                document.getElementById('btnP3').classList.add('active-mode');
+                showToast("SHOWING PAGE 3: THE DEEP DIVE");
+            } else if (mode === 'p4') {
+                p1.classList.add('hidden');
+                p2.classList.add('hidden');
+                p3.classList.add('hidden');
+                p4.classList.remove('hidden');
+                document.getElementById('btnP4').classList.add('active-mode');
+                showToast("SHOWING PAGE 4: THE BACK PAGE");
+            } else if (mode === 'center-spread') {
+                p1.classList.add('hidden');
+                p4.classList.add('hidden');
+                p2.classList.remove('hidden');
+                p3.classList.remove('hidden');
+                p2.classList.add('page-left');
+                p3.classList.add('page-right');
+                root.className = 'spread-wrapper';
+                root.appendChild(p2);
+                root.appendChild(p3);
+                document.getElementById('btnCenterSpread').classList.add('active-mode');
+                showToast("SHOWING CENTER SPREAD: A3 FOLD (P2 + P3)");
+            } else if (mode === 'outer-spread') {
+                p2.classList.add('hidden');
+                p3.classList.add('hidden');
+                p4.classList.remove('hidden');
+                p1.classList.remove('hidden');
+                p4.classList.add('page-left');
+                p1.classList.add('page-right');
+                root.className = 'spread-wrapper';
+                root.appendChild(p4);
+                root.appendChild(p1);
+                document.getElementById('btnOuterSpread').classList.add('active-mode');
+                showToast("SHOWING OUTER SPREAD: A3 FOLD (P4 + P1)");
+            } else if (mode === 'all-pages') {
+                root.appendChild(p1);
+                root.appendChild(p2);
+                root.appendChild(p3);
+                root.appendChild(p4);
+                document.getElementById('btnAllPages').classList.add('active-mode');
+                showToast("SHOWING ALL 4 PAGES");
             }
         }
 
-        // Auto-detect mobile screen on initial load
+        function toggleDarkInk() {
+            document.body.classList.toggle('dark-ink');
+            const btn = document.getElementById('btnInkMode');
+            btn.classList.toggle('active-mode');
+            const isDark = document.body.classList.contains('dark-ink');
+            showToast(isDark ? "DARK INK ENABLED" : "DAYLIGHT NEWSPRINT ENABLED");
+        }
+
         window.addEventListener('DOMContentLoaded', () => {
             if (window.innerWidth <= 768) {
                 setViewMode('mobile');
             }
         });
-
-        function toggleDarkInk() {
-            playTypewriterClack(false);
-            document.body.classList.toggle('dark-ink');
-            const btn = document.getElementById('btnInkMode');
-            btn.classList.toggle('active-mode');
-            const isDark = document.body.classList.contains('dark-ink');
-            showToast(isDark ? "DARK TERMINAL INK ENABLED" : "DAYLIGHT NEWSPRINT ENABLED");
-        }
-
-        let isEditable = false;
-        function toggleEditNewspaper() {
-            playTypewriterClack(false);
-            isEditable = !isEditable;
-            const targets = document.querySelectorAll('.editable-target');
-            targets.forEach(el => {
-                el.setAttribute('contenteditable', isEditable ? 'true' : 'false');
-            });
-            const btn = document.getElementById('btnEditCopy');
-            btn.classList.toggle('active-mode', isEditable);
-            showToast(isEditable ? "TYPESETTER MODE ON: Click any story or title to edit" : "TYPESETTER LOCKED");
-        }
     </script>
 </body>
 </html>
