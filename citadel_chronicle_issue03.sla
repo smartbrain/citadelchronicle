@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCRIBUSUTF8NEW Version="1.7.3">
+    <Document PageCount="4" PageWidth="595.275590551181" PageHeight="841.889763779528" BorderLeft="19.8425196850394" BorderRight="19.8425196850394" BorderTop="19.8425196850394" BorderBottom="19.8425196850394" MarginPreset="0" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" PageOrientation="0" PageSize="Custom" FirstPageNumber="1" PagePositioning="0" AutomaticTextFrameColumnCount="1" AutomaticTextFrameColumnGap="0" UnitIndex="1" FontFace="DejaVu Sans Book" FontSize="12" TextColumnCount="1" TextColumnGap="0" TabFillCharacter="" TabWidth="36" TextDistanceLeft="0" TextDistanceRight="0" TextDistanceBottom="0" TextDistanceTop="0" FirstLineOffset="1" DocumentInfoAuthor="" DocumentInfoComments="" DocumentInfoKeywords="" DocumentInfoPublisher="" DocumentInfoDate="" DocumentInfoType="" DocumentInfoFormat="" DocumentInfoIdentifier="" DocumentInfoSource="" DocumentInfoLanguage="" DocumentInfoRelation="" DocumentInfoCoverage="" DocumentInfoRights="" DocumentInfoContributors="" DocumentInfoTitle="" DocumentInfoSubject="" SuperScriptDisplacement="33" SuperScriptScaling="66" SubScriptDisplacement="33" SubScriptScaling="66" SmallCapsScaling="75" BaselineGridSpacing="14.4" BaselineGridOffset="0" AutoLineSpacingPct="100" UnderlinePosition="-1" UnderlineWidth="-1" StrikeThruPosition="-1" StrikeThruWidth="-1" GroupCounter="1" DocumentHasCMS="0" SoftProofOn="0" SoftProofFullOn="0" ColorManagementActive="0" GamutCheck="0" BlackPoint="1" DefaultPrinterProfile="ISO Coated v2 300% (basICColor)" DefaultImageRGBProfile="sRGB display profile (ICC v2.2)" DefaultImageCMYKProfile="ISO Coated v2 300% (basICColor)" DefaultSolidColorRGBProfile="sRGB display profile (ICC v2.2)" DefaultSolidColorCMYKProfile="ISO Coated v2 300% (basICColor)" DefaultIntentColors="1" DefaultIntentImages="0" ActiveLayer="0" Language="en_US" AutomaticHyphenation="1" AutomaticHyphenationCheck="0" GuideLock="0" SnapToGuides="0" SnapToGrid="0" SnapToItems="0" MinorGridSpacing="20" MajorGridSpacing="100" ShowGrid="0" ShowGuides="1" ShowColumnBorders="1" ShowFrames="1" ShowControls="0" ShowLayerMarkers="0" ShowMargins="1" ShowBaselineGrid="0" ShowImages="1" ShowLinks="0" RulerMode="1" ShowRulers="1" ShowBleed="1" RulerXOffset="0" RulerYOffset="0" GuideRadius="10" GrabRadius="4" PolygonCorners="4" PolygonFactor="0.5" PolygonRotation="0" PolygonInnerRotation="0" PolygonCurvature="0" PolygonOuterCurvature="0" PolygonUseFactor="0" ArcStartAngle="30" ArcSweepAngle="300" SpiralStartAngle="0" SpiralEndAngle="1080" SpiralFactor="1.2" AutoSave="1" AutoSaveTime="600000" AutoSaveCount="1" AutoSaveKeep="0" AutoSaveInDocumentDirectory="1" AutoSaveDirectory="" ScratchBottom="20" ScratchLeft="100" ScratchRight="100" ScratchTop="20" GapHorizontal="0" GapVertical="40" LineStartArrow="0" LineEndArrow="0" ShapeLineColor="Black" ShapeFillColor="None" LineColor="Black" TextColor="Black" TextStrokeColor="Black" TextBackgroundColor="None" TextLineColor="None" TextBackgroundColorShade="100" TextLineColorShade="100" TextColorShade="100" TextStrokeColorShade="100" ShapeLineStyle="1" LineStyle="1" ShapeLineWidth="1" LineWidth="1" ShapeLineColorShade="100" LineColorShade="100" ShapeFillColorShade="100" ImageFillColor="None" ImageFillColorShade="100" ImageStrokeColor="None" ImageStrokeColorShade="100" ImageScaleX="1" ImageScaleY="1" ImageScaleType="1" ImageAspectRatio="1" ImageUseEmbeddedPath="0" ImageLowResType="1" DisplayOffsetX="10" DisplayOffsetY="10" RotationConstrainAngle="15" MinorGridColor="#00ff00" MajorGridColor="#00ff00" GuidesColor="#000080" BaselineGridColor="#c0c0c0" RenderStack="2 0 4 1 3" GridType="0" PageColor="#ffffff" MarginColor="#0000ff" ShowMarginsFilled="0" CurrentProfile="PDF 1.4" CalligraphicPenFillColor="Black" CalligraphicPenLineColor="Black" CalligraphicPenFillColorShade="100" CalligraphicPenLineColorShade="100" CalligraphicPenLineWidth="1" CalligraphicPenAngle="0" CalligraphicPenWidth="10" CalligraphicPenStyle="1">
+        <CheckProfile Name="PDF 1.3" IgnoreErrors="0" AutoCheck="1" CheckGlyphs="1" CheckOrphans="1" CheckOverflow="1" CheckPictures="1" CheckPartFilledImageFrames="0" CheckResolution="1" CheckTransparency="1" MinimumResolution="144" MaximumResolution="2400" CheckAnnotations="0" CheckRasterPDF="1" CheckForGIF="1" IgnoreOffLayers="0" CheckNotCMYKOrSpot="0" CheckDeviceColorsAndOutputIntent="0" CheckFontNotEmbedded="1" CheckFontIsOpenType="1" CheckAppliedMasterDifferentSide="1" CheckEmptyTextFrames="1" CheckImageHasProgressiveEncoding="1"/>
+        <CheckProfile Name="PDF 1.4" IgnoreErrors="0" AutoCheck="1" CheckGlyphs="1" CheckOrphans="1" CheckOverflow="1" CheckPictures="1" CheckPartFilledImageFrames="0" CheckResolution="1" CheckTransparency="0" MinimumResolution="144" MaximumResolution="2400" CheckAnnotations="0" CheckRasterPDF="1" CheckForGIF="1" IgnoreOffLayers="0" CheckNotCMYKOrSpot="0" CheckDeviceColorsAndOutputIntent="0" CheckFontNotEmbedded="1" CheckFontIsOpenType="1" CheckAppliedMasterDifferentSide="1" CheckEmptyTextFrames="1" CheckImageHasProgressiveEncoding="1"/>
+        <CheckProfile Name="PDF 1.5" IgnoreErrors="0" AutoCheck="1" CheckGlyphs="1" CheckOrphans="1" CheckOverflow="1" CheckPictures="1" CheckPartFilledImageFrames="0" CheckResolution="1" CheckTransparency="0" MinimumResolution="144" MaximumResolution="2400" CheckAnnotations="0" CheckRasterPDF="1" CheckForGIF="1" IgnoreOffLayers="0" CheckNotCMYKOrSpot="0" CheckDeviceColorsAndOutputIntent="0" CheckFontNotEmbedded="1" CheckFontIsOpenType="1" CheckAppliedMasterDifferentSide="1" CheckEmptyTextFrames="1" CheckImageHasProgressiveEncoding="1"/>
+        <CheckProfile Name="PDF 1.6" IgnoreErrors="0" AutoCheck="1" CheckGlyphs="1" CheckOrphans="1" CheckOverflow="1" CheckPictures="1" CheckPartFilledImageFrames="0" CheckResolution="1" CheckTransparency="0" MinimumResolution="144" MaximumResolution="2400" CheckAnnotations="0" CheckRasterPDF="1" CheckForGIF="1" IgnoreOffLayers="0" CheckNotCMYKOrSpot="0" CheckDeviceColorsAndOutputIntent="0" CheckFontNotEmbedded="1" CheckFontIsOpenType="0" CheckAppliedMasterDifferentSide="1" CheckEmptyTextFrames="1" CheckImageHasProgressiveEncoding="1"/>
+        <CheckProfile Name="PDF/X-1a" IgnoreErrors="0" AutoCheck="1" CheckGlyphs="1" CheckOrphans="1" CheckOverflow="1" CheckPictures="1" CheckPartFilledImageFrames="0" CheckResolution="1" CheckTransparency="1" MinimumResolution="144" MaximumResolution="2400" CheckAnnotations="1" CheckRasterPDF="1" CheckForGIF="1" IgnoreOffLayers="0" CheckNotCMYKOrSpot="1" CheckDeviceColorsAndOutputIntent="0" CheckFontNotEmbedded="1" CheckFontIsOpenType="1" CheckAppliedMasterDifferentSide="1" CheckEmptyTextFrames="1" CheckImageHasProgressiveEncoding="1"/>
+        <CheckProfile Name="PDF/X-3" IgnoreErrors="0" AutoCheck="1" CheckGlyphs="1" CheckOrphans="1" CheckOverflow="1" CheckPictures="1" CheckPartFilledImageFrames="0" CheckResolution="1" CheckTransparency="1" MinimumResolution="144" MaximumResolution="2400" CheckAnnotations="1" CheckRasterPDF="1" CheckForGIF="1" IgnoreOffLayers="0" CheckNotCMYKOrSpot="0" CheckDeviceColorsAndOutputIntent="1" CheckFontNotEmbedded="1" CheckFontIsOpenType="1" CheckAppliedMasterDifferentSide="1" CheckEmptyTextFrames="1" CheckImageHasProgressiveEncoding="1"/>
+        <CheckProfile Name="PDF/X-4" IgnoreErrors="0" AutoCheck="1" CheckGlyphs="1" CheckOrphans="1" CheckOverflow="1" CheckPictures="1" CheckPartFilledImageFrames="0" CheckResolution="1" CheckTransparency="0" MinimumResolution="144" MaximumResolution="2400" CheckAnnotations="1" CheckRasterPDF="1" CheckForGIF="1" IgnoreOffLayers="0" CheckNotCMYKOrSpot="0" CheckDeviceColorsAndOutputIntent="1" CheckFontNotEmbedded="1" CheckFontIsOpenType="0" CheckAppliedMasterDifferentSide="1" CheckEmptyTextFrames="1" CheckImageHasProgressiveEncoding="1"/>
+        <CheckProfile Name="PostScript" IgnoreErrors="0" AutoCheck="1" CheckGlyphs="1" CheckOrphans="1" CheckOverflow="1" CheckPictures="1" CheckPartFilledImageFrames="0" CheckResolution="1" CheckTransparency="1" MinimumResolution="144" MaximumResolution="2400" CheckAnnotations="0" CheckRasterPDF="1" CheckForGIF="1" IgnoreOffLayers="0" CheckNotCMYKOrSpot="0" CheckDeviceColorsAndOutputIntent="0" CheckFontNotEmbedded="0" CheckFontIsOpenType="0" CheckAppliedMasterDifferentSide="1" CheckEmptyTextFrames="1" CheckImageHasProgressiveEncoding="1"/>
+        <Color Name="Black" Space="CMYK" C="0" M="0" Y="0" K="100"/>
+        <Color Name="CitadelCrimson" Space="RGB" R="139" G="0" B="0"/>
+        <Color Name="CreamYellow" Space="RGB" R="255" G="252" B="245"/>
+        <Color Name="DarkGrey" Space="RGB" R="68" G="68" B="68"/>
+        <Color Name="GreyBorder" Space="RGB" R="180" G="180" B="180"/>
+        <Color Name="GreyRule" Space="RGB" R="204" G="204" B="204"/>
+        <Color Name="InkAccent" Space="RGB" R="139" G="0" B="0"/>
+        <Color Name="NavyBlue" Space="RGB" R="0" G="59" B="112"/>
+        <Color Name="PaperWarm" Space="RGB" R="250" G="248" B="245"/>
+        <Color Name="Registration" Space="CMYK" C="100" M="100" Y="100" K="100" Register="1"/>
+        <Color Name="White" Space="CMYK" C="0" M="0" Y="0" K="0"/>
+        <Hyphenator/>
+        <CharacterStyle Name="Default Character Style" DefaultStyle="1" Font="DejaVu Sans Book" FontSize="12" FontFeatures="" Features="inherit" FontColor="Black" FillShade="100" HyphenWordMinimum="3" StrokeColor="Black" BackgroundColor="None" BackgroundShade="100" StrokeShade="100" TextShadowXOffset="5" TextShadowYOffset="-5" TextOutlineWidth="1" TextUnderlineOffset="-0.1" TextUnderlineWidth="-0.1" TextStrikeThroughOffset="-0.1" TextStrikeThroughWidth="-0.1" ScaleHorizontal="100" ScaleVertical="100" BaselineOffset="0" Kerning="0" Language="en_US"/>
+        <ParagraphStyle Name="Default Paragraph Style" DefaultStyle="1" Alignment="0" Direction="0" LineSpacingMode="0" LineSpacing="15" LeftMargin="0" RightMargin="0" FirstIndent="0" GapBefore="0" GapAfter="0" ParagraphEffectOffset="0" HasDropCap="0" DropCapLines="2" Bullet="0" Numeration="0" HyphenConsecutiveLines="2" ParagraphBackgroundColor="None" ParagraphBackgroundColorShade="100"/>
+        <TableStyle Name="Default Table Style" DefaultStyle="1" FillColor="None" FillShade="100">
+            <TableBorderLeft>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderLeft>
+            <TableBorderRight>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderRight>
+            <TableBorderTop>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderTop>
+            <TableBorderBottom>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderBottom>
+        </TableStyle>
+        <CellStyle Name="Default Cell Style" DefaultStyle="1" FillColor="None" FillShade="100" LeftPadding="1" RightPadding="1" TopPadding="1" BottomPadding="1">
+            <TableBorderLeft>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderLeft>
+            <TableBorderRight>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderRight>
+            <TableBorderTop>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderTop>
+            <TableBorderBottom>
+                <TableBorderLine Width="1" PenStyle="1" Color="Black" Shade="100"/>
+            </TableBorderBottom>
+        </CellStyle>
+        <Layers Number="0" Level="0" Name="Background" IsViewable="1" IsPrintable="1" IsEditable="1" IsSelectable="0" FlowControl="1" Transparency="1" BlendMode="0" OutlineMode="0" LayerColor="#000000"/>
+        <Printer firstUse="1" toFile="0" useAltPrintCommand="0" outputSeparations="0" useSpotColors="1" useColor="1" mirrorH="0" mirrorV="0" useICC="0" doGCR="0" doClip="0" setDevParam="0" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" includePDFMarks="1" PSLevel="3" PrintEngine="3" markLength="20" markOffset="0" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" printer="" filename="" separationName="All" printerCommand=""/>
+        <PDF firstUse="1" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="0" Quality="0" EmbedPDF="0" MirrorH="0" MirrorV="0" Clip="0" rangeSel="0" rangeTxt="" RotateDeg="0" PresentMode="0" RecalcPic="0" FontEmbedding="0" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="300" Resolution="300" Version="14" Intent="1" Intent2="0" SolidP="sRGB display profile (ICC v2.2)" ImageP="sRGB display profile (ICC v2.2)" PrintP="ISO Coated v2 300% (basICColor)" InfoString="" BTop="0" BLeft="0" BRight="0" BBottom="0" useDocBleeds="1" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markLength="20" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" openAfterExport="0" PageLayout="0" openAction="">
+            <LPI Color="Black" Frequency="133" Angle="45" SpotFunction="3"/>
+            <LPI Color="Cyan" Frequency="133" Angle="105" SpotFunction="3"/>
+            <LPI Color="Magenta" Frequency="133" Angle="75" SpotFunction="3"/>
+            <LPI Color="Yellow" Frequency="133" Angle="90" SpotFunction="3"/>
+        </PDF>
+        <DocItemAttributes/>
+        <Indexes/>
+        <TablesOfContents/>
+        <NotesStyles>
+            <notesStyle Name="Default" Start="1" Endnotes="0" Type="Type_1_2_3" Range="0" Prefix="" Suffix=")" AutoHeight="1" AutoWidth="1" AutoRemove="1" AutoWeld="1" SuperNote="1" SuperMaster="1" MarksStyle="" NotesStyle=""/>
+        </NotesStyles>
+        <OpticalMarginSets>
+            <Set Id="preset_0" Type="preset" Name="Default">
+                <Rules>
+                    <Rule Left="0" Right="0.5" Unit="7" Characters="U+003A,U+003B,U+2013,U+2033"/>
+                    <Rule Left="0" Right="0.75" Unit="7" Characters="U+002C,U+002D,U+002E,U+2010,U+2032"/>
+                    <Rule Left="0.25" Right="0.25" Unit="7" Characters="U+2014"/>
+                    <Rule Left="0.5" Right="0" Unit="7" Characters="U+2036"/>
+                    <Rule Left="0.5" Right="0.5" Unit="7" Characters="U+0022,U+0028,U+0029,U+005B,U+005D,U+00AB,U+00BB,U+201C,U+201D,U+201E,U+201F"/>
+                    <Rule Left="0.75" Right="0" Unit="7" Characters="U+2035"/>
+                    <Rule Left="0.75" Right="0.75" Unit="7" Characters="U+0027,U+002A,U+0060,U+007E,U+00B4,U+2018,U+2019,U+201A,U+201B,U+2039,U+203A"/>
+                </Rules>
+            </Set>
+        </OpticalMarginSets>
+        <PageSets>
+            <Set Name="Single Page" FirstPage="0" Rows="1" Columns="1"/>
+            <Set Name="Facing Pages" FirstPage="1" Rows="1" Columns="2">
+                <PageNames Name="Left Page"/>
+                <PageNames Name="Right Page"/>
+            </Set>
+            <Set Name="3-Fold" FirstPage="0" Rows="1" Columns="3">
+                <PageNames Name="Left Page"/>
+                <PageNames Name="Middle"/>
+                <PageNames Name="Right Page"/>
+            </Set>
+            <Set Name="4-Fold" FirstPage="0" Rows="1" Columns="4">
+                <PageNames Name="Left Page"/>
+                <PageNames Name="Middle Left"/>
+                <PageNames Name="Middle Right"/>
+                <PageNames Name="Right Page"/>
+            </Set>
+        </PageSets>
+        <Sections>
+            <Section Number="0" Name="Section 1" From="0" To="3" Type="Type_1_2_3" Start="1" Reversed="0" Active="1" FillChar="0" FieldWidth="0"/>
+        </Sections>
+        <MasterPage PageXPosition="100" PageYPosition="20" PageWidth="595.275590551181" PageHeight="841.889763779528" BorderLeft="19.8425196850394" BorderRight="19.8425196850394" BorderTop="19.8425196850394" BorderBottom="19.8425196850394" PageNumber="0" PageName="Normal" MasterPageName="" Size="Custom" Orientation="0" LeftPage="0" Preset="0" VerticalGuides="" HorizontalGuides="" AutoGuideHorizontalGap="0" AutoGuideVerticalGap="0" AutoGuideHorizontalCount="0" AutoGuideVerticalCount="0" AutoGuideHorizontalReference="0" AutoGuideVerticalReference="0" AutoGuideSelection="0 0 0 0" PageEffectDuration="1" PageViewDuration="1" PageEffectType="0" PageEffectLineDirection="0" PageEffectInsideOutside="0" PageEffectDirection="0"/>
+        <Page PageXPosition="100" PageYPosition="20" PageWidth="595.275590551181" PageHeight="841.889763779528" BorderLeft="19.8425196850394" BorderRight="19.8425196850394" BorderTop="19.8425196850394" BorderBottom="19.8425196850394" PageNumber="0" PageName="" MasterPageName="Normal" Size="Custom" Orientation="0" LeftPage="0" Preset="0" VerticalGuides="" HorizontalGuides="" AutoGuideHorizontalGap="0" AutoGuideVerticalGap="0" AutoGuideHorizontalCount="0" AutoGuideVerticalCount="0" AutoGuideHorizontalReference="0" AutoGuideVerticalReference="0" AutoGuideSelection="0 0 0 0" PageEffectDuration="1" PageViewDuration="1" PageEffectType="0" PageEffectLineDirection="0" PageEffectInsideOutside="0" PageEffectDirection="0"/>
+        <Page PageXPosition="100" PageYPosition="901.889763779528" PageWidth="595.275590551181" PageHeight="841.889763779528" BorderLeft="19.8425196850394" BorderRight="19.8425196850394" BorderTop="19.8425196850394" BorderBottom="19.8425196850394" PageNumber="1" PageName="" MasterPageName="Normal" Size="Custom" Orientation="0" LeftPage="0" Preset="0" VerticalGuides="" HorizontalGuides="" AutoGuideHorizontalGap="0" AutoGuideVerticalGap="0" AutoGuideHorizontalCount="0" AutoGuideVerticalCount="0" AutoGuideHorizontalReference="0" AutoGuideVerticalReference="0" AutoGuideSelection="0 0 0 0" PageEffectDuration="1" PageViewDuration="1" PageEffectType="0" PageEffectLineDirection="0" PageEffectInsideOutside="0" PageEffectDirection="0"/>
+        <Page PageXPosition="100" PageYPosition="1783.77952755906" PageWidth="595.275590551181" PageHeight="841.889763779528" BorderLeft="19.8425196850394" BorderRight="19.8425196850394" BorderTop="19.8425196850394" BorderBottom="19.8425196850394" PageNumber="2" PageName="" MasterPageName="Normal" Size="Custom" Orientation="0" LeftPage="0" Preset="0" VerticalGuides="" HorizontalGuides="" AutoGuideHorizontalGap="0" AutoGuideVerticalGap="0" AutoGuideHorizontalCount="0" AutoGuideVerticalCount="0" AutoGuideHorizontalReference="0" AutoGuideVerticalReference="0" AutoGuideSelection="0 0 0 0" PageEffectDuration="1" PageViewDuration="1" PageEffectType="0" PageEffectLineDirection="0" PageEffectInsideOutside="0" PageEffectDirection="0"/>
+        <Page PageXPosition="100" PageYPosition="2665.66929133858" PageWidth="595.275590551181" PageHeight="841.889763779528" BorderLeft="19.8425196850394" BorderRight="19.8425196850394" BorderTop="19.8425196850394" BorderBottom="19.8425196850394" PageNumber="3" PageName="" MasterPageName="Normal" Size="Custom" Orientation="0" LeftPage="0" Preset="0" VerticalGuides="" HorizontalGuides="" AutoGuideHorizontalGap="0" AutoGuideVerticalGap="0" AutoGuideHorizontalCount="0" AutoGuideVerticalCount="0" AutoGuideHorizontalReference="0" AutoGuideVerticalReference="0" AutoGuideSelection="0 0 0 0" PageEffectDuration="1" PageViewDuration="1" PageEffectType="0" PageEffectLineDirection="0" PageEffectInsideOutside="0" PageEffectDirection="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="39.8425196850394" OwnPage="0" ItemID="1715512663" ItemType="6" Width="102.047244094488" Height="51.0236220472441" FrameType="0" ClipEdited="0" LineWidth="0.8" FillColor="PaperWarm" LineColor="Black" LinePenStyle="1" Path="M0 0 L102.047 0 L102.047 51.0236 L0 51.0236 L0 0 Z" ContourLinePath="M0 0 L102.047 0 L102.047 51.0236 L0 51.0236 L0 0 Z" gXpos="119.842519685039" gYpos="39.8425196850394" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="122.677165354331" YPosition="42.6771653543307" OwnPage="0" ItemID="351043581" ItemType="4" Width="96.3779527559055" Height="45.3543307086614" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L96.378 0 L96.378 45.3543 L0 45.3543 L0 0 Z" ContourLinePath="M0 0 L96.378 0 L96.378 45.3543 L0 45.3543 L0 0 Z" gXpos="122.677165354331" gYpos="42.6771653543307" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Liberation Mono Regular" FontSize="5"/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="MINISTRY ALERT"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="• CP-KRA-PAO: Threat Level High"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="• HOLY BASIL: Kaew Juree 01-04"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="• HOME CHEWING: Permitted"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="• STREET SALE: Azkaban Felony"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="• SUN GODLING: Benevolent"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="[Microwave Fortified]"/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="227.55905511811" YPosition="37.007874015748" OwnPage="0" ItemID="1016359029" ItemType="4" Width="340.157480314961" Height="53.8582677165354" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L340.157 0 L340.157 53.8583 L0 53.8583 L0 0 Z" ContourLinePath="M0 0 L340.157 0 L340.157 53.8583 L0 53.8583 L0 0 Z" gXpos="227.55905511811" gYpos="37.007874015748" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Serif Bold" FontSize="21.5"/>
+                <Content Font="Liberation Serif Bold" FontSize="21.5" Chars="THE CITADEL CHRONICLE"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="573.385826771654" YPosition="39.8425196850394" OwnPage="0" ItemID="68922941" ItemType="6" Width="102.047244094488" Height="51.0236220472441" FrameType="0" ClipEdited="0" LineWidth="0.8" FillColor="PaperWarm" LineColor="Black" LinePenStyle="1" Path="M0 0 L102.047 0 L102.047 51.0236 L0 51.0236 L0 0 Z" ContourLinePath="M0 0 L102.047 0 L102.047 51.0236 L0 51.0236 L0 0 Z" gXpos="573.385826771654" gYpos="39.8425196850394" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="576.220472440945" YPosition="42.6771653543307" OwnPage="0" ItemID="1723691007" ItemType="4" Width="96.3779527559055" Height="45.3543307086614" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L96.378 0 L96.378 45.3543 L0 45.3543 L0 0 Z" ContourLinePath="M0 0 L96.378 0 L96.378 45.3543 L0 45.3543 L0 0 Z" gXpos="576.220472440945" gYpos="42.6771653543307" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Liberation Mono Regular" FontSize="5"/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="SOLAR DECREES"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="• PATENTS: 4 Basil Clones Granted"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="• ENFORCEMENT: Dementor Raids"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="• ROAST PORK: Subsidised"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="• STREET VENDORS: Condemned"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="• SOVEREIGN SEEDS: Confiscated"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5" Chars="[Zero Legal Recourse]"/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="95.1181102362205" OwnPage="0" ItemID="377864103" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="1.2" FillShade="6.83593339126815e-310" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="95.1181102362205" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="97.1023622047244" OwnPage="0" ItemID="528073854" ItemType="4" Width="555.590551181102" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" gXpos="119.842519685039" gYpos="97.1023622047244" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Bold" FontSize="6.8"/>
+                <Content Font="Liberation Mono Bold" FontSize="6.8" Chars="VOL. XXI • ISSUE NO. 03 • BLOCK HEIGHT: 973,528 • WEDNESDAY, 28 OCTOBER 2026 • 1 SAT/vB • BANGKOK // PATHUM THANI"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="112.125984251969" OwnPage="0" ItemID="1200612230" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="1.2" FillShade="1.06099789558145e-313" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="112.125984251969" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="114.96062992126" OwnPage="0" ItemID="946456371" ItemType="4" Width="555.590551181102" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" gXpos="119.842519685039" gYpos="114.96062992126" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Bold" FontSize="7"/>
+                <Content Font="Liberation Mono Bold" FontSize="7" FontColor="CitadelCrimson" Chars="■ MINISTRY OF MAGIC &amp; SOLAR DECREES • AQUATIC &amp; HERBAL HERESY"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="127.716535433071" OwnPage="0" ItemID="1909641901" ItemType="4" Width="555.590551181102" Height="34.0157480314961" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 34.0157 L0 34.0157 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 34.0157 L0 34.0157 L0 0 Z" gXpos="119.842519685039" gYpos="127.716535433071" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Serif Bold" FontSize="12.8"/>
+                <Content Font="Liberation Serif Bold" FontSize="12.8" Chars="“HE-WHO-MUST-NOT-BE-NAMED” BLAMED FOR UNLEASHING BLACKCHIN TILAPIA TO RUIN NATION’S PAD KRA PAO"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="163.149606299213" OwnPage="0" ItemID="1667043833" ItemType="4" Width="555.590551181102" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" gXpos="119.842519685039" gYpos="163.149606299213" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Bold" FontSize="7.8"/>
+                <Content Font="Liberation Mono Bold" FontSize="7.8" FontColor="CitadelCrimson" Chars="“DEFINITELY NOT A LOCAL MEGACORP,” SAY TERRIFIED OFFICIALS"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="134.015748031496" YPosition="175.905511811024" OwnPage="0" ItemID="1264445929" ItemType="4" Width="527.244094488189" Height="21.259842519685" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L527.244 0 L527.244 21.2598 L0 21.2598 L0 0 Z" ContourLinePath="M0 0 L527.244 0 L527.244 21.2598 L0 21.2598 L0 0 Z" gXpos="134.015748031496" gYpos="175.905511811024" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Serif Italic" FontSize="7.5"/>
+                <Content Font="Liberation Serif Italic" FontSize="7.5" Chars="Ministry of Magic announces Lord Voldemort is solely responsible for invasive fish destroying rivers, while The Sun Godling grants citizens royal permission to chew four patented strains of Holy Basil—so long as nobody attempts to sell it."/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="200" OwnPage="0" ItemID="972155302" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="0.6" FillShade="4.03179200283402e-313" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="200" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="204.251968503937" OwnPage="0" ItemID="1275669963" ItemType="6" Width="340.157480314961" Height="226.771653543307" FrameType="0" ClipEdited="0" LineWidth="0.5" FillColor="White" LineColor="Black" LinePenStyle="1" Path="M0 0 L340.157 0 L340.157 226.772 L0 226.772 L0 0 Z" ContourLinePath="M0 0 L340.157 0 L340.157 226.772 L0 226.772 L0 0 Z" gXpos="119.842519685039" gYpos="204.251968503937" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="121.259842519685" YPosition="205.669291338583" OwnPage="0" ItemID="367186171" ItemType="2" Width="337.322834645669" Height="223.937007874016" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="0.249929696287964" ImageScaleY="0.249929696287964" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="0" ImageRatio="1" ImagePageNumber="0" ImageFileName="issue-03/ads/blackchin_voldemort_woodcut.jpg" ImageColorimetricIntent="0" UseEmbeddedProfile="0" Path="M0 0 L337.323 0 L337.323 223.937 L0 223.937 L0 0 Z" ContourLinePath="M0 0 L337.323 0 L337.323 223.937 L0 223.937 L0 0 Z" gXpos="121.259842519685" gYpos="205.669291338583" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1"/>
+        <PageObject XPosition="468.503937007874" YPosition="204.251968503937" OwnPage="0" ItemID="700309836" ItemType="4" Width="206.929133858268" Height="226.771653543307" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L206.929 0 L206.929 226.772 L0 226.772 L0 0 Z" ContourLinePath="M0 0 L206.929 0 L206.929 226.772 L0 226.772 L0 0 Z" gXpos="468.503937007874" gYpos="204.251968503937" gWidth="0" gHeight="0" Alignment="3" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="3" Font="Liberation Serif Regular" FontSize="7"/>
+                <Content Font="Liberation Serif Regular" FontSize="7" Chars="In an extraordinary joint emergency session of the Wizengamot and the Department of Fisheries yesterday, senior mandarins officially attributed the catastrophic ecological devastation of Thailand’s waterways to the dark wizard Lord Voldemort."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="7" Chars="“We have completed an exhaustive forensic audit across fourteen river basins,” announced Deputy Undersecretary for Auror Affairs, Phra Mahakasem, adjusting his enchanted spectacles."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="7" Chars="“The evidence is incontrovertible. This ferocious fish—capable of consuming indigenous shrimp nurseries, out-breeding local catfish, and resisting boiling water—was summoned via an ancient Parseltongue transfiguration curse uttered by He-Who-Must-Not-Be-Named.”"/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="7" Chars="When challenged by journalists as to whether the biological catastrophe had anything to do with a certain agricultural conglomerate whose name rhymes with 'Chaloen Pokphand', the Deputy Undersecretary blanched visibly."/>
+                <trail Alignment="3"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="436.692913385827" OwnPage="0" ItemID="1692029641" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="0.5" FillShade="0" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="436.692913385827" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="442.362204724409" OwnPage="0" ItemID="496576267" ItemType="4" Width="555.590551181102" Height="379.842519685039" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="3" ColumnGap="17.007874015748" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 379.843 L0 379.843 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 379.843 L0 379.843 L0 0 Z" gXpos="119.842519685039" gYpos="442.362204724409" gWidth="0" gHeight="0" Alignment="3" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="3" Font="Liberation Serif Regular" FontSize="6.8"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.8" Chars="“Outrageous slander!” shrieked the Undersecretary, clutching a protective amulet. “To even insinuate that our nation’s most benevolent, state-subsidised solar poultry monopoly could be culpable is treason against the harvest! Lord Voldemort sneaked into Samut Songkhram under an Invisibility Cloak, dumped two plastic tubs of African fingerlings into the canal, and fled on a broomstick.”"/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.8" Chars="Meanwhile, fifty leagues upcountry, the Sun Godling was holding court at the Solar Temple of Retail Convenience. Standing before a glowing neon altar of microwaveable pork steaks, His Radiance unveiled four new patented cultivars of holy basil: Kaew Juree 01 through 04."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.8" Chars="“Rejoice, peasants!” proclaimed the High Solar Priest. “By divine grace of intellectual property decree, all subjects are granted royal indulgence to chew the sacred leaves within the privacy of their hovels. However, should any insolent street vendor crush a single leaf of Kaew Juree upon a wok without an enterprise barcode license, thirty Dementors will instantly descend upon their food cart to impound their fish sauce.”"/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.8" Chars="Street hawkers across Bang Rak and Yaowarat expressed profound bewilderment. “First the Blackchin Tilapia ate all the native river prawns,” lamented Somchai, a third-generation street cook. “Now, if I stir-fry basil with pork, CP police demand to inspect the stomatal genetic sequence of my herbs. If I buy wild basil from Nakhon Pathom, the health inspector claims it carries dark magic. If I buy CP basil, my profit margin is minus twenty-two per cent.”"/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.8" Chars="Economic arithmancers noted that the twin crises have converged into a singular commercial monopoly. With local fisheries wiped out, the only protein left for the national dish is factory-farmed solar chicken and reconstituted tilapia nuggets, available exclusively in vacuum-sealed plastic pouches."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.8" Chars="“The cycle is mathematically complete,” chuckled a veteran sovereign observer in Pathum Thani. “Destroy the commons with invasive monsters, outlaw natural seeds under patent monopolies, blame a fictional sorcerer, and force the populace to eat microwaved lunch boxes. Truly, the dark arts have never been so profitable.”"/>
+                <trail Alignment="3"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="829.291338582677" OwnPage="0" ItemID="2031187784" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="1" FillShade="0" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="829.291338582677" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="830.708661417323" OwnPage="0" ItemID="409925708" ItemType="4" Width="555.590551181102" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" gXpos="119.842519685039" gYpos="830.708661417323" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Regular" FontSize="6.2"/>
+                <Content Font="Liberation Mono Regular" FontSize="6.2" FontColor="Black" Chars="PAGE 1 OF 4 • SPECIAL EDITION: THE BLACKCHIN CONSPIRACY • THE CITADEL CHRONICLE • CITADELCHRONICLE.COM • ESTABLISHED 2026"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="935.905511811024" OwnPage="1" ItemID="1715957738" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="1.2" FillShade="1.06099789558145e-313" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="935.905511811024" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="921.732283464567" OwnPage="1" ItemID="24764070" ItemType="4" Width="555.590551181102" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" gXpos="119.842519685039" gYpos="921.732283464567" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Bold" FontSize="6.5"/>
+                <Content Font="Liberation Mono Bold" FontSize="6.5" FontColor="Black" Chars="THE CITADEL CHRONICLE • WEDNESDAY, 28 OCTOBER 2026 • BLOCK HEIGHT: 973,528    |    Analytical Dispatch: St. Mungo's Medical Arithmancy    |    PAGE 2 OF 4"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="941.574803149606" OwnPage="1" ItemID="1087185767" ItemType="4" Width="555.590551181102" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" gXpos="119.842519685039" gYpos="941.574803149606" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Bold" FontSize="7"/>
+                <Content Font="Liberation Mono Bold" FontSize="7" FontColor="CitadelCrimson" Chars="■ ARITHMANCY &amp; PUBLIC HEALING • THE 14-DAY COHORT EXCLUSION BIAS"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="954.330708661417" OwnPage="1" ItemID="2133025720" ItemType="4" Width="555.590551181102" Height="31.1811023622047" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 31.1811 L0 31.1811 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 31.1811 L0 31.1811 L0 0 Z" gXpos="119.842519685039" gYpos="954.330708661417" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Serif Bold" FontSize="15"/>
+                <Content Font="Liberation Serif Bold" FontSize="15" Chars="THE ARITHMANCY OF THE FOURTEEN-DAY HERETIC"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="986.929133858268" OwnPage="1" ItemID="620290988" ItemType="4" Width="555.590551181102" Height="14.1732283464567" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 14.1732 L0 14.1732 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 14.1732 L0 14.1732 L0 0 Z" gXpos="119.842519685039" gYpos="986.929133858268" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Bold" FontSize="7.5"/>
+                <Content Font="Liberation Mono Bold" FontSize="7.5" FontColor="CitadelCrimson" Chars="HOW ST. MUNGO’S STATISTICIANS CONVERTED POST-POTION CASUALTIES INTO “UNVACCINATED” CONTAGIONS"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="134.015748031496" YPosition="1001.10236220472" OwnPage="1" ItemID="370298107" ItemType="4" Width="527.244094488189" Height="21.259842519685" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L527.244 0 L527.244 21.2598 L0 21.2598 L0 0 Z" ContourLinePath="M0 0 L527.244 0 L527.244 21.2598 L0 21.2598 L0 0 Z" gXpos="134.015748031496" gYpos="1001.10236220472" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Serif Italic" FontSize="7.5"/>
+                <Content Font="Liberation Serif Italic" FontSize="7.5" Chars="A forensic examination of observational case-counting windows, cohort misclassification, and the immortal time bias that manufactured consensus out of thin air."/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="1025.1968503937" OwnPage="1" ItemID="1926826242" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="0.6" FillShade="3.65608577922522e-322" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="1025.1968503937" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="1029.44881889764" OwnPage="1" ItemID="515275773" ItemType="6" Width="325.984251968504" Height="212.59842519685" FrameType="0" ClipEdited="0" LineWidth="0.5" FillColor="White" LineColor="Black" LinePenStyle="1" Path="M0 0 L325.984 0 L325.984 212.598 L0 212.598 L0 0 Z" ContourLinePath="M0 0 L325.984 0 L325.984 212.598 L0 212.598 L0 0 Z" gXpos="119.842519685039" gYpos="1029.44881889764" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="121.259842519685" YPosition="1030.86614173228" OwnPage="1" ItemID="521651520" ItemType="2" Width="323.149606299213" Height="209.763779527559" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="0.234111361079865" ImageScaleY="0.234111361079865" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="0" ImageRatio="1" ImagePageNumber="0" ImageFileName="issue-03/ads/fourteen_day_arithmancy_woodcut.jpg" ImageColorimetricIntent="0" UseEmbeddedProfile="0" Path="M0 0 L323.15 0 L323.15 209.764 L0 209.764 L0 0 Z" ContourLinePath="M0 0 L323.15 0 L323.15 209.764 L0 209.764 L0 0 Z" gXpos="121.259842519685" gYpos="1030.86614173228" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1"/>
+        <PageObject XPosition="454.330708661417" YPosition="1029.44881889764" OwnPage="1" ItemID="783652484" ItemType="4" Width="221.102362204724" Height="212.59842519685" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L221.102 0 L221.102 212.598 L0 212.598 L0 0 Z" ContourLinePath="M0 0 L221.102 0 L221.102 212.598 L0 212.598 L0 0 Z" gXpos="454.330708661417" gYpos="1029.44881889764" gWidth="0" gHeight="0" Alignment="3" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="3" Font="Liberation Serif Regular" FontSize="7.2"/>
+                <Content Font="Liberation Serif Regular" FontSize="7.2" Chars="To question the clinical trials of the Grand Apothecary was folly; to scrutinise their denominator was heresy. Yet when the history of the Great Contagion of 2021–2024 is written by dispassionate chroniclers, the central artefact of official deception will not be biological, but arithmantical."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="7.2" Chars="At St. Mungo’s Hospital for Magical Maladies, the records department operated under a decree of sublime administrative sorcery: no citizen receiving an experimental draught was classified as 'inoculated' until precisely fourteen days had elapsed following the second dose."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="7.2" Chars="To the untrained layman, this appeared a reasonable concession to biological latency—an allowance for antibodies to mature in the bloodstream. To the forensic statistician, however, it constituted a lethal mathematical sleight of hand."/>
+                <trail Alignment="3"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="1247.71653543307" OwnPage="1" ItemID="2088741039" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="0.5" FillShade="2.1393042464926e-321" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="1247.71653543307" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="1253.38582677165" OwnPage="1" ItemID="1756660448" ItemType="4" Width="555.590551181102" Height="450.708661417323" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="3" ColumnGap="17.007874015748" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 450.709 L0 450.709 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 450.709 L0 450.709 L0 0 Z" gXpos="119.842519685039" gYpos="1253.38582677165" gWidth="0" gHeight="0" Alignment="3" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="3" Font="Liberation Serif Regular" FontSize="6.8"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.8" Chars="Consider the epidemiological mechanics of the 14-day window. If an individual experienced an acute adverse cardiovascular reaction, pulmonary collapse, or fatal thrombosis on Day 3 following inoculation, where did their casualty record land? Under the Ministry’s statutory definitions, they had not yet attained the holy fourteen-day threshold."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.8" Chars="Consequently, they were categorized and tallied in the hospital ledgers as an 'unvaccinated death.' The very intervention being evaluated was thus mathematically cleansed of its immediate post-administration perils. Worse still, the burden of those early casualties was dumped into the baseline tally of the untreated control cohort!"/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.8" Chars="This phenomenon, well-known in classical biostatistics as 'immortal time bias' and 'case-counting window manipulation,' created an artificial statistical divergence that guaranteed an appearance of overwhelming efficacy. The newly inoculated cohort was declared immune from counting during its period of highest biological vulnerability, while the non-compliant cohort absorbed every stray malady."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.8" Chars="When independent arithmancers in the Citadel recalculated the raw mortality data using an honest 'intention-to-treat' timeline—counting every soul from the moment the needle entered the flesh—the miraculous divergence vanished into Poisson noise."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.8" Chars="The institutional response was swift and predictable: those who pointed out the denominator trick were branded 'Arithmancy Deniers,' stripped of their clinical wands, and exiled from academic journals. The public health apparatus had invested its entire institutional credibility in the dogma that the potion was safe and effective; to concede that the efficacy metric was an artefact of case-window gerrymandering was an existential impossibility."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.8" Chars="As sovereign citizens reflecting upon this dark era, the lesson transcends pharmacology. Whenever the state or its captured cartels present an authoritative statistical consensus, look not at the numerator of promised salvation; inspect the denominator, check the exclusion windows, and demand to see the unconfirmed raw ledger. Don't trust the apothecary; verify the arithmetic."/>
+                <trail Alignment="3"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="1711.1811023622" OwnPage="1" ItemID="540732525" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="1" FillShade="0" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="1711.1811023622" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="1712.59842519685" OwnPage="1" ItemID="146955427" ItemType="4" Width="555.590551181102" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" gXpos="119.842519685039" gYpos="1712.59842519685" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Regular" FontSize="6.2"/>
+                <Content Font="Liberation Mono Regular" FontSize="6.2" FontColor="Black" Chars="PAGE 2 OF 4 • ST. MUNGO'S ARITHMANCY &amp; OBSERVATIONAL BIAS • THE CITADEL CHRONICLE • CITADELCHRONICLE.COM • ESTABLISHED 2026"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="1817.79527559055" OwnPage="2" ItemID="1128571377" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="1.2" FillShade="4.24399158884746e-314" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="1817.79527559055" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="1803.62204724409" OwnPage="2" ItemID="1057812326" ItemType="4" Width="555.590551181102" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" gXpos="119.842519685039" gYpos="1803.62204724409" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Bold" FontSize="6.5"/>
+                <Content Font="Liberation Mono Bold" FontSize="6.5" FontColor="Black" Chars="THE CITADEL CHRONICLE • WEDNESDAY, 28 OCTOBER 2026 • BLOCK HEIGHT: 973,528    |    Special Investigation: Protocol Forensics &amp; The Architecture of Exploits    |    PAGE 3 OF 4"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="1823.46456692913" OwnPage="2" ItemID="590841772" ItemType="4" Width="555.590551181102" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" gXpos="119.842519685039" gYpos="1823.46456692913" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Bold" FontSize="7"/>
+                <Content Font="Liberation Mono Bold" FontSize="7" FontColor="CitadelCrimson" Chars="■ MEMPOOL FORENSICS • CRITICAL SECURITY DISCLOSURE • GHSA-6JP4-8V48-CC5V"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="1836.22047244094" OwnPage="2" ItemID="1014098880" ItemType="4" Width="555.590551181102" Height="31.1811023622047" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 31.1811 L0 31.1811 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 31.1811 L0 31.1811 L0 0 Z" gXpos="119.842519685039" gYpos="1836.22047244094" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Serif Bold" FontSize="14.5"/>
+                <Content Font="Liberation Serif Bold" FontSize="14.5" Chars="THE WEAPONISED FEE-BUMP: INSIDE THE ELECTRUM RBF HEIST"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="1868.8188976378" OwnPage="2" ItemID="1947148621" ItemType="4" Width="555.590551181102" Height="14.1732283464567" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 14.1732 L0 14.1732 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 14.1732 L0 14.1732 L0 0 Z" gXpos="119.842519685039" gYpos="1868.8188976378" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Bold" FontSize="7.2"/>
+                <Content Font="Liberation Mono Bold" FontSize="7.2" FontColor="CitadelCrimson" Chars="HOW ROGUE SERVERS EXPLOITED THE SPV MEMPOOL BLINDSPOT TO TRICK BITCOINERS INTO SIGNING OVER THEIR OWN FUNDS"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="134.015748031496" YPosition="1882.99212598425" OwnPage="2" ItemID="425391189" ItemType="4" Width="527.244094488189" Height="21.259842519685" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L527.244 0 L527.244 21.2598 L0 21.2598 L0 0 Z" ContourLinePath="M0 0 L527.244 0 L527.244 21.2598 L0 21.2598 L0 0 Z" gXpos="134.015748031496" gYpos="1882.99212598425" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Serif Italic" FontSize="7.5"/>
+                <Content Font="Liberation Serif Italic" FontSize="7.5" Chars="A forensic examination of the high-severity vulnerability patched in Electrum v4.8.3, where adversaries bypassed private-key cryptography by turning the client's Replace-By-Fee routine into an involuntary double-spend guillotine."/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="1907.08661417323" OwnPage="2" ItemID="984712151" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="0.6" FillShade="4.24399158884746e-314" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="1907.08661417323" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="1911.33858267717" OwnPage="2" ItemID="494989721" ItemType="4" Width="266.456692913386" Height="504.566929133858" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L266.457 0 L266.457 504.567 L0 504.567 L0 0 Z" ContourLinePath="M0 0 L266.457 0 L266.457 504.567 L0 504.567 L0 0 Z" gXpos="119.842519685039" gYpos="1911.33858267717" gWidth="0" gHeight="0" Alignment="3" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="3" Font="Liberation Serif Regular" FontSize="6.7"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="On 24 October 2026, the maintainers of the Electrum Bitcoin wallet published a security advisory tracked as GHSA-6jp4-8v48-cc5v and rushed out version 4.8.3. The vulnerability had not merely been discovered in an academic laboratory; it had been actively and ruthlessly exploited in the wild against users operating on public Electrum servers."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="What makes this exploit one of the most intellectually diabolical vectors in Bitcoin client history is that the adversary never broke secp256k1 elliptic curve cryptography, nor did they exfiltrate seed phrases or compromise operating systems. Instead, they weaponised the client’s architectural trust boundary and the user’s own muscle memory, tricking victims into voluntarily authorising and signing the theft of their own coins."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="THE SPV MEMPOOL BLINDSPOT"/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="To understand how the heist operates, one must examine the delicate compromise that makes lightweight Bitcoin wallets possible. In Satoshi Nakamoto’s original design, Simplified Payment Verification (SPV) relies upon 80-byte block headers. When an SPV client receives a confirmed transaction, it cryptographically verifies a Merkle inclusion proof tying that transaction hash to a header buried under cumulative Proof-of-Work. An untrusted server cannot fabricate a confirmed block without overcoming the hashpower of the global network."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="For unconfirmed transactions floating in the mempool, however, this cryptographic anchor vanishes entirely. In the mempool, there is no Proof-of-Work, no consensus, and no Merkle tree."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="When an Electrum client synchronises with an external server over JSON-RPC, it queries its addresses via blockchain.scripthash.subscribe. If a transaction has a height of zero or negative, the server asserts that it is an unconfirmed payment sitting in the mempool."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="Historically, Electrum’s codebase contained a fateful assumption: if an unconfirmed transaction consumed UTXOs belonging to the local wallet (wallet.is_mine), the wallet assumed it was either created by the local user or broadcast from another valid clone. Crucially, pre-4.8.3 Electrum did not execute the script engine to cryptographically verify signatures on unconfirmed incoming inputs."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="PHASE 1 &amp; 2: INTERCEPTION &amp; SYNTHETIC FORGERY"/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="The ambush begins when an unsuspecting user broadcasts a legitimate payment (Tx1)—for example, transferring 2.5 BTC to cold storage. The client relays Tx1 to its connected Electrum server via blockchain.transaction.broadcast. If that server is malicious, it silently suppresses Tx1, refusing to gossip it to the broader Bitcoin P2P network."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="The rogue server immediately constructs an alternative transaction (Tx_fake). It consumes the exact same UTXOs as Tx1, but redirects the output entirely to an address controlled by the attacker. Because the attacker possesses no private keys, Tx_fake contains invalid dummy signatures. Attackers deployed GPU vanity tools so the final four to six characters matched the victim’s intended address, set a fee of 1 sat/vB with BIP 125 opt-in RBF, and fed Tx_fake back to the wallet. Because Electrum skipped signature checks, the fake transaction appeared in the GUI as a pending payment."/>
+                <trail Alignment="3"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="403.307086614173" YPosition="1911.33858267717" OwnPage="2" ItemID="2144405275" ItemType="4" Width="272.125984251969" Height="147.40157480315" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L272.126 0 L272.126 147.402 L0 147.402 L0 0 Z" ContourLinePath="M0 0 L272.126 0 L272.126 147.402 L0 147.402 L0 0 Z" gXpos="403.307086614173" gYpos="1911.33858267717" gWidth="0" gHeight="0" Alignment="3" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="3" Font="Liberation Serif Regular" FontSize="6.7"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="PHASE 3 &amp; 4: THE RBF TRAP AND FATAL RATIFICATION"/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="Because Tx_fake contained invalid signatures, no honest miner would ever include it in a block. To the user, the transaction appeared hopelessly stalled in the mempool."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="The natural reaction in Bitcoin UX when a transaction is stuck is to right-click and select “Increase Fee” (Replace-By-Fee). When the user initiated the fee bump, Electrum loaded Tx_fake from its internal history as the base transaction template. The UI displayed a dialogue asking for a higher fee rate."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="Human psychology and standard hardware wallet UX conspired to seal the trap. When performing an RBF bump, users invariably check only the fee delta (e.g. bumping from 1 sat/vB to 35 sat/vB), assuming the recipient address is immutable from their initial creation."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="The victim typed their passphrase or approved the prompt on their Ledger, Trezor, or Coldcard. In doing so, the wallet generated pristine, mathematically valid ECDSA or Schnorr signatures over the attacker’s outputs. The resulting transaction was immediately relayed, accepted by Bitcoin Core mempools across the globe, and permanently mined into the ledger. The theft was absolute."/>
+                <trail Alignment="3"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="403.307086614173" YPosition="2061.57480314961" OwnPage="2" ItemID="722023680" ItemType="6" Width="272.125984251969" Height="107.716535433071" FrameType="0" ClipEdited="0" LineWidth="1" FillColor="CreamYellow" LineColor="CitadelCrimson" LinePenStyle="1" Path="M0 0 L272.126 0 L272.126 107.717 L0 107.717 L0 0 Z" ContourLinePath="M0 0 L272.126 0 L272.126 107.717 L0 107.717 L0 0 Z" gXpos="403.307086614173" gYpos="2061.57480314961" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="406.141732283465" YPosition="2064.4094488189" OwnPage="2" ItemID="674765617" ItemType="4" Width="266.456692913386" Height="102.047244094488" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L266.457 0 L266.457 102.047 L0 102.047 L0 0 Z" ContourLinePath="M0 0 L266.457 0 L266.457 102.047 L0 102.047 L0 0 Z" gXpos="406.141732283465" gYpos="2064.4094488189" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Liberation Mono Regular" FontSize="5.2"/>
+                <Content Font="Liberation Mono Regular" FontSize="5.2" Chars="▲ THE ANATOMY OF THE RBF TRAP (GHSA-6jp4-8v48-cc5v) ▲"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5.2" Chars="1. VICTIM broadcasts Tx1 (Valid recipient, fully signed)."/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5.2" Chars="2. ROGUE SERVER withholds Tx1 from P2P gossip network."/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5.2" Chars="3. SERVER INJECTS Tx_fake (Same UTXO, vanity attacker output, BOGUS signatures)."/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5.2" Chars="4. CLIENT ACCEPTS Tx_fake into GUI (Skipped unconfirmed sig check!)."/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5.2" Chars="5. TX STALLS: Victim right-clicks 'Increase Fee' (RBF)."/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5.2" Chars="6. FATAL RATIFICATION: Victim signs fee bump • Wallet generates real, valid signatures over the attacker's output!"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5.2" Chars="7. THEFT COMPLETE: Valid Tx_stolen mined on chain."/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="403.307086614173" YPosition="2174.96062992126" OwnPage="2" ItemID="998716507" ItemType="4" Width="272.125984251969" Height="90.7086614173228" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L272.126 0 L272.126 90.7087 L0 90.7087 L0 0 Z" ContourLinePath="M0 0 L272.126 0 L272.126 90.7087 L0 90.7087 L0 0 Z" gXpos="403.307086614173" gYpos="2174.96062992126" gWidth="0" gHeight="0" Alignment="3" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="3" Font="Liberation Serif Regular" FontSize="6.7"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="THE REMEDIATION: COMMIT 90fe308"/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.7" Chars="Lead maintainer SomberNight resolved the flaw in commit 90fe308 by dismantling the assumption of mempool innocence. Electrum v4.8.3 now enforces strict client-side signature verification: before any unconfirmed transaction touching wallet.is_mine UTXOs is accepted into the wallet database, the client validates that the input signatures mathematically correspond to the scriptPubKey. Any forged or invalid server injection is rejected outright and never reaches the GUI."/>
+                <trail Alignment="3"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="403.307086614173" YPosition="2271.33858267717" OwnPage="2" ItemID="471877170" ItemType="6" Width="272.125984251969" Height="141.732283464567" FrameType="0" ClipEdited="0" LineWidth="1" FillColor="PaperWarm" LineColor="Black" LinePenStyle="1" Path="M0 0 L272.126 0 L272.126 141.732 L0 141.732 L0 0 Z" ContourLinePath="M0 0 L272.126 0 L272.126 141.732 L0 141.732 L0 0 Z" gXpos="403.307086614173" gYpos="2271.33858267717" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="406.141732283465" YPosition="2274.17322834646" OwnPage="2" ItemID="191978844" ItemType="4" Width="266.456692913386" Height="136.062992125984" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L266.457 0 L266.457 136.063 L0 136.063 L0 0 Z" ContourLinePath="M0 0 L266.457 0 L266.457 136.063 L0 136.063 L0 0 Z" gXpos="406.141732283465" gYpos="2274.17322834646" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Liberation Mono Regular" FontSize="5.5"/>
+                <Content Font="Liberation Mono Regular" FontSize="5.5" Chars="■ LESSONS FOR THE CITADEL SANCTUARY    |    SOVEREIGN MANDATE"/>
+                <para/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5.5" Chars="• UPGRADE MANDATORY: All users operating Electrum must update to version 4.8.3 or higher. Verify PGP signatures directly from electrum.org."/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5.5" Chars="• INSPECT FULL OUTPUTS: Whenever executing an RBF fee bump, verify the entire recipient address on your hardware signer screen, not merely the fee rate."/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="5.5" Chars="• RUN A SOVEREIGN SERVER: Users who connected to their own private Fulcrum, Electrs, or EPS nodes backed by Bitcoin Core were completely immune. Public servers are third-party trust traps. Don't trust, verify."/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="2424.4094488189" OwnPage="2" ItemID="259761111" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="1.2" FillShade="4.24399158884746e-314" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="2424.4094488189" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="2427.24409448819" OwnPage="2" ItemID="1135359773" ItemType="4" Width="555.590551181102" Height="11.3385826771654" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 11.3386 L0 11.3386 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 11.3386 L0 11.3386 L0 0 Z" gXpos="119.842519685039" gYpos="2427.24409448819" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Liberation Mono Bold" FontSize="6"/>
+                <Content Font="Liberation Mono Bold" FontSize="6" FontColor="CitadelCrimson" Chars="■ 0-CONF DISPATCHES • UNCONFIRMED MEMPOOL INTELLIGENCE &amp; JURISPRUDENCE    |    TRANSACTIONS STREAMING DIRECT FROM THE MEMPOOL"/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="2440" OwnPage="2" ItemID="105237796" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="0.6" FillShade="1.90979621196756e-313" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="2440" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="2444.25196850394" OwnPage="2" ItemID="1552786298" ItemType="4" Width="266.456692913386" Height="144.566929133858" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L266.457 0 L266.457 144.567 L0 144.567 L0 0 Z" ContourLinePath="M0 0 L266.457 0 L266.457 144.567 L0 144.567 L0 0 Z" gXpos="119.842519685039" gYpos="2444.25196850394" gWidth="0" gHeight="0" Alignment="3" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="3" Font="Liberation Serif Regular" FontSize="5.8"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.8" Chars="JURISPRUDENCE • SUPREME COURT EN BANC RULING 4929/2569"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.8" Chars="SATOSHI’S CASH BECOMES INVENTORIED CHATTEL"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.8" Chars="Thai Supreme Court rules 2.48 BTC is legally 'Property' in £40,000 Koh Samui beach heist."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.8" Chars="When Satoshi Nakamoto drafted his 2008 whitepaper, he titled it with spartan simplicity: Bitcoin: A Peer-to-Peer Electronic Cash System. The Thai judiciary, however, has codified a rather different taxonomy. In a historic en banc ruling (Supreme Court Decision No. 4929/2569), the Kingdom’s highest bench formally decreed that Bitcoin is not ephemeral cyber-dust, but bona fide incorporeal property under Sections 137 and 138 of the Civil and Commercial Code."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.8" Chars="The precedent stemmed from an extortion on Koh Samui, where a foreign gang coerced a couple in a café—under threats to their infant child—to convert $50,000 into 2.480801 BTC transferred to an offshore wallet. The defence claimed that because Bitcoin possesses no corporeal form and no state-mandated value, no robbery of chattel had occurred. The bench rejected the sophistry outright: holding that digital assets command measurable market value and exclusive dominion via cryptographic keys, the Court confirmed a ten-year penal stretch for armed robbery. Satoshi engineered sovereign cash; Thailand's prison wardens now treat it as fully confiscable property."/>
+                <trail Alignment="3"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="394.803149606299" YPosition="2444.25196850394" OwnPage="2" ItemID="2047661039" ItemType="5" Width="141.732283464567" Height="1" FrameType="0" ClipEdited="0" Rotation="90" LineWidth="0.5" FillShade="3.75489890839347e-322" LineColor="GreyRule" LinePenStyle="1" Path="" gXpos="394.803149606299" gYpos="2444.25196850394" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="403.307086614173" YPosition="2444.25196850394" OwnPage="2" ItemID="796698115" ItemType="4" Width="272.125984251969" Height="144.566929133858" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L272.126 0 L272.126 144.567 L0 144.567 L0 0 Z" ContourLinePath="M0 0 L272.126 0 L272.126 144.567 L0 144.567 L0 0 Z" gXpos="403.307086614173" gYpos="2444.25196850394" gWidth="0" gHeight="0" Alignment="3" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="3" Font="Liberation Serif Regular" FontSize="5.8"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.8" Chars="FORENSIC AUDITING • THE COGNITIVE DEFICIT OF CRIME"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.8" Chars="KORN HAILS THE OPEN LEDGER; CRIMINALS FAIL ARITHMANCY"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.8" Chars="Former Finance Minister marvels at 118m-baht on-chain gambling trail, exposing the sub-standard intellect of cartel laundering."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.8" Chars="Former Finance Minister Korn Chatikavanij took to Facebook this week to shower unexpected praise upon public blockchains. Reflecting on a forensic dossier compiled by former Democrat MP Sirichok Sopa—who mapped nearly 10,000 transactions totaling 118 million Baht linked to illegal gambling platform Shuffle without requiring a single court warrant or bank subpoena—Korn proclaimed: 'Crypto is not the villain here; it may well be the hero.'"/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.8" Chars="While Mr. Korn noted that unlike opaque bank mule accounts or borderland bags of cash, public ledgers provide an indelible trail for the state, his diplomatic assessment delicately sidestepped the larger psychological reality: the comical IQ deficit of the modern money launderer. To launder illicit revenue across a globally broadcast, permanent ledger is akin to burgling a vault whilst wearing a high-visibility neon vest, a bodycam livestreaming to YouTube, and handing out numbered receipts. Satoshi gave humanity an unforgeable public receipt machine; only the most intellectually deficient cartels would choose it as a hideaway."/>
+                <trail Alignment="3"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="2593.07086614173" OwnPage="2" ItemID="94982254" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="1" FillShade="3.75489890839347e-322" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="2593.07086614173" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="2594.48818897638" OwnPage="2" ItemID="2085879932" ItemType="4" Width="555.590551181102" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" gXpos="119.842519685039" gYpos="2594.48818897638" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Regular" FontSize="6.2"/>
+                <Content Font="Liberation Mono Regular" FontSize="6.2" FontColor="Black" Chars="PAGE 3 OF 4 • PROTOCOL FORENSICS: ELECTRUM RBF WEAPONISATION • THE CITADEL CHRONICLE • CITADELCHRONICLE.COM • ESTABLISHED 2026"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="2699.68503937008" OwnPage="3" ItemID="57823953" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="1.2" FillShade="3.65608577922522e-322" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="2699.68503937008" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="2685.51181102362" OwnPage="3" ItemID="219545682" ItemType="4" Width="555.590551181102" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" gXpos="119.842519685039" gYpos="2685.51181102362" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Bold" FontSize="6.5"/>
+                <Content Font="Liberation Mono Bold" FontSize="6.5" FontColor="Black" Chars="THE CITADEL CHRONICLE • WEDNESDAY, 28 OCTOBER 2026 • BLOCK HEIGHT: 973,528    |    The Back Page: Khao Wanchai Kathina, The Segregated Witness &amp; Familiars    |    PAGE 4 OF 4"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="2705.35433070866" OwnPage="3" ItemID="741321255" ItemType="6" Width="555.590551181102" Height="238.110236220472" FrameType="0" ClipEdited="0" LineWidth="1.5" FillColor="CreamYellow" LineColor="CitadelCrimson" LinePenStyle="1" Path="M0 0 L555.591 0 L555.591 238.11 L0 238.11 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 238.11 L0 238.11 L0 0 Z" gXpos="119.842519685039" gYpos="2705.35433070866" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="125.511811023622" YPosition="2708.18897637795" OwnPage="3" ItemID="1861834498" ItemType="4" Width="544.251968503937" Height="11.3385826771654" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L544.252 0 L544.252 11.3386 L0 11.3386 L0 0 Z" ContourLinePath="M0 0 L544.252 0 L544.252 11.3386 L0 11.3386 L0 0 Z" gXpos="125.511811023622" gYpos="2708.18897637795" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Noto Serif Thai Bold" FontSize="5.8"/>
+                <Content Font="Noto Serif Thai Bold" FontSize="5.8" FontColor="CitadelCrimson" Chars="☸ งานบุญมหากุศล • KATHINA &amp; FOUNDATION PILLAR CEREMONY • PAK CHONG    |    วัดเขาวันชัยนวรัตน์ • 31 ต.ค. – 1 พ.ย. 2569"/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="125.511811023622" YPosition="2720.94488188976" OwnPage="3" ItemID="654781859" ItemType="5" Width="544.251968503937" Height="1" FrameType="0" ClipEdited="0" LineWidth="0.5" FillShade="3.75489890839347e-322" LineColor="CitadelCrimson" LinePenStyle="1" Path="" gXpos="125.511811023622" gYpos="2720.94488188976" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="125.511811023622" YPosition="2725.1968503937" OwnPage="3" ItemID="1617920653" ItemType="6" Width="124.724409448819" Height="212.59842519685" FrameType="0" ClipEdited="0" LineWidth="0.5" FillColor="White" LineColor="Black" LinePenStyle="1" Path="M0 0 L124.724 0 L124.724 212.598 L0 212.598 L0 0 Z" ContourLinePath="M0 0 L124.724 0 L124.724 212.598 L0 212.598 L0 0 Z" gXpos="125.511811023622" gYpos="2725.1968503937" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="126.929133858268" YPosition="2726.61417322835" OwnPage="3" ItemID="214604649" ItemType="2" Width="121.889763779528" Height="209.763779527559" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="0.126968503937008" ImageScaleY="0.126968503937008" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="0" ImageRatio="1" ImagePageNumber="0" ImageFileName="issue-03/ads/kathina_khao_wanchai_01.jpg" ImageColorimetricIntent="0" UseEmbeddedProfile="0" Path="M0 0 L121.89 0 L121.89 209.764 L0 209.764 L0 0 Z" ContourLinePath="M0 0 L121.89 0 L121.89 209.764 L0 209.764 L0 0 Z" gXpos="126.929133858268" gYpos="2726.61417322835" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1"/>
+        <PageObject XPosition="255.905511811024" YPosition="2725.1968503937" OwnPage="3" ItemID="407588459" ItemType="6" Width="124.724409448819" Height="212.59842519685" FrameType="0" ClipEdited="0" LineWidth="0.5" FillColor="White" LineColor="Black" LinePenStyle="1" Path="M0 0 L124.724 0 L124.724 212.598 L0 212.598 L0 0 Z" ContourLinePath="M0 0 L124.724 0 L124.724 212.598 L0 212.598 L0 0 Z" gXpos="255.905511811024" gYpos="2725.1968503937" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="257.322834645669" YPosition="2726.61417322835" OwnPage="3" ItemID="172430956" ItemType="2" Width="121.889763779528" Height="209.763779527559" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="0.126968503937008" ImageScaleY="0.126968503937008" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="0" ImageRatio="1" ImagePageNumber="0" ImageFileName="issue-03/ads/kathina_khao_wanchai_02.jpg" ImageColorimetricIntent="0" UseEmbeddedProfile="0" Path="M0 0 L121.89 0 L121.89 209.764 L0 209.764 L0 0 Z" ContourLinePath="M0 0 L121.89 0 L121.89 209.764 L0 209.764 L0 0 Z" gXpos="257.322834645669" gYpos="2726.61417322835" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1"/>
+        <PageObject XPosition="386.299212598425" YPosition="2725.1968503937" OwnPage="3" ItemID="1029471526" ItemType="4" Width="192.755905511811" Height="212.59842519685" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L192.756 0 L192.756 212.598 L0 212.598 L0 0 Z" ContourLinePath="M0 0 L192.756 0 L192.756 212.598 L0 212.598 L0 0 Z" gXpos="386.299212598425" gYpos="2725.1968503937" gWidth="0" gHeight="0" Alignment="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="0" Font="Noto Serif Thai Regular" FontSize="5.8"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="5.8" Chars="ขอเชิญร่วมบุญทอดกฐินสามัคคี &amp; ยกเสาเอกเจดีย์"/>
+                <para Alignment="0"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="5.8" Chars="Wat Khao Wanchai Nawarat Chedi Foundation • Pak Chong Gathering"/>
+                <para Alignment="0"/>
+                <para Alignment="0"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="5.8" Chars="สุดสัปดาห์นี้ ขอเรียนเชิญกัลยาณมิตร ศิษยานุศิษย์ และพี่น้องชาว Citadel ทุกท่าน ร่วมเดินทางสู่ อ.ปากช่อง จ.นครราชสีมา เพื่อร่วมบุญมหากุศลทอดกฐินสามัคคีสมทบทุนสร้าง &quot;รัตนเจดีย์ศรีดวงแก้วโพธิญาณ&quot; และมุทิตาสักการะอายุวัฒนมงคล 79 ปี หลวงพ่อพระครูภาวนาอุดมคุณ โดย อาจารย์โฉลก สัมพันธารักษ์ พร้อมครอบครัว และคณะศิษย์ CDC จะเดินทางไปร่วมสร้างมหาทานบารมีในครั้งนี้โดยพร้อมเพรียงกัน"/>
+                <para Alignment="0"/>
+                <para Alignment="0"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="5.8" Chars="กำหนดการสำคัญ (CEREMONIAL SCHEDULE)"/>
+                <para Alignment="0"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="5.8" Chars="• เสาร์ 31 ต.ค.: 16.30 น. สรงน้ำหลวงพ่อพระครูภาวนาอุดมคุณ (79 ปี) • 19.00 น. ทำวัตรเย็น ปฏิบัติภาวนา ฟังธรรม"/>
+                <para Alignment="0"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="5.8" Chars="• อาทิตย์ 1 พ.ย.: 07.00 น. ตักบาตร • 08.00 น. ถวายภัตตาหาร • 10.39 น. ถวายผ้ากฐินสามัคคี • 13.19 น. พิธียกเสาเอกเจดีย์ โดยสมเด็จพระวชิรสิทธาจารย์ (วัดสระเกศ) &amp; มทภ.2"/>
+                <para Alignment="0"/>
+                <para Alignment="0"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="5.8" Chars="★ บ้านเกาะแก้ว ต.ปากช่อง อ.ปากช่อง จ.นครราชสีมา ★"/>
+                <trail Alignment="0"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="584.724409448819" YPosition="2725.1968503937" OwnPage="3" ItemID="2058896539" ItemType="6" Width="85.0393700787402" Height="212.59842519685" FrameType="0" ClipEdited="0" LineWidth="1" FillColor="White" LineColor="NavyBlue" LinePenStyle="1" Path="M0 0 L85.0394 0 L85.0394 212.598 L0 212.598 L0 0 Z" ContourLinePath="M0 0 L85.0394 0 L85.0394 212.598 L0 212.598 L0 0 Z" gXpos="584.724409448819" gYpos="2725.1968503937" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="584.724409448819" YPosition="2726.61417322835" OwnPage="3" ItemID="1875345847" ItemType="4" Width="85.0393700787402" Height="11.3385826771654" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L85.0394 0 L85.0394 11.3386 L0 11.3386 L0 0 Z" ContourLinePath="M0 0 L85.0394 0 L85.0394 11.3386 L0 11.3386 L0 0 Z" gXpos="584.724409448819" gYpos="2726.61417322835" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Sans Bold" FontSize="5.2"/>
+                <Content Font="Liberation Sans Bold" FontSize="5.2" FontColor="NavyBlue" Chars="PromptPay e-Donation"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="591.811023622047" YPosition="2740.7874015748" OwnPage="3" ItemID="541717755" ItemType="2" Width="70.8661417322835" Height="70.8661417322835" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="0.172844248127521" ImageScaleY="0.172844248127521" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="0" ImageRatio="1" ImagePageNumber="0" ImageFileName="issue-03/ads/wat_khao_wanchai_edonation_qr.png" ImageColorimetricIntent="0" UseEmbeddedProfile="0" Path="M0 0 L70.8661 0 L70.8661 70.8661 L0 70.8661 L0 0 Z" ContourLinePath="M0 0 L70.8661 0 L70.8661 70.8661 L0 70.8661 L0 0 Z" gXpos="591.811023622047" gYpos="2740.7874015748" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1"/>
+        <PageObject XPosition="587.55905511811" YPosition="2815.90551181102" OwnPage="3" ItemID="1838089459" ItemType="4" Width="79.3700787401575" Height="116.220472440945" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L79.3701 0 L79.3701 116.22 L0 116.22 L0 0 Z" ContourLinePath="M0 0 L79.3701 0 L79.3701 116.22 L0 116.22 L0 0 Z" gXpos="587.55905511811" gYpos="2815.90551181102" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Noto Serif Thai Regular" FontSize="4.8"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="4.8" Chars="วัดเขาวันชัยนวรัตน์"/>
+                <para Alignment="1"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="4.8" Chars="WAT KOW WANCHAI"/>
+                <para Alignment="1"/>
+                <para Alignment="1"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="4.8" Chars="เลขประจำตัวผู้เสียภาษี:"/>
+                <para Alignment="1"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="4.8" Chars="099400230775390"/>
+                <para Alignment="1"/>
+                <para Alignment="1"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="4.8" Chars="สแกนร่วมทำบุญ"/>
+                <para Alignment="1"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="4.8" Chars="ลดหย่อนภาษีอัตโนมัติ"/>
+                <para Alignment="1"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="4.8" Chars="ผ่านกรมสรรพากร"/>
+                <para Alignment="1"/>
+                <Content Font="Noto Serif Thai Regular" FontSize="4.8" Chars="(e-Donation)"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="2951.96850393701" OwnPage="3" ItemID="1444741143" ItemType="6" Width="340.157480314961" Height="518.740157480315" FrameType="0" ClipEdited="0" LineWidth="1.2" FillColor="White" LineColor="Black" LinePenStyle="1" Path="M0 0 L340.157 0 L340.157 518.74 L0 518.74 L0 0 Z" ContourLinePath="M0 0 L340.157 0 L340.157 518.74 L0 518.74 L0 0 Z" gXpos="119.842519685039" gYpos="2951.96850393701" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="125.511811023622" YPosition="2956.22047244094" OwnPage="3" ItemID="730797832" ItemType="4" Width="328.818897637795" Height="11.3385826771654" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L328.819 0 L328.819 11.3386 L0 11.3386 L0 0 Z" ContourLinePath="M0 0 L328.819 0 L328.819 11.3386 L0 11.3386 L0 0 Z" gXpos="125.511811023622" gYpos="2956.22047244094" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Liberation Mono Bold" FontSize="5.5"/>
+                <Content Font="Liberation Mono Bold" FontSize="5.5" FontColor="CitadelCrimson" Chars="■ THE SEGREGATED WITNESS • BY DON SAMBANDARAKSA    |    MEMOIRS OF POST DATABASE • SEPT 2010"/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="125.511811023622" YPosition="2967.55905511811" OwnPage="3" ItemID="1738225410" ItemType="4" Width="328.818897637795" Height="21.259842519685" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L328.819 0 L328.819 21.2598 L0 21.2598 L0 0 Z" ContourLinePath="M0 0 L328.819 0 L328.819 21.2598 L0 21.2598 L0 0 Z" gXpos="125.511811023622" gYpos="2967.55905511811" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Liberation Serif Bold" FontSize="14"/>
+                <Content Font="Liberation Serif Bold" FontSize="14" Chars="EIGHTEEN PER CENT AND PROUD OF IT"/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="125.511811023622" YPosition="2988.8188976378" OwnPage="3" ItemID="1078184380" ItemType="4" Width="328.818897637795" Height="21.259842519685" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L328.819 0 L328.819 21.2598 L0 21.2598 L0 0 Z" ContourLinePath="M0 0 L328.819 0 L328.819 21.2598 L0 21.2598 L0 0 Z" gXpos="125.511811023622" gYpos="2988.8188976378" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Liberation Serif Italic" FontSize="6.5"/>
+                <Content Font="Liberation Serif Italic" FontSize="6.5" Chars="How a delivery of frozen sausages revived a sixteen-year-old epiphany in Chiang Mai on the true price of capital, the cruelty of interest rate caps, and the moral hazard of the nanny state."/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="125.511811023622" YPosition="3011.49606299213" OwnPage="3" ItemID="1081350860" ItemType="6" Width="328.818897637795" Height="175.748031496063" FrameType="0" ClipEdited="0" LineWidth="0.5" FillColor="White" LineColor="Black" LinePenStyle="1" Path="M0 0 L328.819 0 L328.819 175.748 L0 175.748 L0 0 Z" ContourLinePath="M0 0 L328.819 0 L328.819 175.748 L0 175.748 L0 0 Z" gXpos="125.511811023622" gYpos="3011.49606299213" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="126.929133858268" YPosition="3012.91338582677" OwnPage="3" ItemID="1071260372" ItemType="2" Width="325.984251968504" Height="172.913385826772" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="0.225147637795276" ImageScaleY="0.225147637795276" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="0" ImageRatio="1" ImagePageNumber="0" ImageFileName="issue-03/ads/motorcycle_18percent_woodcut.jpg" ImageColorimetricIntent="0" UseEmbeddedProfile="0" Path="M0 0 L325.984 0 L325.984 172.913 L0 172.913 L0 0 Z" ContourLinePath="M0 0 L325.984 0 L325.984 172.913 L0 172.913 L0 0 Z" gXpos="126.929133858268" gYpos="3012.91338582677" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1"/>
+        <PageObject XPosition="125.511811023622" YPosition="3188.66141732283" OwnPage="3" ItemID="1810640822" ItemType="4" Width="328.818897637795" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L328.819 0 L328.819 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L328.819 0 L328.819 12.7559 L0 12.7559 L0 0 Z" gXpos="125.511811023622" gYpos="3188.66141732283" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Serif Italic" FontSize="5.5"/>
+                <Content Font="Liberation Serif Italic" FontSize="5.5" Chars="Plate 4: The 18% Northern Sovereign Rider. A modest motorcycle transforms an informal labourer into an independent enterprise. In the clouds above: the towering silhouette of an IBM P-Series database server."/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="125.511811023622" YPosition="3202.83464566929" OwnPage="3" ItemID="264480537" ItemType="5" Width="323.149606299213" Height="1" FrameType="0" ClipEdited="0" LineWidth="0.5" FillShade="2.1393042464926e-321" LineColor="GreyRule" LinePenStyle="1" Path="" gXpos="125.511811023622" gYpos="3202.83464566929" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="125.511811023622" YPosition="3207.08661417323" OwnPage="3" ItemID="433990624" ItemType="4" Width="328.818897637795" Height="249.448818897638" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="2" ColumnGap="17.007874015748" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L328.819 0 L328.819 249.449 L0 249.449 L0 0 Z" ContourLinePath="M0 0 L328.819 0 L328.819 249.449 L0 249.449 L0 0 Z" gXpos="125.511811023622" gYpos="3207.08661417323" gWidth="0" gHeight="0" Alignment="3" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="3" Font="Liberation Serif Regular" FontSize="6.4"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.4" Chars="This morning, an express van pulled up to my gate to deliver a parcel of frozen sausages dispatched from Ratchaburi. Emblazoned across the vehicle was the livery of NIM Express. It is a peculiar facet of human memory that an ordinary parcel of breakfast meat can instantly dislodge an encounter buried sixteen years in the past."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.4" Chars="In September 2010, I was covering technology for the Post Database at the Bangkok Post. IBM had ferried a contingent of tech journalists to Chiang Mai for what polite society terms a “geo-expansion showcase”—what the rest of us recognized as a corporate fluff junket. Big Blue was strutting its northern conquests: 70 terabytes of medical storage for Chiang Mai University, modular containerised data centres, and Lotus Live suites."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.4" Chars="Tucked into the briefing pack as a star regional showcase was Nim See Seng Leasing. They commanded 233 branches across eight northern provinces, powered by centralised IBM P-Series servers and DB2 databases. Their core business? Providing vehicle and motorcycle loans to low-income, informal-sector borrowers who could never dream of securing an audience with a commercial bank."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.4" Chars="The executives presented their metrics with straight faces and unmistakable corporate pride: Nim, they beamed, was performing an uplifting social service by lending at “only” 18 per cent annual interest."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.4" Chars="Eighteen per cent! Sitting in that air-conditioned ballroom as a comfortable urban scribe, my jaw hit the parquet. Eighteen per cent interest, and they called it cheap? Was this not textbook usurious predation—capitalist financiers extracting blood from the poorest labourers on two wheels?"/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.4" Chars="Then I checked my reporting notes from the provincial streets. The prevailing uncollateralised street rate charged by village loan sharks across the north was 25 per cent. Often higher. Often compounded monthly, and collected under the implicit threat of a lead pipe."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.4" Chars="Now that I am sixteen years older—and, one hopes, a fraction wiser—I find myself returning often to that Chiang Mai epiphany. High interest rates are not inherently an evil conspiracy of elites feasting upon the destitute. Rather, interest is the honest, unvarnished market price of risk."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.4" Chars="What is “fair”? What is “access”? If righteous paternalists in parliament pass an edict capping interest rates out of ostensible compassion, what actually happens? The laws of risk do not bow to ministerial decrees. Two things inevitably follow: either the man at the bottom of the pyramid is denied the motorcycle that allows him to commute and earn his livelihood; or he is driven straight back into the shadows of the loan shark at 25, 30, or 50 per cent."/>
+                <para Alignment="3"/>
+                <para Alignment="3"/>
+                <Content Font="Liberation Serif Regular" FontSize="6.4" Chars="In pretending that high-risk capital should be artificially cheap, the state does not protect the vulnerable; it subsidises moral hazard, breeds a sub-class dependent on perpetual debt moratoria and bailouts, and outlaws the bottom rungs of the formal credit ladder. The market price of risk is uncomfortable. The state’s compassionate illusion is ruinous."/>
+                <trail Alignment="3"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="125.511811023622" YPosition="3459.37007874016" OwnPage="3" ItemID="1888534794" ItemType="5" Width="323.149606299213" Height="1" FrameType="0" ClipEdited="0" LineWidth="0.5" FillShade="4.24399158884746e-314" LineColor="GreyRule" LinePenStyle="1" Path="" gXpos="125.511811023622" gYpos="3459.37007874016" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="125.511811023622" YPosition="3460.7874015748" OwnPage="3" ItemID="460863557" ItemType="4" Width="328.818897637795" Height="9.92125984251969" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L328.819 0 L328.819 9.92126 L0 9.92126 L0 0 Z" ContourLinePath="M0 0 L328.819 0 L328.819 9.92126 L0 9.92126 L0 0 Z" gXpos="125.511811023622" gYpos="3460.7874015748" gWidth="0" gHeight="0" Alignment="2" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="2" Font="Liberation Mono Bold" FontSize="5"/>
+                <Content Font="Liberation Mono Bold" FontSize="5" Chars="★ THE SEGREGATED WITNESS APPEARS EXCLUSIVELY IN THE CITADEL CHRONICLE ★"/>
+                <trail Alignment="2"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="468.503937007874" YPosition="2951.96850393701" OwnPage="3" ItemID="1553925220" ItemType="6" Width="206.929133858268" Height="133.228346456693" FrameType="0" ClipEdited="0" LineWidth="1" FillColor="CreamYellow" LineColor="Black" LinePenStyle="1" Path="M0 0 L206.929 0 L206.929 133.228 L0 133.228 L0 0 Z" ContourLinePath="M0 0 L206.929 0 L206.929 133.228 L0 133.228 L0 0 Z" gXpos="468.503937007874" gYpos="2951.96850393701" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="471.338582677165" YPosition="2954.8031496063" OwnPage="3" ItemID="1043802577" ItemType="4" Width="201.259842519685" Height="9.92125984251969" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L201.26 0 L201.26 9.92126 L0 9.92126 L0 0 Z" ContourLinePath="M0 0 L201.26 0 L201.26 9.92126 L0 9.92126 L0 0 Z" gXpos="471.338582677165" gYpos="2954.8031496063" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Liberation Mono Bold" FontSize="5.5"/>
+                <Content Font="Liberation Mono Bold" FontSize="5.5" FontColor="CitadelCrimson" Chars="★ ADOPT A FAMILIAR ★    |    FREE (0 SATS)"/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="471.338582677165" YPosition="2964.72440944882" OwnPage="3" ItemID="1623925420" ItemType="4" Width="201.259842519685" Height="14.1732283464567" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L201.26 0 L201.26 14.1732 L0 14.1732 L0 0 Z" ContourLinePath="M0 0 L201.26 0 L201.26 14.1732 L0 14.1732 L0 0 Z" gXpos="471.338582677165" gYpos="2964.72440944882" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Serif Bold" FontSize="11"/>
+                <Content Font="Liberation Serif Bold" FontSize="11" Chars="THE NINE FAMILIARS"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="519.527559055118" YPosition="2980.31496062992" OwnPage="3" ItemID="1681987262" ItemType="6" Width="104.88188976378" Height="70.8661417322835" FrameType="0" ClipEdited="0" LineWidth="0.5" FillColor="White" LineColor="Black" LinePenStyle="1" Path="M0 0 L104.882 0 L104.882 70.8661 L0 70.8661 L0 0 Z" ContourLinePath="M0 0 L104.882 0 L104.882 70.8661 L0 70.8661 L0 0 Z" gXpos="519.527559055118" gYpos="2980.31496062992" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="520.944881889764" YPosition="2981.73228346457" OwnPage="3" ItemID="794714225" ItemType="2" Width="102.047244094488" Height="68.0314960629921" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="0.0885826771653543" ImageScaleY="0.0885826771653543" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="0" ImageRatio="1" ImagePageNumber="0" ImageFileName="issue-03/ads/wizarding_puppies.jpg" ImageProfile="Embedded sRGB" ImageColorimetricIntent="0" EmbeddedProfile="Embedded sRGB" Path="M0 0 L102.047 0 L102.047 68.0315 L0 68.0315 L0 0 Z" ContourLinePath="M0 0 L102.047 0 L102.047 68.0315 L0 68.0315 L0 0 Z" gXpos="520.944881889764" gYpos="2981.73228346457" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1"/>
+        <PageObject XPosition="471.338582677165" YPosition="3054.0157480315" OwnPage="3" ItemID="1285832536" ItemType="4" Width="201.259842519685" Height="28.3464566929134" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L201.26 0 L201.26 28.3465 L0 28.3465 L0 0 Z" ContourLinePath="M0 0 L201.26 0 L201.26 28.3465 L0 28.3465 L0 0 Z" gXpos="471.338582677165" gYpos="3054.0157480315" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Serif Regular" FontSize="5.5"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.5" Chars="Every wizard needs a loyal familiar. Bred in our Pathum Thani redoubt, these nine canine companions are house-broken, impervious to basilisk stares, and trained to bark vigorously at tax collectors."/>
+                <para Alignment="1"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.5" Chars="ENQUIRE: @DON VIA NOSTR OR DESK"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="468.503937007874" YPosition="3090.86614173228" OwnPage="3" ItemID="55206019" ItemType="6" Width="206.929133858268" Height="266.456692913386" FrameType="0" ClipEdited="0" LineWidth="1" FillColor="CreamYellow" LineColor="Black" LinePenStyle="1" Path="M0 0 L206.929 0 L206.929 266.457 L0 266.457 L0 0 Z" ContourLinePath="M0 0 L206.929 0 L206.929 266.457 L0 266.457 L0 0 Z" gXpos="468.503937007874" gYpos="3090.86614173228" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="471.338582677165" YPosition="3093.70078740157" OwnPage="3" ItemID="738102694" ItemType="4" Width="201.259842519685" Height="9.92125984251969" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L201.26 0 L201.26 9.92126 L0 9.92126 L0 0 Z" ContourLinePath="M0 0 L201.26 0 L201.26 9.92126 L0 9.92126 L0 0 Z" gXpos="471.338582677165" gYpos="3093.70078740157" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Liberation Mono Bold" FontSize="5.5"/>
+                <Content Font="Liberation Mono Bold" FontSize="5.5" FontColor="CitadelCrimson" Chars="★ CITADEL COFFEE ROASTERS ★    |    PATHUM THANI"/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="471.338582677165" YPosition="3103.62204724409" OwnPage="3" ItemID="1047220814" ItemType="4" Width="201.259842519685" Height="14.1732283464567" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L201.26 0 L201.26 14.1732 L0 14.1732 L0 0 Z" ContourLinePath="M0 0 L201.26 0 L201.26 14.1732 L0 14.1732 L0 0 Z" gXpos="471.338582677165" gYpos="3103.62204724409" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Serif Bold" FontSize="10.5"/>
+                <Content Font="Liberation Serif Bold" FontSize="10.5" Chars="SIGNATURE PICCOLO LATTE"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="474.173228346457" YPosition="3119.2125984252" OwnPage="3" ItemID="384447282" ItemType="6" Width="195.590551181102" Height="192.755905511811" FrameType="0" ClipEdited="0" LineWidth="0.5" FillColor="White" LineColor="Black" LinePenStyle="1" Path="M0 0 L195.591 0 L195.591 192.756 L0 192.756 L0 0 Z" ContourLinePath="M0 0 L195.591 0 L195.591 192.756 L0 192.756 L0 0 Z" gXpos="474.173228346457" gYpos="3119.2125984252" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="475.590551181102" YPosition="3120.62992125984" OwnPage="3" ItemID="249366441" ItemType="2" Width="192.755905511811" Height="189.92125984252" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="0.0949606299212599" ImageScaleY="0.0949606299212599" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="0" ImageRatio="1" ImagePageNumber="0" ImageFileName="issue-03/ads/citadel_coffee_piccolo.png" ImageColorimetricIntent="0" UseEmbeddedProfile="0" Path="M0 0 L192.756 0 L192.756 189.921 L0 189.921 L0 0 Z" ContourLinePath="M0 0 L192.756 0 L192.756 189.921 L0 189.921 L0 0 Z" gXpos="475.590551181102" gYpos="3120.62992125984" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1"/>
+        <PageObject XPosition="471.338582677165" YPosition="3314.8031496063" OwnPage="3" ItemID="402486443" ItemType="4" Width="201.259842519685" Height="39.6850393700787" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L201.26 0 L201.26 39.685 L0 39.685 L0 0 Z" ContourLinePath="M0 0 L201.26 0 L201.26 39.685 L0 39.685 L0 0 Z" gXpos="471.338582677165" gYpos="3314.8031496063" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Serif Regular" FontSize="5.2"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.2" Chars="Piccolo Latte (90.-) • Double ristretto extracted under 21-bar consensus pressure, cut with velvety milk at 1:2 ratio. Low latency, zero dilution, pure proof-of-work caffeine."/>
+                <para Alignment="1"/>
+                <Content Font="Liberation Serif Regular" FontSize="5.2" Chars="⚡ 0-CONF LIGHTNING SETTLED • ZERO CUSTODIAL DEBT"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="468.503937007874" YPosition="3362.99212598425" OwnPage="3" ItemID="757311789" ItemType="6" Width="206.929133858268" Height="107.716535433071" FrameType="0" ClipEdited="0" LineWidth="1" FillColor="PaperWarm" LineColor="Black" LinePenStyle="1" Path="M0 0 L206.929 0 L206.929 107.717 L0 107.717 L0 0 Z" ContourLinePath="M0 0 L206.929 0 L206.929 107.717 L0 107.717 L0 0 Z" gXpos="468.503937007874" gYpos="3362.99212598425" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="471.338582677165" YPosition="3365.82677165354" OwnPage="3" ItemID="1405843700" ItemType="4" Width="201.259842519685" Height="9.92125984251969" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L201.26 0 L201.26 9.92126 L0 9.92126 L0 0 Z" ContourLinePath="M0 0 L201.26 0 L201.26 9.92126 L0 9.92126 L0 0 Z" gXpos="471.338582677165" gYpos="3365.82677165354" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Liberation Mono Bold" FontSize="5.5"/>
+                <Content Font="Liberation Mono Bold" FontSize="5.5" Chars="CITADEL CHRONICLE • COLOPHON    |    ISSUE 03"/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="471.338582677165" YPosition="3375.74803149606" OwnPage="3" ItemID="1545275471" ItemType="5" Width="198.425196850394" Height="1" FrameType="0" ClipEdited="0" LineWidth="0.5" FillShade="2.1393042464926e-321" LineColor="Black" LinePenStyle="1" Path="" gXpos="471.338582677165" gYpos="3375.74803149606" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="471.338582677165" YPosition="3378.58267716535" OwnPage="3" ItemID="1616082692" ItemType="4" Width="147.40157480315" Height="79.3700787401575" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L147.402 0 L147.402 79.3701 L0 79.3701 L0 0 Z" ContourLinePath="M0 0 L147.402 0 L147.402 79.3701 L0 79.3701 L0 0 Z" gXpos="471.338582677165" gYpos="3378.58267716535" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Font="Liberation Mono Regular" FontSize="4.8"/>
+                <Content Font="Liberation Mono Regular" FontSize="4.8" Chars="• EDITOR-IN-CHIEF: Don Sambandaraksa (@don)"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="4.8" Chars="• BLOCK ANCHOR: 973,528 • 28 OCT 2026"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="4.8" Chars="• LIGHTNING: don@citadelchronicle.com"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="4.8" Chars="• FULL NPUB:"/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="4.8" Chars="npub1mwpsruysa2nv0ukv9mzssk8grfp7tdhftvcrs3azu9sfrhnasl7qu5uu3w"/>
+                <para/>
+                <para/>
+                <Content Font="Liberation Mono Regular" FontSize="4.8" Chars="“ALL THE RANTS THAT FIT ON FOUR SHEETS”"/>
+                <trail/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="621.574803149606" YPosition="3380" OwnPage="3" ItemID="1871624132" ItemType="6" Width="48.1889763779528" Height="59.5275590551181" FrameType="0" ClipEdited="0" LineWidth="0.5" FillColor="White" LineColor="Black" LinePenStyle="1" Path="M0 0 L48.189 0 L48.189 59.5276 L0 59.5276 L0 0 Z" ContourLinePath="M0 0 L48.189 0 L48.189 59.5276 L0 59.5276 L0 0 Z" gXpos="621.574803149606" gYpos="3380" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="624.409448818898" YPosition="3382.83464566929" OwnPage="3" ItemID="24654227" ItemType="2" Width="42.5196850393701" Height="42.5196850393701" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="0.103706548876512" ImageScaleY="0.103706548876512" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="0" ImageRatio="1" ImagePageNumber="0" ImageFileName="issue-03/ads/nostr_qr.png" ImageColorimetricIntent="0" UseEmbeddedProfile="0" Path="M0 0 L42.5197 0 L42.5197 42.5197 L0 42.5197 L0 0 Z" ContourLinePath="M0 0 L42.5197 0 L42.5197 42.5197 L0 42.5197 L0 0 Z" gXpos="624.409448818898" gYpos="3382.83464566929" gWidth="0" gHeight="0" Layer="0" NextItem="-1" BackItem="-1"/>
+        <PageObject XPosition="621.574803149606" YPosition="3428.18897637795" OwnPage="3" ItemID="1357351869" ItemType="4" Width="48.1889763779528" Height="9.92125984251969" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L48.189 0 L48.189 9.92126 L0 9.92126 L0 0 Z" ContourLinePath="M0 0 L48.189 0 L48.189 9.92126 L0 9.92126 L0 0 Z" gXpos="621.574803149606" gYpos="3428.18897637795" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Bold" FontSize="3.8"/>
+                <Content Font="Liberation Mono Bold" FontSize="3.8" Chars="SCAN NOSTR"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+        <PageObject XPosition="119.842519685039" YPosition="3474.96062992126" OwnPage="3" ItemID="2027570854" ItemType="5" Width="555.590551181102" Height="1" FrameType="0" ClipEdited="0" LineWidth="1" FillShade="0" LineColor="Black" LinePenStyle="1" Path="" gXpos="119.842519685039" gYpos="3474.96062992126" gWidth="0" gHeight="0" Layer="0"/>
+        <PageObject XPosition="119.842519685039" YPosition="3476.37795275591" OwnPage="3" ItemID="488291454" ItemType="4" Width="555.590551181102" Height="12.755905511811" FrameType="0" ClipEdited="0" LineWidth="1" LinePenStyle="1" ImageScaleX="1" ImageScaleY="1" ImageOffsetX="0" ImageOffsetY="0" ImageRotation="0" ImageVisible="1" ImageScaleType="1" ImageRatio="1" Columns="1" ColumnGap="0" AutomaticTextFrame="0" TextToFrameDistanceLeft="0" TextToFrameDistanceTop="0" TextToFrameDistanceBottom="0" TextToFrameDistanceRight="0" VerticalAlignment="0" FirstLineOffset="1" PathTextShowPath="0" PathTextDistanceFromPath="0" TextPathType="0" TextPathFlipped="0" Path="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" ContourLinePath="M0 0 L555.591 0 L555.591 12.7559 L0 12.7559 L0 0 Z" gXpos="119.842519685039" gYpos="3476.37795275591" gWidth="0" gHeight="0" Alignment="1" Layer="0" NextItem="-1" BackItem="-1">
+            <StoryText>
+                <DefaultStyle Alignment="1" Font="Liberation Mono Regular" FontSize="6.2"/>
+                <Content Font="Liberation Mono Regular" FontSize="6.2" FontColor="Black" Chars="PAGE 4 OF 4 • KATHINA KHAO WANCHAI, THE SEGREGATED WITNESS &amp; FAMILIARS • THE CITADEL CHRONICLE • CITADELCHRONICLE.COM • ESTABLISHED 2026"/>
+                <trail Alignment="1"/>
+            </StoryText>
+        </PageObject>
+    </Document>
+</SCRIBUSUTF8NEW>
